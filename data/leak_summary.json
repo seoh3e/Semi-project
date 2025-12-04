@@ -1,0 +1,43 @@
+[
+    {
+        "collected_at": "2025-12-04",
+        "source": "DarkForum A",
+        "post_title": "KR education site users dump 2024",
+        "post_id": "DF-2024-TEST",
+        "author": "leaker007",
+        "posted_at": "2024-11-30",
+        "leak_types": [
+            "email",
+            "password_hash",
+            "phone"
+        ],
+        "estimated_volume": 15000,
+        "file_formats": [
+            "sql",
+            "zip"
+        ],
+        "target_service": "Example Korean Education Service",
+        "domains": [
+            "edu-example.co.kr"
+        ],
+        "country": "KR",
+        "threat_claim": "2024년 10월 기준 최신 사용자 DB 1.5만 건 덤프",
+        "deal_terms": "150 USD in BTC, 샘플 데이터 제공",
+        "confidence": "high",
+        "screenshot_refs": [
+            "SS_2025-12-02_01.png"
+        ],
+        "osint_seeds": {
+            "email_patterns": [
+                "*@edu-example.co.kr"
+            ],
+            "domains": [
+                "edu-example.co.kr"
+            ],
+            "usernames": [
+                "sample_user01",
+                "teacher_test"
+            ]
+        }
+    }
+]

@@ -14,7 +14,7 @@ def run_demo() -> None:
         collected_at=date.today(),
         source="DarkForum A",
         post_title="KR education site users dump 2024",
-        post_id="DF-2024-001",
+        post_id="DF-2024-TEST",
         author="leaker007",
         posted_at=date(2024, 11, 30),
 
