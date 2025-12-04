@@ -11,6 +11,36 @@ DATA_DIR = "data"
 CSV_PATH = os.path.join(DATA_DIR, "leak_summary.csv")
 JSON_PATH = os.path.join(DATA_DIR, "leak_summary.json")
 
+def is_duplicate(record: LeakRecord) -> bool:
+    """
+    CSV에 이미 같은 유출이 있는지 확인.
+    - 기준: source + post_title 조합이 동일하면 같은 유출이라고 간주
+    """
+
+    # CSV가 아직 없으면 당연히 중복 아님
+    if not os.path.exists(CSV_PATH):
+        return False
+
+    key = (
+        (record.source or "").strip(),
+        (record.post_title or "").strip(),
+    )
+
+    import csv
+
+    with CSV_PATH.open("r", encoding="utf-8", newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            row_key = (
+                (row.get("source") or "").strip(),
+                (row.get("post_title") or "").strip(),
+            )
+            if row_key == key:
+                # 이미 동일한 Source + Title 이 존재 → 중복
+                return True
+
+    return False
+
 
 def _record_to_serializable_dict(r: LeakRecord) -> dict:
     """JSON으로 저장 가능하도록 date 타입을 문자열로 바꾸는 헬퍼."""
@@ -94,6 +124,11 @@ def save_to_json(records: List[LeakRecord], path: str = JSON_PATH) -> None:
 
 # ---------------- 한 건 추가 + 전체 저장 ----------------
 def add_leak_record(record: LeakRecord) -> None:
+    # 0) 중복 여부 먼저 확인
+    if is_duplicate(record):
+        print("[INFO] duplicate leak detected, skip saving.")
+        return
+
     """
     새 유출 정보를 1건 추가할 때 호출.
     - 기존 JSON을 읽어서 리스트에 추가
