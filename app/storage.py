@@ -7,9 +7,17 @@ from typing import List
 from .models import LeakRecord
 
 
+import os
+import json
+from typing import List
+import csv
+
+from .models import LeakRecord
+
 DATA_DIR = "data"
 CSV_PATH = os.path.join(DATA_DIR, "leak_summary.csv")
 JSON_PATH = os.path.join(DATA_DIR, "leak_summary.json")
+
 
 def is_duplicate(record: LeakRecord) -> bool:
     """
@@ -28,7 +36,7 @@ def is_duplicate(record: LeakRecord) -> bool:
 
     import csv
 
-    with CSV_PATH.open("r", encoding="utf-8", newline="") as f:
+    with open(CSV_PATH, "r", encoding="utf-8", newline="") as f:
         reader = csv.DictReader(f)
         for row in reader:
             row_key = (

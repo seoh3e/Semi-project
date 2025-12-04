@@ -11,8 +11,8 @@
 
 Semi-project/
 ├── app/
-│ ├── main_demo.py # 샘플 데이터 기반 실행
-│ ├── main_from_telegram.py # 텔레그램 메시지 기반 실행
+│ ├── main_demo_manual.py # 샘플 데이터 기반 실행
+│ ├── main_demo_telegram.py # 텔레그램 메시지 기반 실행
 │ ├── parser.py # 메시지 → LeakRecord 파서
 │ ├── storage.py # CSV/JSON 저장
 │ ├── notifier.py # 알림 출력
@@ -48,10 +48,10 @@ source env/bin/activate
 
 ▶ 실행 방법
 📌 1. 샘플 다크웹 데이터 실행
-python3 -m app.main_demo
+python3 -m app.main_demo_manual
 
 📌 2. 텔레그램 메시지 파싱 실행
-python3 -m app.main_from_telegram
+python3 -m app.main_demo_telegram
 
 💾 결과 저장 위치
 
