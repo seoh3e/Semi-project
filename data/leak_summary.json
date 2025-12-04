@@ -105,5 +105,356 @@
         "osint_seeds": {
             "raw_message": "[DarkForum A] KR education site users dump 2024\nTarget: Example Korean Education Service (edu-example.co.kr)\nLeak: email, password_hash, phone\nVolume: 15000\nConfidence: high\n"
         }
+    },
+    {
+        "collected_at": "2025-12-04",
+        "source": "DarkForum A",
+        "post_title": "KR education site users dump 2024",
+        "post_id": null,
+        "author": null,
+        "posted_at": null,
+        "leak_types": [
+            "email",
+            "password_hash",
+            "phone"
+        ],
+        "estimated_volume": 15000,
+        "file_formats": [],
+        "target_service": "Example Korean Education Service",
+        "domains": [
+            "edu-example.co.kr"
+        ],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "high",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "raw_message": "[DarkForum A] KR education site users dump 2024\nTarget: Example Korean Education Service (edu-example.co.kr)\nLeak: email, password_hash, phone\nVolume: 15000\nConfidence: high\n"
+        }
+    },
+    {
+        "collected_at": "2025-12-04",
+        "source": "DarkForum A",
+        "post_title": "KR education site users dump 2024",
+        "post_id": null,
+        "author": null,
+        "posted_at": null,
+        "leak_types": [
+            "email",
+            "password_hash",
+            "phone"
+        ],
+        "estimated_volume": 15000,
+        "file_formats": [],
+        "target_service": "Example Korean Education Service",
+        "domains": [
+            "edu-example.co.kr"
+        ],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "high",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "raw_message": "[DarkForum A] KR education site users dump 2024\nTarget: Example Korean Education Service (edu-example.co.kr)\nLeak: email, password_hash, phone\nVolume: 15000\nConfidence: high\n"
+        }
+    },
+    {
+        "collected_at": "2025-12-04",
+        "source": "DarkForum A",
+        "post_title": "KR education site users dump 2024",
+        "post_id": null,
+        "author": null,
+        "posted_at": null,
+        "leak_types": [
+            "email",
+            "password_hash",
+            "phone"
+        ],
+        "estimated_volume": 15000,
+        "file_formats": [],
+        "target_service": "Example Korean Education Service",
+        "domains": [
+            "edu-example.co.kr"
+        ],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "high",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "raw_message": "[DarkForum A] KR education site users dump 2024\nTarget: Example Korean Education Service (edu-example.co.kr)\nLeak: email, password_hash, phone\nVolume: 15000\nConfidence: high\n"
+        }
+    },
+    {
+        "collected_at": "2025-12-04",
+        "source": "DarkForum A",
+        "post_title": "KR education site users dump 2024",
+        "post_id": null,
+        "author": null,
+        "posted_at": null,
+        "leak_types": [
+            "email",
+            "password_hash",
+            "phone"
+        ],
+        "estimated_volume": 15000,
+        "file_formats": [],
+        "target_service": "Example Korean Education Service",
+        "domains": [
+            "edu-example.co.kr"
+        ],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "high",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "raw_message": "[DarkForum A] KR education site users dump 2024\nTarget: Example Korean Education Service (edu-example.co.kr)\nLeak: email, password_hash, phone\nVolume: 15000\nConfidence: high\n"
+        }
+    },
+    {
+        "collected_at": "2025-12-04",
+        "source": "DarkForum A",
+        "post_title": "KR education site users dump 2024",
+        "post_id": null,
+        "author": null,
+        "posted_at": null,
+        "leak_types": [
+            "email",
+            "password_hash",
+            "phone"
+        ],
+        "estimated_volume": 15000,
+        "file_formats": [],
+        "target_service": "Example Korean Education Service",
+        "domains": [
+            "edu-example.co.kr"
+        ],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "high",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "raw_message": "[DarkForum A] KR education site users dump 2024\nTarget: Example Korean Education Service (edu-example.co.kr)\nLeak: email, password_hash, phone\nVolume: 15000\nConfidence: high\n"
+        }
+    },
+    {
+        "collected_at": "2025-12-04",
+        "source": "DarkForum A",
+        "post_title": "KR education site users dump 2024",
+        "post_id": null,
+        "author": null,
+        "posted_at": null,
+        "leak_types": [
+            "email",
+            "password_hash",
+            "phone"
+        ],
+        "estimated_volume": 15000,
+        "file_formats": [],
+        "target_service": "Example Korean Education Service",
+        "domains": [
+            "edu-example.co.kr"
+        ],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "high",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "raw_message": "[DarkForum A] KR education site users dump 2024\nTarget: Example Korean Education Service (edu-example.co.kr)\nLeak: email, password_hash, phone\nVolume: 15000\nConfidence: high\n"
+        }
+    },
+    {
+        "collected_at": "2025-12-04",
+        "source": "DarkForum A",
+        "post_title": "KR education site users dump 2024",
+        "post_id": null,
+        "author": null,
+        "posted_at": null,
+        "leak_types": [
+            "email",
+            "password_hash",
+            "phone"
+        ],
+        "estimated_volume": 15000,
+        "file_formats": [],
+        "target_service": "Example Korean Education Service",
+        "domains": [
+            "edu-example.co.kr"
+        ],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "high",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "raw_message": "[DarkForum A] KR education site users dump 2024\nTarget: Example Korean Education Service (edu-example.co.kr)\nLeak: email, password_hash, phone\nVolume: 15000\nConfidence: high\n"
+        }
+    },
+    {
+        "collected_at": "2025-12-04",
+        "source": "DarkForum A",
+        "post_title": "KR education site users dump 2024",
+        "post_id": null,
+        "author": null,
+        "posted_at": null,
+        "leak_types": [
+            "email",
+            "password_hash",
+            "phone"
+        ],
+        "estimated_volume": 15000,
+        "file_formats": [],
+        "target_service": "Example Korean Education Service",
+        "domains": [
+            "edu-example.co.kr"
+        ],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "high",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "raw_message": "[DarkForum A] KR education site users dump 2024\nTarget: Example Korean Education Service (edu-example.co.kr)\nLeak: email, password_hash, phone\nVolume: 15000\nConfidence: high\n"
+        }
+    },
+    {
+        "collected_at": "2025-12-04",
+        "source": "DarkForum A",
+        "post_title": "KR education site users dump 2024",
+        "post_id": null,
+        "author": null,
+        "posted_at": null,
+        "leak_types": [
+            "email",
+            "password_hash",
+            "phone"
+        ],
+        "estimated_volume": 15000,
+        "file_formats": [],
+        "target_service": "Example Korean Education Service",
+        "domains": [
+            "edu-example.co.kr"
+        ],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "high",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "raw_message": "[DarkForum A] KR education site users dump 2024\nTarget: Example Korean Education Service (edu-example.co.kr)\nLeak: email, password_hash, phone\nVolume: 15000\nConfidence: high\n"
+        }
+    },
+    {
+        "collected_at": "2025-12-04",
+        "source": "DarkForum A",
+        "post_title": "KR education site users dump 2024",
+        "post_id": null,
+        "author": null,
+        "posted_at": null,
+        "leak_types": [
+            "email",
+            "password_hash",
+            "phone"
+        ],
+        "estimated_volume": 15000,
+        "file_formats": [],
+        "target_service": "Example Korean Education Service",
+        "domains": [
+            "edu-example.co.kr"
+        ],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "high",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "raw_message": "[DarkForum A] KR education site users dump 2024\nTarget: Example Korean Education Service (edu-example.co.kr)\nLeak: email, password_hash, phone\nVolume: 15000\nConfidence: high\n"
+        }
+    },
+    {
+        "collected_at": "2025-12-04",
+        "source": "DarkForum A",
+        "post_title": "KR education site users dump 2024",
+        "post_id": null,
+        "author": null,
+        "posted_at": null,
+        "leak_types": [
+            "email",
+            "password_hash",
+            "phone"
+        ],
+        "estimated_volume": 15000,
+        "file_formats": [],
+        "target_service": "Example Korean Education Service",
+        "domains": [
+            "edu-example.co.kr"
+        ],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "high",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "raw_message": "[DarkForum A] KR education site users dump 2024\nTarget: Example Korean Education Service (edu-example.co.kr)\nLeak: email, password_hash, phone\nVolume: 15000\nConfidence: high\n"
+        }
+    },
+    {
+        "collected_at": "2025-12-04",
+        "source": "DarkForum B",
+        "post_title": "KR gov users leaked 2025",
+        "post_id": null,
+        "author": null,
+        "posted_at": null,
+        "leak_types": [
+            "email",
+            "password_hash",
+            "address"
+        ],
+        "estimated_volume": 20000,
+        "file_formats": [],
+        "target_service": "Example Korean Gov Portal",
+        "domains": [
+            "gov-example.go.kr"
+        ],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "high",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "raw_message": "[DarkForum B] KR gov users leaked 2025\n\ntarget service : Example Korean Gov Portal (gov-example.go.kr)\nLEAK TYPES: email / password_hash / address\nvolume   : 20,000\nCONFIDENCE : HIGH\n"
+        }
+    },
+    {
+        "collected_at": "2025-12-04",
+        "source": "DarkForum B",
+        "post_title": "KR gov users leaked 2025",
+        "post_id": null,
+        "author": null,
+        "posted_at": null,
+        "leak_types": [
+            "email",
+            "password_hash",
+            "address"
+        ],
+        "estimated_volume": 20000,
+        "file_formats": [],
+        "target_service": "Example Korean Gov Portal",
+        "domains": [
+            "gov-example.go.kr"
+        ],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "high",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "raw_message": "[DarkForum B] KR gov users leaked 2025\n\ntarget service : Example Korean Gov Portal (gov-example.go.kr)\nLEAK TYPES: email / password_hash / address\nvolume   : 20,000\nCONFIDENCE : HIGH\n"
+        }
     }
 ]

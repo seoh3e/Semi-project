@@ -13,12 +13,19 @@ def run_from_telegram_demo() -> None:
 
     # 실제로는 여기 raw_message를
     #  - 텔레그램 봇/피드 모듈에서 받아서 넣어주면 됨
-    raw_message = """[DarkForum A] KR education site users dump 2024
-Target: Example Korean Education Service (edu-example.co.kr)
-Leak: email, password_hash, phone
-Volume: 15000
-Confidence: high
+    raw_message = """[DarkForum B] KR gov users leaked 2025
+
+target service : Example Korean Gov Portal (gov-example.go.kr)
+LEAK TYPES: email / password_hash / address
+volume   : 20,000
+CONFIDENCE : HIGH
 """
+
+
+
+
+
+
 
     # 1) 텔레그램 메시지를 LeakRecord로 변환
     record = parse_telegram_message(raw_message)
