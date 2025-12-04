@@ -80,7 +80,7 @@ def parse_ctifeeds_message(message: Message) -> Optional[LeakRecord]:
     lower = text.lower()
 
     # defacement / breach / leak 키워드가 없는 글은 스킵
-    keywords = ["defacement", "data breach", "breach", "leak"]
+    keywords = ["defacement", "data breach", "breach", "leak", "Sector:", "Threat class:", "Status:", "Observed:", "Source:"]
     if not any(k in lower for k in keywords):
         return None
 
@@ -168,3 +168,4 @@ def fetch_ctifeeds_defacements(limit: int = 50) -> None:
 
 if __name__ == "__main__":
     fetch_ctifeeds_defacements(limit=30)
+
