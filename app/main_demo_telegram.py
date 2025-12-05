@@ -21,6 +21,7 @@ from .notifier import notify_new_leak
 from .models import LeakRecord
 from .telegram_ransomfeednews import (
     parse_ransomfeednews,
+    parse_hackmanac_cybernews,
     intermediate_to_leakrecord,
 )
 
