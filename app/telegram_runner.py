@@ -1,5 +1,3 @@
-# app/telegram_runner.py
-
 """
 텔레그램 채널에서 실제 메시지를 읽어와서
 RansomFeedNews 파서 → IntermediateEvent → LeakRecord → 저장/알림
