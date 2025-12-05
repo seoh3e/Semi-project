@@ -187,28 +187,6 @@ def lookup_domain_dns(service_name: str) -> list[str]:
 def parse_telegram_message(msg: Any) -> LeakRecord:
     raw_text = getattr(msg, "raw_text", None) or getattr(msg, "message", "") or ""
 
-    if not raw_text.startswith("🚨Cyberattack Alert ‼️"):
-        record = LeakRecord(
-            collected_at=date.today(),
-            source=None,
-            post_id=None,
-            post_title="",
-            author=None,
-            posted_at=None,
-            leak_types=[],
-            estimated_volume=None,
-            file_formats=[],
-            target_service="",
-            domains=[],
-            country=None,
-            threat_claim=None,
-            deal_terms=None,
-            confidence="unknown",
-            screenshot_refs=[],
-            osint_seeds={},
-        )
-        return record
-
     source: Optional[str] = None
     post_title: str = ""
     post_id: Optional[str] = str(getattr(msg, "id", None)) if getattr(msg, "id", None) else None
@@ -326,3 +304,4 @@ def parse_telegram_message(msg: Any) -> LeakRecord:
     )
 
     return record
+
