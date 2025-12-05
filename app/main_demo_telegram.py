@@ -10,6 +10,7 @@
 
 - 현재 구현된 채널:
     - RansomFeedNews
+    - hackmanac_cybernews(구현 중)
 """
 
 from __future__ import annotations
@@ -106,6 +107,41 @@ Leak: https://ransomleaks.com/post/12345
 
 
 # ---------------------------------------------------------------------------
+# 3. hackmanac_cybernews 전용 데모
+# ---------------------------------------------------------------------------
+
+def run_hackmanac_cybernews_demo() -> None:
+    """
+    hackmanac_cybernews 채널에서 온 메시지를 예시로 사용하는 데모.
+
+    실제 텔레그램 API 연동 없이,
+    '이런 형식의 텍스트가 왔다'고 가정하고 파이프라인을 테스트한다.
+    """
+    raw_message = "🚨Cyberattack Alert ‼️\n\n🇿🇲Zambia - National Health Insurance Scheme (NHIS)\n\nNova hacking group claims to have breached National Health Insurance Scheme (NHIS).\n\nAllegedly, the attackers exfiltrated patients data.\n\nSector: Insurance\nThreat class: Cybercrime\n\nObserved: Dec 5, 2025\nStatus: Pending verification\n\nSource: https://therecord.media/askul-resumes-limited-ordering-following-ransomware-attack"
+
+    if raw_message[:21] != "🚨Cyberattack Alert ‼️":
+        return
+
+    # 1) raw → IntermediateEvent
+    event = parse_hackmanac_cybernews(
+        raw_text=raw_message,
+        message_id=123,                      # 데모용 임의 값
+        message_url="https://t.me/hackmanac_cybernews/123",
+    )
+    print(event)
+    # group / victim 둘 다 없으면 의미 없는 메시지로 간주
+    if not event.group_name and not event.victim_name:
+        print("[SKIP] hackmanac_cybernews event without group/victim")
+        return
+
+    # 2) IntermediateEvent → LeakRecord
+    record: LeakRecord = intermediate_to_leakrecord(event)
+    print(record)
+    # 3) 공통 파이프라인 태우기
+    process_leak_record(record)
+
+
+# ---------------------------------------------------------------------------
 # 엔트리 포인트
 # ---------------------------------------------------------------------------
 
@@ -117,3 +153,6 @@ if __name__ == "__main__":
 
     # 2) RansomFeedNews 채널 포맷 테스트
     run_ransomfeednews_demo()
+
+    # 3) hackmanac_cybernews 채널 포맷 테스트
+    # run_hackmanac_cybernews_demo()
