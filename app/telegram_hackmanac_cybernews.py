@@ -1,76 +1,113 @@
-# app/telegram_ransomfeednews.py
+# app/telegram_hackmanac_cybernews.py
 
 import re
-from datetime import date
+from datetime import date, datetime
 from typing import Optional, List
-
 from app.models import IntermediateEvent, LeakRecord
 
 
-def _extract_first(pattern: str, text: str) -> Optional[str]:
-    m = re.search(pattern, text, re.IGNORECASE | re.MULTILINE)
-    if not m:
-        return None
-    return m.group(1).strip()
+#─────────────────────────────────────────────
+# 1) raw_text → IntermediateEvent
+#─────────────────────────────────────────────
 
-
-def _extract_urls(text: str) -> List[str]:
-    return re.findall(r"https?://\S+", text)
-
-
-def parse_ransomfeednews(raw_text: str, message_id=None, message_url=None) -> IntermediateEvent:
+def parse_hackmanac_cybernews(raw_text: str, message_id=None, message_url=None) -> IntermediateEvent:
     """
-    RansomFeedNews 채널의 raw 텍스트를 IntermediateEvent 로 변환.
+    hackmanac_cybernews 채널 메시지 파서.
     """
-    cleaned = raw_text.replace("\r\n", "\n").strip()
 
-    group = _extract_first(
-        r"(?:^|\n)\s*(?:Group|Ransomware\s*group)\s*:\s*(.+)",
-        cleaned,
-    )
-    victim = _extract_first(
-        r"(?:^|\n)\s*(?:Victim|Target|Company)\s*:\s*(.+)",
-        cleaned,
-    )
-    published_at_text = _extract_first(
-        r"(?:^|\n)\s*(?:Date|Published)\s*:\s*(.+)",
-        cleaned,
-    )
+    lines = raw_text.splitlines()
 
-    urls = _extract_urls(cleaned)
-    tags = re.findall(r"#(\w+)", cleaned)
+    victim = None
+    group = None
+    published_date_text = None
+    urls: List[str] = []
+
+    # 기본 포맷:
+    # 🚨Cyberattack Alert ‼️
+    #
+    # 🇿🇲Zambia - National Health Insurance Scheme (NHIS)
+    #
+    # Nova hacking group claims to have breached National Health Insurance Scheme (NHIS).
+    #
+    # Allegedly, the attackers exfiltrated patients data.
+    #
+    # Sector: Insurance
+    # Threat class: Cybercrime
+    #
+    # Observed: Dec 5, 2025
+    # Status: Pending verification
+    #
+    # Source: https://www.kankyo-kanri.co.jp/wp-content/uploads/2025/12/2512%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B.pdf
+    # —
+    # About this post:
+    # Hackmanac provides early warning and cyber situational awareness through its social channels. This alert is based on publicly available information that our analysts retrieved from clear and dark web sources. No confidential or proprietary data was downloaded, copied, or redistributed, and sensitive details were redacted from the attached screenshot(s).
+    #
+    # For more details about this incident, our ESIX impact score, and additional context, visit HackRisk.io.
+
+    for idx, line in enumerate(lines):
+        # 날짜 정보
+        if "Observed:" in line:
+            parts = line.split("Observed:")
+            if len(parts) > 1:
+                published_date_text = parts[1].strip()
+
+        # 그룹명
+        if "hacking group" in line:
+            parts = line.split("hacking group")
+            if len(parts) > 1:
+                group = parts[0].strip()
+
+        # 피해자
+        if idx == 2:
+            parts = line.split(" - ")
+            if len(parts) > 1:
+                victim = parts[1].strip()
+
+        # URL
+        if "Source:" in line:
+            parts = line.split("Source:")
+            if len(parts) > 1:
+                urls.append(parts[1].strip())
 
     return IntermediateEvent(
-        source_channel="RansomFeedNews",
-        raw_text=cleaned,
+        source_channel="hackmanac_cybernews",
+        raw_text=raw_text,
         message_id=message_id,
         message_url=message_url,
         group_name=group,
         victim_name=victim,
-        published_at_text=published_at_text,
+        published_at=published_date_text,
         urls=urls,
-        tags=tags,
+        tags=[],
     )
 
 
+#─────────────────────────────────────────────
+# 2) IntermediateEvent → LeakRecord 변환기
+#─────────────────────────────────────────────
+
 def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
     """
-    IntermediateEvent(RansomFeedNews) → LeakRecord 간단 변환 (PoC 버전).
+    파싱된 IntermediateEvent → LeakRecord 표준 구조 변환
     """
-    if event.group_name or event.victim_name:
-        title = f"{event.group_name or '?'} → {event.victim_name or '?'}"
-    else:
-        title = "(no title)"
 
-    post_id = str(event.message_id) if event.message_id is not None else ""
+    lines = event.raw_text.splitlines()
+
+    for idx, line in enumerate(lines):
+        if idx == 2:
+            parts = line.split(" - ")
+            if len(parts) > 1:
+                flag = parts[0].strip()[:2]
+                OFFSET = 0x1F1E6  # Regional Indicator Symbol 'A' 시작
+                country = ''.join(chr(ord(c) - OFFSET + ord('A')) for c in flag)
 
     return LeakRecord(
         collected_at=date.today(),
-        source="telegram:RansomFeedNews",
-        post_title=title,
-        post_id=post_id,
+        source=event.source_channel,
+        post_title=f"{event.group_name or ''} → {event.victim_name or ''}",
+        post_id=str(event.message_id) if event.message_id else "",
         author=None,
-        posted_at=None,
+        posted_at=datetime.strptime(event.published_at, '%b %d, %Y').date(),
 
         leak_types=[],
         estimated_volume=None,
@@ -78,19 +115,12 @@ def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
 
         target_service=event.victim_name,
         domains=[],
-        country=None,
+        country=country,
 
-        threat_claim=None,
+        threat_claim=event.group_name,
         deal_terms=None,
-        confidence="low",
+        confidence="medium",
 
-        screenshot_refs=event.urls,
-        osint_seeds={
-            "source_channel": event.source_channel,
-            "message_url": event.message_url,
-            "group_name": event.group_name,
-            "victim_name": event.victim_name,
-            "published_at_text": event.published_at_text,
-            "raw_text": event.raw_text,
-        },
+        screenshot_refs=[],
+        osint_seeds={"urls": event.urls},
     )
