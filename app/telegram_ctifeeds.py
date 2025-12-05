@@ -1,11 +1,9 @@
-
 import re
 from urllib.parse import urlparse
 from datetime import date
 from typing import Optional, List, Dict
 
-from pyrogram import Client
-from pyrogram.types import Message
+from telethon import TelegramClient
 
 from .models import LeakRecord
 from .storage import add_leak_record
@@ -15,12 +13,12 @@ from .notifier import notify_new_leak
 # ─────────────────────────────────────────
 # 1) 텔레그램 클라이언트 설정
 # ─────────────────────────────────────────
-API_ID = 34221825          # <- 본인 api_id 
-API_HASH = "44a948711e6034324886bebc6abb0a5d"  # <- 본인 api_hash 
-CHANNEL = "@ctifeeds"    # Cyber Threat Intelligence Feeds
 
+API_ID = 34221825
+API_HASH = "44a948711e6034324886bebc6abb0a5d"
+CHANNEL = "@ctifeeds"
 
-app = Client("ctifeeds_session", api_id=API_ID, api_hash=API_HASH)
+client = TelegramClient("ctifeeds_session", API_ID, API_HASH)
 
 
 # ─────────────────────────────────────────
@@ -32,7 +30,6 @@ def extract_first_url(text: str) -> Optional[str]:
     m = re.search(r"(https?://\S+)", text)
     if not m:
         return None
-    # 뒤에 붙은 괄호/마침표 같은 건 대충 제거
     return m.group(1).rstrip(").,")
 
 
@@ -48,7 +45,7 @@ def extract_attacker_aliases(text: str) -> List[str]:
     예:
       - 'Recent defacement reported by H4x0r: https://...'
       - 'Hacked BY XYZEAZ'
-    이런 패턴에서 공격자/그룹 닉네임 뽑기.
+    공격자/그룹 닉네임 뽑기.
     """
     aliases: List[str] = []
 
@@ -60,7 +57,6 @@ def extract_attacker_aliases(text: str) -> List[str]:
     if m:
         aliases.append(m.group(1).strip())
 
-    # 중복 제거
     return list(dict.fromkeys(aliases))
 
 
@@ -68,19 +64,30 @@ def extract_attacker_aliases(text: str) -> List[str]:
 # 3) ctifeeds 한 메시지 → LeakRecord 변환
 # ─────────────────────────────────────────
 
-def parse_ctifeeds_message(message: Message) -> Optional[LeakRecord]:
+def parse_ctifeeds_message(message) -> Optional[LeakRecord]:
     """
     Cyber Threat Intelligence Feeds(@ctifeeds)의 메시지 1건을
-    LeakRecord로 변환. defacement 관련이 아닌 건 None 리턴.
+    LeakRecord로 변환. defacement/유출 관련이 아닌 건 None.
+    (Telethon Message 객체 기준)
     """
-    text = (message.text or message.caption or "").strip()
+    text = (getattr(message, "message", None) or "").strip()
     if not text:
         return None
 
     lower = text.lower()
 
-    # defacement / breach / leak 키워드가 없는 글은 스킵
-    keywords = ["defacement", "data breach", "breach", "leak", "Sector:", "Threat class:", "Status:", "Observed:", "Source:"]
+    # ✅ 기존 코드에서 대문자 키워드가 lower와 안 맞는 문제 보정
+    keywords = [
+        "defacement",
+        "data breach",
+        "breach",
+        "leak",
+        "sector:",
+        "threat class:",
+        "status:",
+        "observed:",
+        "source:",
+    ]
     if not any(k in lower for k in keywords):
         return None
 
@@ -88,26 +95,20 @@ def parse_ctifeeds_message(message: Message) -> Optional[LeakRecord]:
     domain = domain_from_url(url) if url else None
     attacker_aliases = extract_attacker_aliases(text)
 
-    # 제목은 전체 문장을 그대로 사용 (필요하면 잘라 써도 됨)
     post_title_val = text
+    posted_at_val = message.date.date() if getattr(message, "date", None) else None
 
-    # 게시 시각
-    posted_at_val = message.date.date() if message.date else None
+    # 채널 포스트는 작성자 정보가 없는 경우가 많아서 None 처리
+    author_val = None
 
-    # 작성자(채널 메시지는 보통 없음)
-    author_val = message.from_user.username if message.from_user else None
-
-    # leak_types 대충 분류 (데이터 유출 vs 웹디페이스)
     leak_types: List[str] = []
     if "defacement" in lower:
         leak_types.append("web_defacement")
     if "data breach" in lower or "breach" in lower or "leak" in lower:
         leak_types.append("data_breach")
 
-    # confidence: 뉴스/피드 기반이라 일단 medium 정도
     confidence_val = "medium"
 
-    # OSINT용 seed 정보
     osint_seeds: Dict = {
         "domains": [domain] if domain else [],
         "urls": [url] if url else [],
@@ -115,7 +116,7 @@ def parse_ctifeeds_message(message: Message) -> Optional[LeakRecord]:
         "raw_text": text,
     }
 
-    record = LeakRecord(
+    return LeakRecord(
         collected_at=date.today(),
         source="Telegram:Cyber Threat Intelligence Feeds",
         post_title=post_title_val,
@@ -127,9 +128,9 @@ def parse_ctifeeds_message(message: Message) -> Optional[LeakRecord]:
         estimated_volume=None,
         file_formats=[],
 
-        target_service=domain,      # 일단 도메인 기준으로 서비스 이름 대체
+        target_service=domain,
         domains=[domain] if domain else [],
-        country=None,               # 필요하면 나중에 따로 추출
+        country=None,
 
         threat_claim=text,
         deal_terms=None,
@@ -139,33 +140,31 @@ def parse_ctifeeds_message(message: Message) -> Optional[LeakRecord]:
         osint_seeds=osint_seeds,
     )
 
-    return record
-
 
 # ─────────────────────────────────────────
 # 4) 최근 메시지 여러 개 불러와서 저장 + 알림
 # ─────────────────────────────────────────
 
-def fetch_ctifeeds_defacements(limit: int = 50) -> None:
-    """
-    @ctifeeds 채널 history 중 최근 limit개 메시지를 가져와서
-    defacement/유출 관련 글만 LeakRecord로 저장하고 알림 출력.
-    """
+async def fetch_ctifeeds_defacements(limit: int = 50) -> None:
     parsed_count = 0
 
-    with app:
-        for message in app.get_chat_history(CHANNEL, limit=limit):
-            record = parse_ctifeeds_message(message)
-            if record is None:
-                continue
+    async for message in client.iter_messages(CHANNEL, limit=limit):
+        record = parse_ctifeeds_message(message)
+        if record is None:
+            continue
 
-            parsed_count += 1
-            add_leak_record(record)
-            notify_new_leak(record)
+        parsed_count += 1
+        add_leak_record(record)
+        notify_new_leak(record)
 
     print(f"[INFO] ctifeeds에서 {parsed_count}건의 유출/defacement 이벤트를 파싱했습니다.")
 
 
-if __name__ == "__main__":
-    fetch_ctifeeds_defacements(limit=30)
+async def main():
+    await client.start()
+    await fetch_ctifeeds_defacements(limit=30)
 
+
+if __name__ == "__main__":
+    import asyncio
+    asyncio.run(main())
