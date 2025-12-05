@@ -4,6 +4,24 @@ from typing import List, Dict, Optional
 
 
 @dataclass
+class IntermediateEvent:
+    source_channel: str
+    raw_text: str
+
+    message_id: Optional[int] = None
+    message_url: Optional[str] = None
+
+    group_name: Optional[str] = None
+    victim_name: Optional[str] = None
+
+    # RansomFeedNews 템플릿 호환용
+    published_at_text: Optional[str] = None
+
+    urls: List[str] = field(default_factory=list)
+    tags: List[str] = field(default_factory=list)
+
+
+@dataclass
 class LeakRecord:
     collected_at: date               # 수집일
     source: str                      # 출처(포럼/마켓 이름)
@@ -26,22 +44,3 @@ class LeakRecord:
 
     screenshot_refs: List[str] = field(default_factory=list)
     osint_seeds: Dict = field(default_factory=dict)
-
-from dataclasses import dataclass, field
-from typing import List, Optional
-
-
-@dataclass
-class IntermediateEvent:
-    source_channel: str
-    raw_text: str
-
-    message_id: Optional[int] = None
-    message_url: Optional[str] = None
-
-    group_name: Optional[str] = None
-    victim_name: Optional[str] = None
-
-    published_at: Optional[str] = None   # ← 추가
-    urls: List[str] = field(default_factory=list)  # ← 추가
-    tags: List[str] = field(default_factory=list)  # ← 추가
