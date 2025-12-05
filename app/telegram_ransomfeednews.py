@@ -57,7 +57,7 @@ def parse_ransomfeednews(raw_text: str, message_id=None, message_url=None) -> In
         message_url=message_url,
         group_name=group,
         victim_name=victim,
-        published_at=published_date_text,
+        published_at_text=published_date_text,
         urls=urls,
         tags=[],
     )
