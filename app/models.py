@@ -26,3 +26,22 @@ class LeakRecord:
 
     screenshot_refs: List[str] = field(default_factory=list)
     osint_seeds: Dict = field(default_factory=dict)
+
+from dataclasses import dataclass, field
+from typing import List, Optional
+
+
+@dataclass
+class IntermediateEvent:
+    source_channel: str
+    raw_text: str
+
+    message_id: Optional[int] = None
+    message_url: Optional[str] = None
+
+    group_name: Optional[str] = None
+    victim_name: Optional[str] = None
+
+    published_at: Optional[str] = None   # ← 추가
+    urls: List[str] = field(default_factory=list)  # ← 추가
+    tags: List[str] = field(default_factory=list)  # ← 추가

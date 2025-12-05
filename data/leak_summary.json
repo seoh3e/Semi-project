@@ -456,5 +456,1155 @@
         "osint_seeds": {
             "raw_message": "[DarkForum B] KR gov users leaked 2025\n\ntarget service : Example Korean Gov Portal (gov-example.go.kr)\nLEAK TYPES: email / password_hash / address\nvolume   : 20,000\nCONFIDENCE : HIGH\n"
         }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Yellow Cab of Columbus, USA",
+        "post_id": "10622",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Yellow Cab of Columbus, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27651"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Quasar Inc, USA",
+        "post_id": "10621",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Quasar Inc, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27650"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Atenção Primária à Saúde Brazil, Brazil",
+        "post_id": "10620",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Atenção Primária à Saúde Brazil, Brazil",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27649"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → CCJM, USA",
+        "post_id": "10619",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "CCJM, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27648"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Providence Academy, USA",
+        "post_id": "10618",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Providence Academy, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27647"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → cpasch.com, USA",
+        "post_id": "10617",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "cpasch.com, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27646"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → SUNNYGO.COM.TW, Taiwan",
+        "post_id": "10616",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "SUNNYGO.COM.TW, Taiwan",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27645"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Bo Beuckman Ford, USA",
+        "post_id": "10615",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Bo Beuckman Ford, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27644"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Davis Kitchens, United States, USA",
+        "post_id": "10614",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Davis Kitchens, United States, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27643"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → COTTAGE, USA",
+        "post_id": "10613",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "COTTAGE, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27642"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Gandía Palace Hotel, Spain",
+        "post_id": "10612",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Gandía Palace Hotel, Spain",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27641"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Valley Eye Associates, USA",
+        "post_id": "10611",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Valley Eye Associates, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27640"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Clayco Electric, USA",
+        "post_id": "10610",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Clayco Electric, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27639"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → IES Synergy, France",
+        "post_id": "10609",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "IES Synergy, France",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27638"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Golden Artist Colors, USA",
+        "post_id": "10608",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Golden Artist Colors, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27637"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Pan-O-Gold Baking Company, USA",
+        "post_id": "10607",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Pan-O-Gold Baking Company, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27636"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Quality Engineered Homes, Canada",
+        "post_id": "10606",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Quality Engineered Homes, Canada",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27635"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → CST Coal, Canada",
+        "post_id": "10605",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "CST Coal, Canada",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27634"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Eggelhof, USA",
+        "post_id": "10604",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Eggelhof, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27632"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Building Controls and Services, USA",
+        "post_id": "10603",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Building Controls and Services, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27631"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Custom Engineered Wheels, USA",
+        "post_id": "10602",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Custom Engineered Wheels, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27630"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Wisconsin Knife Works, The Smith Companies, Envirotech Services, Next Generation Logistics..., USA",
+        "post_id": "10601",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Wisconsin Knife Works, The Smith Companies, Envirotech Services, Next Generation Logistics..., USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27629"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Armis Group, Portugal",
+        "post_id": "10600",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Armis Group, Portugal",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27628"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Fuji Vegetable Oil, Japan",
+        "post_id": "10599",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Fuji Vegetable Oil, Japan",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27627"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Wynn  AND  Wynn, USA",
+        "post_id": "10598",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Wynn  AND  Wynn, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27626"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Rouse Frets White Goss Gentile Rhodes, USA",
+        "post_id": "10597",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Rouse Frets White Goss Gentile Rhodes, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27625"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → NUMALLIANCE, France",
+        "post_id": "10596",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "NUMALLIANCE, France",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27624"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → City of Urbana, USA",
+        "post_id": "10595",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "City of Urbana, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27623"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Brodosplit, Croatia",
+        "post_id": "10594",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Brodosplit, Croatia",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27622"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → LA Injury Attorneys, USA",
+        "post_id": "10593",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "LA Injury Attorneys, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27621"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → bisonfamilymedical.com, Canada",
+        "post_id": "10592",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "bisonfamilymedical.com, Canada",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27620"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → instyle.com.au, Australia",
+        "post_id": "10591",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "instyle.com.au, Australia",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27619"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Basra Transports, Canada",
+        "post_id": "10590",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Basra Transports, Canada",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27618"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → R* E*, Non Disponibile",
+        "post_id": "10589",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "R* E*, Non Disponibile",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27617"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → lesker.com, USA",
+        "post_id": "10588",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "lesker.com, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27616"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Sarmap, Switzerland",
+        "post_id": "10587",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Sarmap, Switzerland",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27615"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Petra, USA",
+        "post_id": "10586",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Petra, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27614"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Reading Elevator Service, USA",
+        "post_id": "10585",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Reading Elevator Service, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27613"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → GV Service, Germany",
+        "post_id": "10584",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "GV Service, Germany",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27612"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Pathmaker Group, USA",
+        "post_id": "10583",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Pathmaker Group, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27611"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Garrett Taylor, Dds, USA",
+        "post_id": "10582",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Garrett Taylor, Dds, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27610"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → dakkota.com, USA",
+        "post_id": "10581",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "dakkota.com, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27609"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → noment, USA",
+        "post_id": "10580",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "noment, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27608"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Moyes, USA",
+        "post_id": "10579",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Moyes, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27607"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Mr Christmas, USA",
+        "post_id": "10578",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Mr Christmas, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27606"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → EDIS, Poland",
+        "post_id": "10577",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "EDIS, Poland",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27605"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → ASUS, Taiwan",
+        "post_id": "10576",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "ASUS, Taiwan",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27604"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → Exegy, USA",
+        "post_id": "10575",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "Exegy, USA",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27603"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → n*w*****.com, Non Disponibile",
+        "post_id": "10574",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "n*w*****.com, Non Disponibile",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27602"
+            ]
+        }
+    },
+    {
+        "collected_at": "2025-12-05",
+        "source": "RansomFeedNews",
+        "post_title": " → ravand.com, Canada",
+        "post_id": "10573",
+        "author": null,
+        "posted_at": null,
+        "leak_types": [],
+        "estimated_volume": null,
+        "file_formats": [],
+        "target_service": "ravand.com, Canada",
+        "domains": [],
+        "country": null,
+        "threat_claim": null,
+        "deal_terms": null,
+        "confidence": "medium",
+        "screenshot_refs": [],
+        "osint_seeds": {
+            "urls": [
+                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27601"
+            ]
+        }
     }
 ]
