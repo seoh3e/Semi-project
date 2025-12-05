@@ -129,7 +129,7 @@ def run_hackmanac_cybernews_demo() -> None:
         message_id=123,                      # 데모용 임의 값
         message_url="https://t.me/hackmanac_cybernews/123",
     )
-    print(event)
+    
     # group / victim 둘 다 없으면 의미 없는 메시지로 간주
     if not event.group_name and not event.victim_name:
         print("[SKIP] hackmanac_cybernews event without group/victim")
@@ -137,7 +137,7 @@ def run_hackmanac_cybernews_demo() -> None:
 
     # 2) IntermediateEvent → LeakRecord
     record: LeakRecord = intermediate_to_leakrecord(event)
-    print(record)
+    
     # 3) 공통 파이프라인 태우기
     process_leak_record(record)
 
