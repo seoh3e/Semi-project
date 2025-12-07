@@ -6,6 +6,10 @@ from typing import Optional, List, Dict
 from .models import IntermediateEvent, LeakRecord
 
 
+# 기본 포맷:
+# Recent defacement reported by Hax.or: https://sadra-kss.ir https://sadra-kss.ir
+
+
 def extract_urls(text: str) -> List[str]:
     urls = re.findall(r"(https?://\S+)", text)
     cleaned = [u.rstrip(").,") for u in urls]
@@ -33,7 +37,9 @@ def extract_attacker_aliases(text: str) -> List[str]:
     return list(dict.fromkeys(aliases))
 
 
-def parse_ctifeeds(raw_text: str, message_id=None, message_url=None) -> IntermediateEvent:
+def parse_ctifeeds(
+    raw_text: str, message_id=None, message_url=None
+) -> IntermediateEvent:
     lower = raw_text.lower()
 
     urls = extract_urls(raw_text)
@@ -50,7 +56,7 @@ def parse_ctifeeds(raw_text: str, message_id=None, message_url=None) -> Intermed
         tags.append("data_breach")
 
     return IntermediateEvent(
-        source_channel="Telegram:Cyber Threat Intelligence Feeds",
+        source_channel="@ctifeeds",
         raw_text=raw_text.strip(),
         message_id=message_id,
         message_url=message_url,
@@ -86,19 +92,15 @@ def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
         post_id=str(event.message_id) if event.message_id else "",
         author=None,
         posted_at=None,
-
         leak_types=leak_types,
         estimated_volume=None,
         file_formats=[],
-
         target_service=target_service_val,
         domains=domains_val,
         country=None,
-
         threat_claim=event.raw_text,
         deal_terms=None,
         confidence="medium",
-
         screenshot_refs=[],
         osint_seeds=osint_seeds,
     )

@@ -6,11 +6,14 @@ from typing import Optional, List
 from app.models import IntermediateEvent, LeakRecord
 
 
-#─────────────────────────────────────────────
+# ─────────────────────────────────────────────
 # 1) raw_text → IntermediateEvent
-#─────────────────────────────────────────────
+# ─────────────────────────────────────────────
 
-def parse_RansomFeedNews(raw_text: str, message_id=None, message_url=None) -> IntermediateEvent:
+
+def parse_RansomFeedNews(
+    raw_text: str, message_id=None, message_url=None
+) -> IntermediateEvent:
     """
     RansomFeedNews 채널 메시지 파서.
     """
@@ -23,35 +26,35 @@ def parse_RansomFeedNews(raw_text: str, message_id=None, message_url=None) -> In
     urls: List[str] = []
 
     # 기본 포맷:
-    # ID: 27651
-    # ⚠ Thu, 04 Dec 2025 09:25:47 CET
-    # 🐺 qilin
-    # 🎯 Yellow Cab of Columbus, USA
-    # 🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27651
+    # ID: 27710
+    # ⚠️ Sat, 06 Dec 2025 18:43:27 CET
+    # 🥷 nightspire
+    # 🎯 Ermat Grup, Turkey
+    # 🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27710
 
-    for line in lines:
+    for idx, line in enumerate(lines):
         # 날짜 정보
-        if "CET" in line or "UTC" in line:
+        if idx == 1:
             published_date_text = line.strip()
 
         # 그룹명
-        if "🐺" in line or "🎭" in line or "👿" in line or "😈" in line or "☠" in line:
+        if idx == 2:
             parts = line.split()
             if len(parts) > 1:
                 group = " ".join(parts[1:]).strip()
 
         # 피해자
-        if "🎯" in line:
+        if idx == 3:
             parts = line.split("🎯")
             if len(parts) > 1:
                 victim = parts[1].strip()
 
         # URL
-        if "http" in line:
+        if idx == 4:
             urls.append(line.strip())
 
     return IntermediateEvent(
-        source_channel="RansomFeedNews",
+        source_channel="@RansomFeedNews",
         raw_text=raw_text,
         message_id=message_id,
         message_url=message_url,
@@ -63,9 +66,10 @@ def parse_RansomFeedNews(raw_text: str, message_id=None, message_url=None) -> In
     )
 
 
-#─────────────────────────────────────────────
+# ─────────────────────────────────────────────
 # 2) IntermediateEvent → LeakRecord 변환기
-#─────────────────────────────────────────────
+# ─────────────────────────────────────────────
+
 
 def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
     """
@@ -79,19 +83,15 @@ def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
         post_id=str(event.message_id) if event.message_id else "",
         author=None,
         posted_at=None,
-
         leak_types=[],
         estimated_volume=None,
         file_formats=[],
-
         target_service=event.victim_name,
         domains=[],
         country=None,
-
         threat_claim=event.group_name,
         deal_terms=None,
         confidence="medium",
-
         screenshot_refs=[],
         osint_seeds={"urls": event.urls},
     )

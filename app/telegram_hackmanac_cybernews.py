@@ -6,11 +6,14 @@ from typing import Optional, List
 from app.models import IntermediateEvent, LeakRecord
 
 
-#─────────────────────────────────────────────
+# ─────────────────────────────────────────────
 # 1) raw_text → IntermediateEvent
-#─────────────────────────────────────────────
+# ─────────────────────────────────────────────
 
-def parse_hackmanac_cybernews(raw_text: str, message_id=None, message_url=None) -> IntermediateEvent:
+
+def parse_hackmanac_cybernews(
+    raw_text: str, message_id=None, message_url=None
+) -> IntermediateEvent:
     """
     hackmanac_cybernews 채널 메시지 파서.
     """
@@ -37,7 +40,6 @@ def parse_hackmanac_cybernews(raw_text: str, message_id=None, message_url=None) 
     # Observed: Dec 5, 2025
     # Status: Pending verification
     #
-    # Source: https://www.kankyo-kanri.co.jp/wp-content/uploads/2025/12/2512%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B.pdf
     # —
     # About this post:
     # Hackmanac provides early warning and cyber situational awareness through its social channels. This alert is based on publicly available information that our analysts retrieved from clear and dark web sources. No confidential or proprietary data was downloaded, copied, or redistributed, and sensitive details were redacted from the attached screenshot(s).
@@ -70,21 +72,22 @@ def parse_hackmanac_cybernews(raw_text: str, message_id=None, message_url=None) 
                 urls.append(parts[1].strip())
 
     return IntermediateEvent(
-        source_channel="hackmanac_cybernews",
+        source_channel="@hackmanac_cybernews",
         raw_text=raw_text,
         message_id=message_id,
         message_url=message_url,
         group_name=group,
         victim_name=victim,
-        published_at=published_date_text,
+        published_at_text=published_date_text,
         urls=urls,
         tags=[],
     )
 
 
-#─────────────────────────────────────────────
+# ─────────────────────────────────────────────
 # 2) IntermediateEvent → LeakRecord 변환기
-#─────────────────────────────────────────────
+# ─────────────────────────────────────────────
+
 
 def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
     """
@@ -99,7 +102,7 @@ def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
             if len(parts) > 1:
                 flag = parts[0].strip()[:2]
                 OFFSET = 0x1F1E6  # Regional Indicator Symbol 'A' 시작
-                country = ''.join(chr(ord(c) - OFFSET + ord('A')) for c in flag)
+                country = "".join(chr(ord(c) - OFFSET + ord("A")) for c in flag)
 
     return LeakRecord(
         collected_at=date.today(),
@@ -107,20 +110,16 @@ def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
         post_title=f"{event.group_name or ''} → {event.victim_name or ''}",
         post_id=str(event.message_id) if event.message_id else "",
         author=None,
-        posted_at=datetime.strptime(event.published_at, '%b %d, %Y').date(),
-
+        posted_at=datetime.strptime(event.published_at, "%b %d, %Y").date(),
         leak_types=[],
         estimated_volume=None,
         file_formats=[],
-
         target_service=event.victim_name,
         domains=[],
         country=country,
-
         threat_claim=event.group_name,
         deal_terms=None,
         confidence="medium",
-
         screenshot_refs=[],
         osint_seeds={"urls": event.urls},
     )
