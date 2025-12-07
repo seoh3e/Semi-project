@@ -10,7 +10,7 @@ from app.models import IntermediateEvent, LeakRecord
 # 1) raw_text → IntermediateEvent
 #─────────────────────────────────────────────
 
-def parse_ransomfeednews(raw_text: str, message_id=None, message_url=None) -> IntermediateEvent:
+def parse_RansomFeedNews(raw_text: str, message_id=None, message_url=None) -> IntermediateEvent:
     """
     RansomFeedNews 채널 메시지 파서.
     """
