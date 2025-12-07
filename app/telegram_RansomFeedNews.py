@@ -1,7 +1,7 @@
-# app/telegram_hackmanac_cybernews.py
+# app/telegram_ransomfeednews.py
 
 import re
-from datetime import date, datetime
+from datetime import date
 from typing import Optional, List
 from app.models import IntermediateEvent, LeakRecord
 
@@ -11,11 +11,11 @@ from app.models import IntermediateEvent, LeakRecord
 # ─────────────────────────────────────────────
 
 
-def parse_hackmanac_cybernews(
+def parse_RansomFeedNews(
     raw_text: str, message_id=None, message_url=None
 ) -> IntermediateEvent:
     """
-    hackmanac_cybernews 채널 메시지 파서.
+    RansomFeedNews 채널 메시지 파서.
     """
 
     lines = raw_text.splitlines()
@@ -26,53 +26,35 @@ def parse_hackmanac_cybernews(
     urls: List[str] = []
 
     # 기본 포맷:
-    # 🚨Cyberattack Alert ‼️
-    #
-    # 🇿🇲Zambia - National Health Insurance Scheme (NHIS)
-    #
-    # Nova hacking group claims to have breached National Health Insurance Scheme (NHIS).
-    #
-    # Allegedly, the attackers exfiltrated patients data.
-    #
-    # Sector: Insurance
-    # Threat class: Cybercrime
-    #
-    # Observed: Dec 5, 2025
-    # Status: Pending verification
-    #
-    # —
-    # About this post:
-    # Hackmanac provides early warning and cyber situational awareness through its social channels. This alert is based on publicly available information that our analysts retrieved from clear and dark web sources. No confidential or proprietary data was downloaded, copied, or redistributed, and sensitive details were redacted from the attached screenshot(s).
-    #
-    # For more details about this incident, our ESIX impact score, and additional context, visit HackRisk.io.
+    # ID: 27710
+    # ⚠️ Sat, 06 Dec 2025 18:43:27 CET
+    # 🥷 nightspire
+    # 🎯 Ermat Grup, Turkey
+    # 🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27710
 
     for idx, line in enumerate(lines):
         # 날짜 정보
-        if "Observed:" in line:
-            parts = line.split("Observed:")
-            if len(parts) > 1:
-                published_date_text = parts[1].strip()
+        if idx == 1:
+            published_date_text = line.strip()
 
         # 그룹명
-        if "hacking group" in line:
-            parts = line.split("hacking group")
+        if idx == 2:
+            parts = line.split()
             if len(parts) > 1:
-                group = parts[0].strip()
+                group = " ".join(parts[1:]).strip()
 
         # 피해자
-        if idx == 2:
-            parts = line.split(" - ")
+        if idx == 3:
+            parts = line.split("🎯")
             if len(parts) > 1:
                 victim = parts[1].strip()
 
         # URL
-        if "Source:" in line:
-            parts = line.split("Source:")
-            if len(parts) > 1:
-                urls.append(parts[1].strip())
+        if idx == 4:
+            urls.append(line.strip())
 
     return IntermediateEvent(
-        source_channel="@hackmanac_cybernews",
+        source_channel="@RansomFeedNews",
         raw_text=raw_text,
         message_id=message_id,
         message_url=message_url,
@@ -94,29 +76,19 @@ def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
     파싱된 IntermediateEvent → LeakRecord 표준 구조 변환
     """
 
-    lines = event.raw_text.splitlines()
-
-    for idx, line in enumerate(lines):
-        if idx == 2:
-            parts = line.split(" - ")
-            if len(parts) > 1:
-                flag = parts[0].strip()[:2]
-                OFFSET = 0x1F1E6  # Regional Indicator Symbol 'A' 시작
-                country = "".join(chr(ord(c) - OFFSET + ord("A")) for c in flag)
-
     return LeakRecord(
         collected_at=date.today(),
         source=event.source_channel,
         post_title=f"{event.group_name or ''} → {event.victim_name or ''}",
         post_id=str(event.message_id) if event.message_id else "",
         author=None,
-        posted_at=datetime.strptime(event.published_at, "%b %d, %Y").date(),
+        posted_at=None,
         leak_types=[],
         estimated_volume=None,
         file_formats=[],
         target_service=event.victim_name,
         domains=[],
-        country=country,
+        country=None,
         threat_claim=event.group_name,
         deal_terms=None,
         confidence="medium",

@@ -1,5 +1,3 @@
-# app/telegram_runner.py
-
 """
 텔레그램 채널에서 실제 메시지를 읽어와서
 RansomFeedNews 파서 → IntermediateEvent → LeakRecord → 저장/알림
@@ -21,6 +19,10 @@ from .telegram_ransomfeednews import (
     parse_ransomfeednews,
     intermediate_to_leakrecord,
 )
+from .telegram_ctifeeds_parser import (
+    parse_ctifeeds,
+    intermediate_to_leakrecord as ctifeeds_to_leakrecord,
+)
 
 # ───────────────────── 설정 ─────────────────────
 
@@ -35,8 +37,8 @@ ChannelParser = Tuple[
 ]
 
 CHANNEL_PARSERS: Dict[str, ChannelParser] = {
-    # 나중에 여기다가 다른 채널도 추가할 거야.
     "RansomFeedNews": (parse_ransomfeednews, intermediate_to_leakrecord),
+    "ctifeeds": (parse_ctifeeds, ctifeeds_to_leakrecord),
 }
 
 MESSAGES_PER_CHANNEL = 50  # 채널당 최근 몇 개까지 처리할지

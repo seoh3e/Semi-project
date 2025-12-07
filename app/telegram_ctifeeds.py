@@ -3,34 +3,17 @@ from urllib.parse import urlparse
 from datetime import date
 from typing import Optional, List, Dict
 
-from telethon import TelegramClient
-
-from .models import LeakRecord
-from .storage import add_leak_record
-from .notifier import notify_new_leak
+from .models import IntermediateEvent, LeakRecord
 
 
-# ─────────────────────────────────────────
-# 1) 텔레그램 클라이언트 설정
-# ─────────────────────────────────────────
-
-API_ID = 34221825
-API_HASH = "44a948711e6034324886bebc6abb0a5d"
-CHANNEL = "@ctifeeds"
-
-client = TelegramClient("ctifeeds_session", API_ID, API_HASH)
+# 기본 포맷:
+# Recent defacement reported by Hax.or: https://sadra-kss.ir https://sadra-kss.ir
 
 
-# ─────────────────────────────────────────
-# 2) 유틸 함수들
-# ─────────────────────────────────────────
-
-def extract_first_url(text: str) -> Optional[str]:
-    """문장 안에서 최초의 http/https URL 하나 추출."""
-    m = re.search(r"(https?://\S+)", text)
-    if not m:
-        return None
-    return m.group(1).rstrip(").,")
+def extract_urls(text: str) -> List[str]:
+    urls = re.findall(r"(https?://\S+)", text)
+    cleaned = [u.rstrip(").,") for u in urls]
+    return list(dict.fromkeys(cleaned))
 
 
 def domain_from_url(url: str) -> Optional[str]:
@@ -41,12 +24,6 @@ def domain_from_url(url: str) -> Optional[str]:
 
 
 def extract_attacker_aliases(text: str) -> List[str]:
-    """
-    예:
-      - 'Recent defacement reported by H4x0r: https://...'
-      - 'Hacked BY XYZEAZ'
-    공격자/그룹 닉네임 뽑기.
-    """
     aliases: List[str] = []
 
     m = re.search(r"reported by\s+([^:]+):", text, re.IGNORECASE)
@@ -60,111 +37,70 @@ def extract_attacker_aliases(text: str) -> List[str]:
     return list(dict.fromkeys(aliases))
 
 
-# ─────────────────────────────────────────
-# 3) ctifeeds 한 메시지 → LeakRecord 변환
-# ─────────────────────────────────────────
+def parse_ctifeeds(
+    raw_text: str, message_id=None, message_url=None
+) -> IntermediateEvent:
+    lower = raw_text.lower()
 
-def parse_ctifeeds_message(message) -> Optional[LeakRecord]:
-    """
-    Cyber Threat Intelligence Feeds(@ctifeeds)의 메시지 1건을
-    LeakRecord로 변환. defacement/유출 관련이 아닌 건 None.
-    (Telethon Message 객체 기준)
-    """
-    text = (getattr(message, "message", None) or "").strip()
-    if not text:
-        return None
+    urls = extract_urls(raw_text)
+    first_url = urls[0] if urls else None
+    domain = domain_from_url(first_url) if first_url else None
 
-    lower = text.lower()
+    attacker_aliases = extract_attacker_aliases(raw_text)
+    group = attacker_aliases[0] if attacker_aliases else None
 
-    # ✅ 기존 코드에서 대문자 키워드가 lower와 안 맞는 문제 보정
-    keywords = [
-        "defacement",
-        "data breach",
-        "breach",
-        "leak",
-        "sector:",
-        "threat class:",
-        "status:",
-        "observed:",
-        "source:",
-    ]
-    if not any(k in lower for k in keywords):
-        return None
-
-    url = extract_first_url(text)
-    domain = domain_from_url(url) if url else None
-    attacker_aliases = extract_attacker_aliases(text)
-
-    post_title_val = text
-    posted_at_val = message.date.date() if getattr(message, "date", None) else None
-
-    # 채널 포스트는 작성자 정보가 없는 경우가 많아서 None 처리
-    author_val = None
-
-    leak_types: List[str] = []
-    if "defacement" in lower:
-        leak_types.append("web_defacement")
+    tags: List[str] = []
+    if "defacement" in lower or "hacked by" in lower:
+        tags.append("web_defacement")
     if "data breach" in lower or "breach" in lower or "leak" in lower:
+        tags.append("data_breach")
+
+    return IntermediateEvent(
+        source_channel="@ctifeeds",
+        raw_text=raw_text.strip(),
+        message_id=message_id,
+        message_url=message_url,
+        group_name=group,
+        victim_name=domain,
+        published_at_text=None,
+        urls=urls,
+        tags=tags,
+    )
+
+
+def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
+    leak_types: List[str] = []
+    if "web_defacement" in (event.tags or []):
+        leak_types.append("web_defacement")
+    if "data_breach" in (event.tags or []):
         leak_types.append("data_breach")
 
-    confidence_val = "medium"
+    target_service_val = event.victim_name
+    domains_val = [event.victim_name] if event.victim_name else []
 
     osint_seeds: Dict = {
-        "domains": [domain] if domain else [],
-        "urls": [url] if url else [],
-        "attacker_aliases": attacker_aliases,
-        "raw_text": text,
+        "urls": event.urls,
+        "attacker_aliases": [event.group_name] if event.group_name else [],
+        "raw_text": event.raw_text,
+        "message_url": event.message_url,
     }
 
     return LeakRecord(
         collected_at=date.today(),
-        source="Telegram:Cyber Threat Intelligence Feeds",
-        post_title=post_title_val,
-        post_id=str(message.id),
-        author=author_val,
-        posted_at=posted_at_val,
-
+        source=event.source_channel,
+        post_title=event.raw_text,
+        post_id=str(event.message_id) if event.message_id else "",
+        author=None,
+        posted_at=None,
         leak_types=leak_types,
         estimated_volume=None,
         file_formats=[],
-
-        target_service=domain,
-        domains=[domain] if domain else [],
+        target_service=target_service_val,
+        domains=domains_val,
         country=None,
-
-        threat_claim=text,
+        threat_claim=event.raw_text,
         deal_terms=None,
-        confidence=confidence_val,
-
+        confidence="medium",
         screenshot_refs=[],
         osint_seeds=osint_seeds,
     )
-
-
-# ─────────────────────────────────────────
-# 4) 최근 메시지 여러 개 불러와서 저장 + 알림
-# ─────────────────────────────────────────
-
-async def fetch_ctifeeds_defacements(limit: int = 50) -> None:
-    parsed_count = 0
-
-    async for message in client.iter_messages(CHANNEL, limit=limit):
-        record = parse_ctifeeds_message(message)
-        if record is None:
-            continue
-
-        parsed_count += 1
-        add_leak_record(record)
-        notify_new_leak(record)
-
-    print(f"[INFO] ctifeeds에서 {parsed_count}건의 유출/defacement 이벤트를 파싱했습니다.")
-
-
-async def main():
-    await client.start()
-    await fetch_ctifeeds_defacements(limit=30)
-
-
-if __name__ == "__main__":
-    import asyncio
-    asyncio.run(main())
