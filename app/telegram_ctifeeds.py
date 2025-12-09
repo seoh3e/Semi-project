@@ -4,7 +4,7 @@ import re
 from datetime import date
 from typing import Optional, List
 from .models import IntermediateEvent, LeakRecord
-from telethon.tl.types import MessageMediaWebPage,WebPage
+from urllib.parse import urlparse
 
 
 # ─────────────────────────────────────────────
@@ -13,7 +13,7 @@ from telethon.tl.types import MessageMediaWebPage,WebPage
 
 
 def parse_ctifeeds(
-    raw_text: str, message_id=None, message_url=None,message_media=None
+    raw_text: str, message_id=None, message_url=None
 ) -> IntermediateEvent:
     """
     ctifeeds 채널 메시지 파서.
@@ -27,14 +27,11 @@ def parse_ctifeeds(
     # 기본 포맷:
     # Recent defacement reported by Hax.or: http://psb.mikenongomulyo.sch.id http://psb.mikenongomulyo.sch.id
 
-    # MessageMediaWebPage(webpage=WebPage(id=8771885212922184846, url='https://psb.mikenongomulyo.sch.id/', display_url='psb.mikenongomulyo.sch.id', hash=0, has_large_media=False, video_cover_photo=False, type='article', site_name='psb.mikenongomulyo.sch.id', title='PPDB ONLINE | HACKED BY MIKU', description='Mari bergabung Bersama Kami di HACKED BY MIKU, Pendaftaran Peserta didik Baru Tahun 2026/2027 Kembali dibuka', photo=None, embed_url=None, embed_type=None, embed_width=None, embed_height=None, duration=None, author=None, document=None, cached_page=None, attributes=[]))
+    url=re.search(r'(https?://[^\s]+)', raw_text).group(1)
 
-    if message_media:
-        urls.append(message_media.webpage.display_url)
+    urls.append(url)
 
-        victim=message_media.webpage.site_name
-
-        group=message_media.webpage.title[message_media.webpage.title.lower().find("hacked by")+10:]
+    victim=urlparse(url).netloc
 
     return IntermediateEvent(
         source_channel="@ctifeeds",
@@ -54,7 +51,7 @@ def parse_ctifeeds(
 # ─────────────────────────────────────────────
 
 
-def intermediate_to_ctifeeds_leakrecord(event: IntermediateEvent) -> LeakRecord:
+def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
     """
     파싱된 IntermediateEvent → LeakRecord 표준 구조 변환
     """

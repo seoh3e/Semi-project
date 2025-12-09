@@ -4,8 +4,8 @@ import os
 import asyncio
 from telethon import TelegramClient
 
-API_ID = int(os.environ["TELEGRAM_API_ID"])
-API_HASH = os.environ["TELEGRAM_API_HASH"]
+API_ID = int(os.environ["TG_API_ID"])
+API_HASH = os.environ["TG_API_HASH"]
 SESSION = "semi_project"   # login_test 때 썼던 이름과 동일해야 함
 
 

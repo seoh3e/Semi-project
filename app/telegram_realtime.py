@@ -5,16 +5,28 @@ import asyncio
 from telethon import TelegramClient, events
 
 from .telegram_RansomFeedNews import (
-    parse_ransomfeednews,
-    intermediate_to_leakrecord,
+    parse_RansomFeedNews,
+    intermediate_to_leakrecord as ransomfeed_to_leakrecord,
+)
+from .telegram_ctifeeds import (
+    parse_ctifeeds,
+    intermediate_to_leakrecord as ctifeeds_to_leakrecord,
+)
+from .telegram_hackmanac_cybernews import (
+    parse_hackmanac_cybernews,
+    intermediate_to_leakrecord as hackmanac_to_leakrecord,
+)
+from .telegram_venarix import (
+    parse_venarix,
+    intermediate_to_leakrecord as venarix_to_leakrecord,
 )
 from .models import LeakRecord
 from .storage import add_leak_record
 from .notifier import notify_new_leak
 
 
-API_ID = int(os.environ["TELEGRAM_API_ID"])
-API_HASH = os.environ["TELEGRAM_API_HASH"]
+API_ID = int(os.environ["TG_API_ID"])
+API_HASH = os.environ["TG_API_HASH"]
 SESSION = "semi_project"
 
 

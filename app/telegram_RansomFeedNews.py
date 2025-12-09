@@ -32,7 +32,7 @@ def parse_RansomFeedNews(
     # 🎯 Quality Companies, USA
     # 🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27781
 
-    published_date_text = datetime.strptime(lines[1][3:-5], "%a, %d %b %Y %H:%M:%S").date()
+    published_date_text = datetime.strptime(lines[1][2:-5], "%a, %d %b %Y %H:%M:%S").date()
 
     group = lines[2][2:-1]
 
@@ -58,7 +58,7 @@ def parse_RansomFeedNews(
 # ─────────────────────────────────────────────
 
 
-def intermediate_to_RansomFeedNews_leakrecord(event: IntermediateEvent) -> LeakRecord:
+def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
     """
     파싱된 IntermediateEvent → LeakRecord 표준 구조 변환
     """

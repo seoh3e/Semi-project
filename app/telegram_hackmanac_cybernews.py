@@ -76,7 +76,7 @@ def parse_hackmanac_cybernews(
 # ─────────────────────────────────────────────
 
 
-def intermediate_to_hackmanac_cybernews_leakrecord(event: IntermediateEvent) -> LeakRecord:
+def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
     """
     파싱된 IntermediateEvent → LeakRecord 표준 구조 변환
     """

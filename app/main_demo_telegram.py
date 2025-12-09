@@ -23,19 +23,19 @@ from .notifier import notify_new_leak
 from .models import LeakRecord
 from .telegram_RansomFeedNews import (
     parse_RansomFeedNews,
-    intermediate_to_RansomFeedNews_leakrecord,
+    intermediate_to_leakrecord as ransomfeed_to_leakrecord,
 )
 from .telegram_ctifeeds import (
     parse_ctifeeds,
-    intermediate_to_ctifeeds_leakrecord,
+    intermediate_to_leakrecord as ctifeeds_to_leakrecord,
 )
 from .telegram_hackmanac_cybernews import (
     parse_hackmanac_cybernews,
-    intermediate_to_hackmanac_cybernews_leakrecord,
+    intermediate_to_leakrecord as hackmanac_to_leakrecord,
 )
 from .telegram_venarix import (
     parse_venarix,
-    intermediate_to_venarix_leakrecord,
+    intermediate_to_leakrecord as venarix_to_leakrecord,
 )
 from .storage import append_leak_record_csv
 
@@ -121,7 +121,7 @@ ID: 27781
         return
 
     # 2) IntermediateEvent → LeakRecord
-    record: LeakRecord = intermediate_to_RansomFeedNews_leakrecord(event)
+    record: LeakRecord = ransomfeed_to_leakrecord(event)
     print(record)
     # 3) 공통 파이프라인 태우기
     process_leak_record(record)
@@ -148,7 +148,6 @@ Recent defacement reported by Hax.or: http://psb.mikenongomulyo.sch.id http://ps
         raw_text=raw_message,
         message_id=123,  # 데모용 임의 값
         message_url="https://t.me/ctifeeds/123",
-        message_media=MessageMediaWebPage(webpage=WebPage(id=8771885212922184846, url='https://psb.mikenongomulyo.sch.id/', display_url='psb.mikenongomulyo.sch.id', hash=0, has_large_media=False, video_cover_photo=False, type='article', site_name='psb.mikenongomulyo.sch.id', title='PPDB ONLINE | HACKED BY MIKU', description='Mari bergabung Bersama Kami di HACKED BY MIKU, Pendaftaran Peserta didik Baru Tahun 2026/2027 Kembali dibuka', photo=None, embed_url=None, embed_type=None, embed_width=None, embed_height=None, duration=None, author=None, document=None, cached_page=None, attributes=[])),
     )
 
     # group / victim 둘 다 없으면 의미 없는 메시지로 간주
@@ -157,7 +156,7 @@ Recent defacement reported by Hax.or: http://psb.mikenongomulyo.sch.id http://ps
         return
 
     # 2) IntermediateEvent → LeakRecord
-    record: LeakRecord = intermediate_to_ctifeeds_leakrecord(event)
+    record: LeakRecord = ctifeeds_to_leakrecord(event)
 
     # 3) 공통 파이프라인 태우기
     process_leak_record(record)
@@ -207,7 +206,7 @@ For more details about this incident, our ESIX impact score, and additional cont
         return
 
     # 2) IntermediateEvent → LeakRecord
-    record: LeakRecord = intermediate_to_hackmanac_cybernews_leakrecord(event)
+    record: LeakRecord = hackmanac_to_leakrecord(event)
     print(record)
     # 3) 공통 파이프라인 태우기
     process_leak_record(record)
@@ -248,7 +247,7 @@ For datailed insights on this incident, sign up for free at https://www.venarix.
         return
 
     # 2) IntermediateEvent → LeakRecord
-    record: LeakRecord = intermediate_venarix_to_leakrecord(event)
+    record: LeakRecord = venarix_to_leakrecord(event)
 
     # 3) 공통 파이프라인 태우기
     process_leak_record(record)
@@ -265,7 +264,7 @@ if __name__ == "__main__":
     # run_generic_telegram_demo()
 
     # 2) RansomFeedNews 채널 포맷 테스트
-    # run_RansomFeedNews_demo()
+    run_RansomFeedNews_demo()
 
     # 3) ctifeeds 채널 포맷 테스트
     # run_ctifeeds_demo()
