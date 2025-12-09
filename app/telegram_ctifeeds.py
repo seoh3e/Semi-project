@@ -1,106 +1,80 @@
+# app/telegram_ctifeeds.py
+
 import re
-from urllib.parse import urlparse
 from datetime import date
-from typing import Optional, List, Dict
-
+from typing import Optional, List
 from .models import IntermediateEvent, LeakRecord
+from telethon.tl.types import MessageMediaWebPage,WebPage
 
 
-# 기본 포맷:
-# Recent defacement reported by Hax.or: https://sadra-kss.ir https://sadra-kss.ir
-
-
-def extract_urls(text: str) -> List[str]:
-    urls = re.findall(r"(https?://\S+)", text)
-    cleaned = [u.rstrip(").,") for u in urls]
-    return list(dict.fromkeys(cleaned))
-
-
-def domain_from_url(url: str) -> Optional[str]:
-    try:
-        return urlparse(url).netloc.lower()
-    except Exception:
-        return None
-
-
-def extract_attacker_aliases(text: str) -> List[str]:
-    aliases: List[str] = []
-
-    m = re.search(r"reported by\s+([^:]+):", text, re.IGNORECASE)
-    if m:
-        aliases.append(m.group(1).strip())
-
-    m = re.search(r"Hacked BY\s+([^\s]+)", text, re.IGNORECASE)
-    if m:
-        aliases.append(m.group(1).strip())
-
-    return list(dict.fromkeys(aliases))
+# ─────────────────────────────────────────────
+# 1) raw_text → IntermediateEvent
+# ─────────────────────────────────────────────
 
 
 def parse_ctifeeds(
-    raw_text: str, message_id=None, message_url=None
+    raw_text: str, message_id=None, message_url=None,message_media=None
 ) -> IntermediateEvent:
-    lower = raw_text.lower()
+    """
+    ctifeeds 채널 메시지 파서.
+    """
 
-    urls = extract_urls(raw_text)
-    first_url = urls[0] if urls else None
-    domain = domain_from_url(first_url) if first_url else None
+    urls: List[str] = []
+    victim = None
+    group = None
+    published_date_text = None
 
-    attacker_aliases = extract_attacker_aliases(raw_text)
-    group = attacker_aliases[0] if attacker_aliases else None
+    # 기본 포맷:
+    # Recent defacement reported by Hax.or: http://psb.mikenongomulyo.sch.id http://psb.mikenongomulyo.sch.id
 
-    tags: List[str] = []
-    if "defacement" in lower or "hacked by" in lower:
-        tags.append("web_defacement")
-    if "data breach" in lower or "breach" in lower or "leak" in lower:
-        tags.append("data_breach")
+    # MessageMediaWebPage(webpage=WebPage(id=8771885212922184846, url='https://psb.mikenongomulyo.sch.id/', display_url='psb.mikenongomulyo.sch.id', hash=0, has_large_media=False, video_cover_photo=False, type='article', site_name='psb.mikenongomulyo.sch.id', title='PPDB ONLINE | HACKED BY MIKU', description='Mari bergabung Bersama Kami di HACKED BY MIKU, Pendaftaran Peserta didik Baru Tahun 2026/2027 Kembali dibuka', photo=None, embed_url=None, embed_type=None, embed_width=None, embed_height=None, duration=None, author=None, document=None, cached_page=None, attributes=[]))
+
+    if message_media:
+        urls.append(message_media.webpage.display_url)
+
+        victim=message_media.webpage.site_name
+
+        group=message_media.webpage.title[message_media.webpage.title.lower().find("hacked by")+10:]
 
     return IntermediateEvent(
         source_channel="@ctifeeds",
-        raw_text=raw_text.strip(),
+        raw_text=raw_text,
         message_id=message_id,
         message_url=message_url,
         group_name=group,
-        victim_name=domain,
-        published_at_text=None,
+        victim_name=victim,
+        published_at_text=published_date_text,
         urls=urls,
-        tags=tags,
+        tags=[],
     )
 
 
-def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
-    leak_types: List[str] = []
-    if "web_defacement" in (event.tags or []):
-        leak_types.append("web_defacement")
-    if "data_breach" in (event.tags or []):
-        leak_types.append("data_breach")
+# ─────────────────────────────────────────────
+# 2) IntermediateEvent → LeakRecord 변환기
+# ─────────────────────────────────────────────
 
-    target_service_val = event.victim_name
-    domains_val = [event.victim_name] if event.victim_name else []
 
-    osint_seeds: Dict = {
-        "urls": event.urls,
-        "attacker_aliases": [event.group_name] if event.group_name else [],
-        "raw_text": event.raw_text,
-        "message_url": event.message_url,
-    }
+def intermediate_to_ctifeeds_leakrecord(event: IntermediateEvent) -> LeakRecord:
+    """
+    파싱된 IntermediateEvent → LeakRecord 표준 구조 변환
+    """
 
     return LeakRecord(
         collected_at=date.today(),
         source=event.source_channel,
-        post_title=event.raw_text,
-        post_id=str(event.message_id) if event.message_id else "",
+        post_title=f"{event.group_name or ''} → {event.victim_name or ''}",
+        post_id=str(event.message_id) if event.message_id else '',
         author=None,
         posted_at=None,
-        leak_types=leak_types,
+        leak_types=[],
         estimated_volume=None,
         file_formats=[],
-        target_service=target_service_val,
-        domains=domains_val,
+        target_service=event.victim_name,
+        domains=event.urls,
         country=None,
-        threat_claim=event.raw_text,
+        threat_claim=event.group_name,
         deal_terms=None,
         confidence="medium",
         screenshot_refs=[],
-        osint_seeds=osint_seeds,
+        osint_seeds={"urls": event.urls},
     )
