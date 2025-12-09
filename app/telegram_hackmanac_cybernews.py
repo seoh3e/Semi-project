@@ -4,7 +4,7 @@ import re
 from datetime import date, datetime
 from typing import Optional, List
 
-from app.models import IntermediateEvent, LeakRecord
+from .models import IntermediateEvent, LeakRecord
 
 
 # ─────────────────────────────────────────────
@@ -35,13 +35,13 @@ def parse_hackmanac_cybernews(
 
         # 날짜 정보 (예: "Observed: Dec 5, 2025")
         if "Observed:" in line:
-            parts = line.split("Observed:")
+            parts = line.split("Observed:", 1)
             if len(parts) > 1:
                 published_date_text = parts[1].strip()
 
         # 그룹명 (예: "Nova hacking group claims to have breached ...")
         if "hacking group" in line:
-            parts = line.split("hacking group")
+            parts = line.split("hacking group", 1)
             if len(parts) > 0:
                 group = parts[0].strip()
 
@@ -55,7 +55,7 @@ def parse_hackmanac_cybernews(
 
         # URL (예: "Source: https://...")
         if "Source:" in line:
-            parts = line.split("Source:")
+            parts = line.split("Source:", 1)
             if len(parts) > 1:
                 url = parts[1].strip()
                 if url:
@@ -79,15 +79,27 @@ def parse_hackmanac_cybernews(
 # ─────────────────────────────────────────────
 
 
-def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
+def intermediate_to_hackmanac_cybernews_leakrecord(
+    event: IntermediateEvent,
+) -> LeakRecord:
     """
     파싱된 IntermediateEvent → LeakRecord 표준 구조 변환.
-    published_at_text가 없거나 파싱 실패하면 오늘 날짜(date.today()) 사용.
-    국기 이모지를 국가코드(예: 🇿🇲 → ZM)로 변환 시도, 실패하면 None.
+    - published_at_text가 없거나 파싱 실패하면 오늘 날짜(date.today()) 사용.
+    - 국기 이모지를 국가코드(예: 🇿🇲 → ZM)로 변환 시도, 실패하면 None.
+    - 본문에서 exfiltrated 문장을 찾아 유출량/유형 추출.
+    - Status: 값에 따라 confidence 매핑.
     """
+
+    status_to_confidence = {
+        "Pending verification": "medium",
+        "Confirmed": "high",
+    }
 
     lines = event.raw_text.splitlines()
     country: Optional[str] = None
+    estimated_volume: Optional[str] = None
+    leak_types: List[str] = []
+    status: Optional[str] = None
 
     # 두 번째 라인(예: "🇿🇲Zambia - National Health Insurance Scheme (NHIS)")
     # 에서 맨 앞의 국기 이모지를 ISO2 코드로 변환 시도
@@ -102,8 +114,26 @@ def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
             except Exception:
                 country = None
 
+    # 본문에서 유출량/유형, Status 추출
+    for line in lines:
+        line = line.strip()
+
+        # 예: "Allegedly, the attackers exfiltrated 50GB of data, including personal information."
+        if " exfiltrated " in line:
+            phrase = line.split(" exfiltrated ", 1)[1].rstrip(".")
+            if " of " in phrase:
+                estimated_volume = phrase.split(" of ", 1)[0].strip()
+                if ", including " in phrase:
+                    leak_types_part = phrase.split(", including ", 1)[1].rstrip(".")
+                    leak_types.append(leak_types_part.strip())
+            else:
+                leak_types.append(phrase.strip())
+
+        # 예: "Status: Pending verification"
+        if line.startswith("Status:"):
+            status = line.split("Status:", 1)[1].strip()
+
     # 관측 날짜 파싱
-    posted_at: date
     if getattr(event, "published_at_text", None):
         try:
             posted_at = datetime.strptime(
@@ -114,10 +144,15 @@ def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
     else:
         posted_at = date.today()
 
-    # 타이틀: "그룹 → 피해자" 형태로 간단하게 구성
+    # 타이틀: "그룹 → 피해자" 형태로 구성
     title = f"{event.group_name or ''} → {event.victim_name or ''}".strip()
     if not title or title == "→":
         title = (event.victim_name or event.group_name or "").strip()
+
+    # Status 기반 confidence 설정 (없으면 기본 medium)
+    confidence = "medium"
+    if status:
+        confidence = status_to_confidence.get(status, "medium")
 
     return LeakRecord(
         collected_at=date.today(),
@@ -126,15 +161,15 @@ def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
         post_id=str(event.message_id) if event.message_id is not None else "",
         author=None,
         posted_at=posted_at,
-        leak_types=[],
-        estimated_volume=None,
+        leak_types=leak_types,
+        estimated_volume=estimated_volume,
         file_formats=[],
         target_service=event.victim_name,
         domains=[],
         country=country,
         threat_claim=event.group_name,
         deal_terms=None,
-        confidence="medium",
+        confidence=confidence,
         screenshot_refs=[],
         osint_seeds={"urls": event.urls or []},
     )

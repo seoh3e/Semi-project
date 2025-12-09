@@ -23,19 +23,19 @@ from .notifier import notify_new_leak
 from .models import LeakRecord
 from .telegram_RansomFeedNews import (
     parse_RansomFeedNews,
-    intermediate_to_leakrecord,
+    intermediate_to_RansomFeedNews_leakrecord,
 )
 from .telegram_ctifeeds import (
     parse_ctifeeds,
-    intermediate_to_leakrecord,
+    intermediate_to_ctifeeds_leakrecord,
 )
 from .telegram_hackmanac_cybernews import (
     parse_hackmanac_cybernews,
-    intermediate_to_leakrecord,
+    intermediate_to_hackmanac_cybernews_leakrecord,
 )
 from .telegram_venarix import (
     parse_venarix,
-    intermediate_to_leakrecord,
+    intermediate_to_venarix_leakrecord,
 )
 from .storage import append_leak_record_csv
 
@@ -101,11 +101,11 @@ def run_RansomFeedNews_demo() -> None:
     '이런 형식의 텍스트가 왔다'고 가정하고 파이프라인을 테스트한다.
     """
     raw_message = """
-    ID: 27710 
-⚠️ Sat, 06 Dec 2025 18:43:27 CET 
-🥷 nightspire 
-🎯 Ermat Grup, Turkey 
-🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27710
+ID: 27781 
+⚠️ Sun, 07 Dec 2025 14:42:25 CET 
+🥷 sinobi 
+🎯 Quality Companies, USA 
+🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27781
     """.strip()
 
     # 1) raw → IntermediateEvent
@@ -121,8 +121,8 @@ def run_RansomFeedNews_demo() -> None:
         return
 
     # 2) IntermediateEvent → LeakRecord
-    record: LeakRecord = intermediate_to_leakrecord(event)
-
+    record: LeakRecord = intermediate_to_RansomFeedNews_leakrecord(event)
+    print(record)
     # 3) 공통 파이프라인 태우기
     process_leak_record(record)
 
@@ -140,23 +140,23 @@ def run_ctifeeds_demo() -> None:
     '이런 형식의 텍스트가 왔다'고 가정하고 파이프라인을 테스트한다.
     """
     raw_message = """
-    Recent defacement reported by Hax.or: https://sadra-kss.ir https://sadra-kss.ir
+
     """.strip()
 
     # 1) raw → IntermediateEvent
     event = parse_ctifeeds(
         raw_text=raw_message,
         message_id=123,  # 데모용 임의 값
-        message_url="https://t.me/RansomFeedNews/123",
+        message_url="https://t.me/ctifeeds/123",
     )
 
     # group / victim 둘 다 없으면 의미 없는 메시지로 간주
     if not event.group_name and not event.victim_name:
-        print("[SKIP] RansomFeedNews event without group/victim")
+        print("[SKIP] ctifeeds event without group/victim")
         return
 
     # 2) IntermediateEvent → LeakRecord
-    record: LeakRecord = intermediate_to_leakrecord(event)
+    record: LeakRecord = intermediate_to_ctifeeds_leakrecord(event)
 
     # 3) 공통 파이프라인 태우기
     process_leak_record(record)
@@ -175,18 +175,15 @@ def run_hackmanac_cybernews_demo() -> None:
     '이런 형식의 텍스트가 왔다'고 가정하고 파이프라인을 테스트한다.
     """
     raw_message = """
-    🚨Cyberattack Alert ‼️
+🚨Cyberattack Alert ‼️
 
-🇿🇲Zambia - National Health Insurance Scheme (NHIS)
+🇺🇸USA - Scientology
 
-Nova hacking group claims to have breached National Health Insurance Scheme (NHIS).
+Qilin hacking group claims to have breached Scientology.
 
-Allegedly, the attackers exfiltrated patients data.
-
-Sector: Insurance
+Sector: Organizations
 Threat class: Cybercrime
-
-Observed: Dec 5, 2025
+Observed: Dec 4, 2025
 Status: Pending verification
 
 —
@@ -195,9 +192,6 @@ Hackmanac provides early warning and cyber situational awareness through its soc
 
 For more details about this incident, our ESIX impact score, and additional context, visit HackRisk.io.
     """.strip()
-
-    if raw_message[:21] != "🚨Cyberattack Alert ‼️":
-        return
 
     # 1) raw → IntermediateEvent
     event = parse_hackmanac_cybernews(
@@ -212,8 +206,8 @@ For more details about this incident, our ESIX impact score, and additional cont
         return
 
     # 2) IntermediateEvent → LeakRecord
-    record: LeakRecord = intermediate_to_leakrecord(event)
-
+    record: LeakRecord = intermediate_to_hackmanac_cybernews_leakrecord(event)
+    print(record)
     # 3) 공통 파이프라인 태우기
     process_leak_record(record)
 
@@ -231,29 +225,23 @@ def run_venarix_demo() -> None:
     '이런 형식의 텍스트가 왔다'고 가정하고 파이프라인을 테스트한다.
     """
     raw_message = """
-    🚨 New cyber event 🚨
 
-Threat group: nightspire
-
-Victim: <img style='width:30px;', src='http://nspiremkiq44z>
-
-For detailed insights on this incident, sign up for free at https://www.venarix.com
     """.strip()
 
     # 1) raw → IntermediateEvent
     event = parse_venarix(
         raw_text=raw_message,
         message_id=123,  # 데모용 임의 값
-        message_url="https://t.me/RansomFeedNews/123",
+        message_url="https://t.me/venarix/123",
     )
 
     # group / victim 둘 다 없으면 의미 없는 메시지로 간주
     if not event.group_name and not event.victim_name:
-        print("[SKIP] RansomFeedNews event without group/victim")
+        print("[SKIP] venarix event without group/victim")
         return
 
     # 2) IntermediateEvent → LeakRecord
-    record: LeakRecord = intermediate_to_leakrecord(event)
+    record: LeakRecord = intermediate_venarix_to_leakrecord(event)
 
     # 3) 공통 파이프라인 태우기
     process_leak_record(record)
@@ -270,13 +258,13 @@ if __name__ == "__main__":
     # run_generic_telegram_demo()
 
     # 2) RansomFeedNews 채널 포맷 테스트
-    run_RansomFeedNews_demo()
+    # run_RansomFeedNews_demo()
 
     # 3) ctifeeds 채널 포맷 테스트
     # run_ctifeeds_demo()
 
     # 4) hackmanac_cybernews 채널 포맷 테스트
-    # run_hackmanac_cybernews_demo()
+    run_hackmanac_cybernews_demo()
 
     # 5) venarix 채널 포맷 테스트
     # run_venarix_demo()
