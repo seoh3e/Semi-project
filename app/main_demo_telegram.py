@@ -140,7 +140,7 @@ def run_ctifeeds_demo() -> None:
     '이런 형식의 텍스트가 왔다'고 가정하고 파이프라인을 테스트한다.
     """
     raw_message = """
-
+Recent defacement reported by Hax.or: http://psb.mikenongomulyo.sch.id http://psb.mikenongomulyo.sch.id
     """.strip()
 
     # 1) raw → IntermediateEvent
@@ -148,6 +148,7 @@ def run_ctifeeds_demo() -> None:
         raw_text=raw_message,
         message_id=123,  # 데모용 임의 값
         message_url="https://t.me/ctifeeds/123",
+        message_media=MessageMediaWebPage(webpage=WebPage(id=8771885212922184846, url='https://psb.mikenongomulyo.sch.id/', display_url='psb.mikenongomulyo.sch.id', hash=0, has_large_media=False, video_cover_photo=False, type='article', site_name='psb.mikenongomulyo.sch.id', title='PPDB ONLINE | HACKED BY MIKU', description='Mari bergabung Bersama Kami di HACKED BY MIKU, Pendaftaran Peserta didik Baru Tahun 2026/2027 Kembali dibuka', photo=None, embed_url=None, embed_type=None, embed_width=None, embed_height=None, duration=None, author=None, document=None, cached_page=None, attributes=[])),
     )
 
     # group / victim 둘 다 없으면 의미 없는 메시지로 간주
@@ -225,7 +226,13 @@ def run_venarix_demo() -> None:
     '이런 형식의 텍스트가 왔다'고 가정하고 파이프라인을 테스트한다.
     """
     raw_message = """
+🚨 New cyber event 🚨
 
+Threat group: coinbasecartel
+
+Victim: Acu Trans Solutions
+
+For datailed insights on this incident, sign up for free at https://www.venarix.com
     """.strip()
 
     # 1) raw → IntermediateEvent
@@ -264,7 +271,8 @@ if __name__ == "__main__":
     # run_ctifeeds_demo()
 
     # 4) hackmanac_cybernews 채널 포맷 테스트
-    run_hackmanac_cybernews_demo()
+    # run_hackmanac_cybernews_demo()
 
     # 5) venarix 채널 포맷 테스트
     # run_venarix_demo()
+
