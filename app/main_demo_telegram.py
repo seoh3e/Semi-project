@@ -37,6 +37,7 @@ from .telegram_venarix import (
     parse_venarix,
     intermediate_to_leakrecord,
 )
+from .storage import append_leak_record_csv
 
 
 # ---------------------------------------------------------------------------
@@ -46,12 +47,16 @@ from .telegram_venarix import (
 
 def process_leak_record(record: LeakRecord) -> None:
     """
-    LeakRecord를 공통 파이프라인에 태우는 함수.
+    LeakRecord를 공동 파이프라인에 태우는 함수.
     - CSV/JSON 저장
     - 콘솔/슬랙 등 알림 출력
     """
-    # 1) 저장
+    # 1) JSON 저장 (기존)
     add_leak_record(record)
+
+    # 1-2) CSV에도 한 줄 append (대시보드용)
+    append_leak_record_csv(record)
+    print("✅ CSV 저장 완료: data/leak_records.csv")
 
     # 2) 알림
     notify_new_leak(record)

@@ -1,1610 +1,4323 @@
 [
-    {
-        "collected_at": "2025-12-04",
-        "source": "DarkForum A",
-        "post_title": "KR education site users dump 2024",
-        "post_id": "DF-2024-TEST",
-        "author": "leaker007",
-        "posted_at": "2024-11-30",
-        "leak_types": [
-            "email",
-            "password_hash",
-            "phone"
-        ],
-        "estimated_volume": 15000,
-        "file_formats": [
-            "sql",
-            "zip"
-        ],
-        "target_service": "Example Korean Education Service",
-        "domains": [
-            "edu-example.co.kr"
-        ],
-        "country": "KR",
-        "threat_claim": "2024년 10월 기준 최신 사용자 DB 1.5만 건 덤프",
-        "deal_terms": "150 USD in BTC, 샘플 데이터 제공",
-        "confidence": "high",
-        "screenshot_refs": [
-            "SS_2025-12-02_01.png"
-        ],
-        "osint_seeds": {
-            "email_patterns": [
-                "*@edu-example.co.kr"
-            ],
-            "domains": [
-                "edu-example.co.kr"
-            ],
-            "usernames": [
-                "sample_user01",
-                "teacher_test"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-04",
-        "source": "DarkForum A",
-        "post_title": "KR education site users dump 2024",
-        "post_id": "DF-2024-TEST",
-        "author": "leaker007",
-        "posted_at": "2024-11-30",
-        "leak_types": [
-            "email",
-            "password_hash",
-            "phone"
-        ],
-        "estimated_volume": 15000,
-        "file_formats": [
-            "sql",
-            "zip"
-        ],
-        "target_service": "Example Korean Education Service",
-        "domains": [
-            "edu-example.co.kr"
-        ],
-        "country": "KR",
-        "threat_claim": "2024년 10월 기준 최신 사용자 DB 1.5만 건 덤프",
-        "deal_terms": "150 USD in BTC, 샘플 데이터 제공",
-        "confidence": "high",
-        "screenshot_refs": [
-            "SS_2025-12-02_01.png"
-        ],
-        "osint_seeds": {
-            "email_patterns": [
-                "*@edu-example.co.kr"
-            ],
-            "domains": [
-                "edu-example.co.kr"
-            ],
-            "usernames": [
-                "sample_user01",
-                "teacher_test"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-04",
-        "source": "DarkForum A",
-        "post_title": "KR education site users dump 2024",
-        "post_id": null,
-        "author": null,
-        "posted_at": null,
-        "leak_types": [
-            "email",
-            "password_hash",
-            "phone"
-        ],
-        "estimated_volume": 15000,
-        "file_formats": [],
-        "target_service": "E",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "high",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "raw_message": "[DarkForum A] KR education site users dump 2024\nTarget: Example Korean Education Service (edu-example.co.kr)\nLeak: email, password_hash, phone\nVolume: 15000\nConfidence: high\n"
-        }
-    },
-    {
-        "collected_at": "2025-12-04",
-        "source": "DarkForum A",
-        "post_title": "KR education site users dump 2024",
-        "post_id": null,
-        "author": null,
-        "posted_at": null,
-        "leak_types": [
-            "email",
-            "password_hash",
-            "phone"
-        ],
-        "estimated_volume": 15000,
-        "file_formats": [],
-        "target_service": "Example Korean Education Service",
-        "domains": [
-            "edu-example.co.kr"
-        ],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "high",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "raw_message": "[DarkForum A] KR education site users dump 2024\nTarget: Example Korean Education Service (edu-example.co.kr)\nLeak: email, password_hash, phone\nVolume: 15000\nConfidence: high\n"
-        }
-    },
-    {
-        "collected_at": "2025-12-04",
-        "source": "DarkForum A",
-        "post_title": "KR education site users dump 2024",
-        "post_id": null,
-        "author": null,
-        "posted_at": null,
-        "leak_types": [
-            "email",
-            "password_hash",
-            "phone"
-        ],
-        "estimated_volume": 15000,
-        "file_formats": [],
-        "target_service": "Example Korean Education Service",
-        "domains": [
-            "edu-example.co.kr"
-        ],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "high",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "raw_message": "[DarkForum A] KR education site users dump 2024\nTarget: Example Korean Education Service (edu-example.co.kr)\nLeak: email, password_hash, phone\nVolume: 15000\nConfidence: high\n"
-        }
-    },
-    {
-        "collected_at": "2025-12-04",
-        "source": "DarkForum A",
-        "post_title": "KR education site users dump 2024",
-        "post_id": null,
-        "author": null,
-        "posted_at": null,
-        "leak_types": [
-            "email",
-            "password_hash",
-            "phone"
-        ],
-        "estimated_volume": 15000,
-        "file_formats": [],
-        "target_service": "Example Korean Education Service",
-        "domains": [
-            "edu-example.co.kr"
-        ],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "high",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "raw_message": "[DarkForum A] KR education site users dump 2024\nTarget: Example Korean Education Service (edu-example.co.kr)\nLeak: email, password_hash, phone\nVolume: 15000\nConfidence: high\n"
-        }
-    },
-    {
-        "collected_at": "2025-12-04",
-        "source": "DarkForum A",
-        "post_title": "KR education site users dump 2024",
-        "post_id": null,
-        "author": null,
-        "posted_at": null,
-        "leak_types": [
-            "email",
-            "password_hash",
-            "phone"
-        ],
-        "estimated_volume": 15000,
-        "file_formats": [],
-        "target_service": "Example Korean Education Service",
-        "domains": [
-            "edu-example.co.kr"
-        ],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "high",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "raw_message": "[DarkForum A] KR education site users dump 2024\nTarget: Example Korean Education Service (edu-example.co.kr)\nLeak: email, password_hash, phone\nVolume: 15000\nConfidence: high\n"
-        }
-    },
-    {
-        "collected_at": "2025-12-04",
-        "source": "DarkForum A",
-        "post_title": "KR education site users dump 2024",
-        "post_id": null,
-        "author": null,
-        "posted_at": null,
-        "leak_types": [
-            "email",
-            "password_hash",
-            "phone"
-        ],
-        "estimated_volume": 15000,
-        "file_formats": [],
-        "target_service": "Example Korean Education Service",
-        "domains": [
-            "edu-example.co.kr"
-        ],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "high",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "raw_message": "[DarkForum A] KR education site users dump 2024\nTarget: Example Korean Education Service (edu-example.co.kr)\nLeak: email, password_hash, phone\nVolume: 15000\nConfidence: high\n"
-        }
-    },
-    {
-        "collected_at": "2025-12-04",
-        "source": "DarkForum A",
-        "post_title": "KR education site users dump 2024",
-        "post_id": null,
-        "author": null,
-        "posted_at": null,
-        "leak_types": [
-            "email",
-            "password_hash",
-            "phone"
-        ],
-        "estimated_volume": 15000,
-        "file_formats": [],
-        "target_service": "Example Korean Education Service",
-        "domains": [
-            "edu-example.co.kr"
-        ],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "high",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "raw_message": "[DarkForum A] KR education site users dump 2024\nTarget: Example Korean Education Service (edu-example.co.kr)\nLeak: email, password_hash, phone\nVolume: 15000\nConfidence: high\n"
-        }
-    },
-    {
-        "collected_at": "2025-12-04",
-        "source": "DarkForum A",
-        "post_title": "KR education site users dump 2024",
-        "post_id": null,
-        "author": null,
-        "posted_at": null,
-        "leak_types": [
-            "email",
-            "password_hash",
-            "phone"
-        ],
-        "estimated_volume": 15000,
-        "file_formats": [],
-        "target_service": "Example Korean Education Service",
-        "domains": [
-            "edu-example.co.kr"
-        ],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "high",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "raw_message": "[DarkForum A] KR education site users dump 2024\nTarget: Example Korean Education Service (edu-example.co.kr)\nLeak: email, password_hash, phone\nVolume: 15000\nConfidence: high\n"
-        }
-    },
-    {
-        "collected_at": "2025-12-04",
-        "source": "DarkForum A",
-        "post_title": "KR education site users dump 2024",
-        "post_id": null,
-        "author": null,
-        "posted_at": null,
-        "leak_types": [
-            "email",
-            "password_hash",
-            "phone"
-        ],
-        "estimated_volume": 15000,
-        "file_formats": [],
-        "target_service": "Example Korean Education Service",
-        "domains": [
-            "edu-example.co.kr"
-        ],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "high",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "raw_message": "[DarkForum A] KR education site users dump 2024\nTarget: Example Korean Education Service (edu-example.co.kr)\nLeak: email, password_hash, phone\nVolume: 15000\nConfidence: high\n"
-        }
-    },
-    {
-        "collected_at": "2025-12-04",
-        "source": "DarkForum A",
-        "post_title": "KR education site users dump 2024",
-        "post_id": null,
-        "author": null,
-        "posted_at": null,
-        "leak_types": [
-            "email",
-            "password_hash",
-            "phone"
-        ],
-        "estimated_volume": 15000,
-        "file_formats": [],
-        "target_service": "Example Korean Education Service",
-        "domains": [
-            "edu-example.co.kr"
-        ],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "high",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "raw_message": "[DarkForum A] KR education site users dump 2024\nTarget: Example Korean Education Service (edu-example.co.kr)\nLeak: email, password_hash, phone\nVolume: 15000\nConfidence: high\n"
-        }
-    },
-    {
-        "collected_at": "2025-12-04",
-        "source": "DarkForum A",
-        "post_title": "KR education site users dump 2024",
-        "post_id": null,
-        "author": null,
-        "posted_at": null,
-        "leak_types": [
-            "email",
-            "password_hash",
-            "phone"
-        ],
-        "estimated_volume": 15000,
-        "file_formats": [],
-        "target_service": "Example Korean Education Service",
-        "domains": [
-            "edu-example.co.kr"
-        ],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "high",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "raw_message": "[DarkForum A] KR education site users dump 2024\nTarget: Example Korean Education Service (edu-example.co.kr)\nLeak: email, password_hash, phone\nVolume: 15000\nConfidence: high\n"
-        }
-    },
-    {
-        "collected_at": "2025-12-04",
-        "source": "DarkForum A",
-        "post_title": "KR education site users dump 2024",
-        "post_id": null,
-        "author": null,
-        "posted_at": null,
-        "leak_types": [
-            "email",
-            "password_hash",
-            "phone"
-        ],
-        "estimated_volume": 15000,
-        "file_formats": [],
-        "target_service": "Example Korean Education Service",
-        "domains": [
-            "edu-example.co.kr"
-        ],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "high",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "raw_message": "[DarkForum A] KR education site users dump 2024\nTarget: Example Korean Education Service (edu-example.co.kr)\nLeak: email, password_hash, phone\nVolume: 15000\nConfidence: high\n"
-        }
-    },
-    {
-        "collected_at": "2025-12-04",
-        "source": "DarkForum B",
-        "post_title": "KR gov users leaked 2025",
-        "post_id": null,
-        "author": null,
-        "posted_at": null,
-        "leak_types": [
-            "email",
-            "password_hash",
-            "address"
-        ],
-        "estimated_volume": 20000,
-        "file_formats": [],
-        "target_service": "Example Korean Gov Portal",
-        "domains": [
-            "gov-example.go.kr"
-        ],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "high",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "raw_message": "[DarkForum B] KR gov users leaked 2025\n\ntarget service : Example Korean Gov Portal (gov-example.go.kr)\nLEAK TYPES: email / password_hash / address\nvolume   : 20,000\nCONFIDENCE : HIGH\n"
-        }
-    },
-    {
-        "collected_at": "2025-12-04",
-        "source": "DarkForum B",
-        "post_title": "KR gov users leaked 2025",
-        "post_id": null,
-        "author": null,
-        "posted_at": null,
-        "leak_types": [
-            "email",
-            "password_hash",
-            "address"
-        ],
-        "estimated_volume": 20000,
-        "file_formats": [],
-        "target_service": "Example Korean Gov Portal",
-        "domains": [
-            "gov-example.go.kr"
-        ],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "high",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "raw_message": "[DarkForum B] KR gov users leaked 2025\n\ntarget service : Example Korean Gov Portal (gov-example.go.kr)\nLEAK TYPES: email / password_hash / address\nvolume   : 20,000\nCONFIDENCE : HIGH\n"
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Yellow Cab of Columbus, USA",
-        "post_id": "10622",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Yellow Cab of Columbus, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27651"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Quasar Inc, USA",
-        "post_id": "10621",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Quasar Inc, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27650"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Atenção Primária à Saúde Brazil, Brazil",
-        "post_id": "10620",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Atenção Primária à Saúde Brazil, Brazil",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27649"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → CCJM, USA",
-        "post_id": "10619",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "CCJM, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27648"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Providence Academy, USA",
-        "post_id": "10618",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Providence Academy, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27647"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → cpasch.com, USA",
-        "post_id": "10617",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "cpasch.com, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27646"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → SUNNYGO.COM.TW, Taiwan",
-        "post_id": "10616",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "SUNNYGO.COM.TW, Taiwan",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27645"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Bo Beuckman Ford, USA",
-        "post_id": "10615",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Bo Beuckman Ford, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27644"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Davis Kitchens, United States, USA",
-        "post_id": "10614",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Davis Kitchens, United States, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27643"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → COTTAGE, USA",
-        "post_id": "10613",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "COTTAGE, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27642"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Gandía Palace Hotel, Spain",
-        "post_id": "10612",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Gandía Palace Hotel, Spain",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27641"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Valley Eye Associates, USA",
-        "post_id": "10611",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Valley Eye Associates, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27640"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Clayco Electric, USA",
-        "post_id": "10610",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Clayco Electric, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27639"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → IES Synergy, France",
-        "post_id": "10609",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "IES Synergy, France",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27638"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Golden Artist Colors, USA",
-        "post_id": "10608",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Golden Artist Colors, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27637"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Pan-O-Gold Baking Company, USA",
-        "post_id": "10607",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Pan-O-Gold Baking Company, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27636"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Quality Engineered Homes, Canada",
-        "post_id": "10606",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Quality Engineered Homes, Canada",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27635"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → CST Coal, Canada",
-        "post_id": "10605",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "CST Coal, Canada",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27634"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Eggelhof, USA",
-        "post_id": "10604",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Eggelhof, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27632"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Building Controls and Services, USA",
-        "post_id": "10603",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Building Controls and Services, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27631"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Custom Engineered Wheels, USA",
-        "post_id": "10602",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Custom Engineered Wheels, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27630"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Wisconsin Knife Works, The Smith Companies, Envirotech Services, Next Generation Logistics..., USA",
-        "post_id": "10601",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Wisconsin Knife Works, The Smith Companies, Envirotech Services, Next Generation Logistics..., USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27629"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Armis Group, Portugal",
-        "post_id": "10600",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Armis Group, Portugal",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27628"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Fuji Vegetable Oil, Japan",
-        "post_id": "10599",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Fuji Vegetable Oil, Japan",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27627"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Wynn  AND  Wynn, USA",
-        "post_id": "10598",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Wynn  AND  Wynn, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27626"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Rouse Frets White Goss Gentile Rhodes, USA",
-        "post_id": "10597",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Rouse Frets White Goss Gentile Rhodes, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27625"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → NUMALLIANCE, France",
-        "post_id": "10596",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "NUMALLIANCE, France",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27624"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → City of Urbana, USA",
-        "post_id": "10595",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "City of Urbana, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27623"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Brodosplit, Croatia",
-        "post_id": "10594",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Brodosplit, Croatia",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27622"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → LA Injury Attorneys, USA",
-        "post_id": "10593",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "LA Injury Attorneys, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27621"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → bisonfamilymedical.com, Canada",
-        "post_id": "10592",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "bisonfamilymedical.com, Canada",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27620"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → instyle.com.au, Australia",
-        "post_id": "10591",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "instyle.com.au, Australia",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27619"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Basra Transports, Canada",
-        "post_id": "10590",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Basra Transports, Canada",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27618"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → R* E*, Non Disponibile",
-        "post_id": "10589",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "R* E*, Non Disponibile",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27617"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → lesker.com, USA",
-        "post_id": "10588",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "lesker.com, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27616"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Sarmap, Switzerland",
-        "post_id": "10587",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Sarmap, Switzerland",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27615"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Petra, USA",
-        "post_id": "10586",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Petra, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27614"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Reading Elevator Service, USA",
-        "post_id": "10585",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Reading Elevator Service, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27613"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → GV Service, Germany",
-        "post_id": "10584",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "GV Service, Germany",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27612"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Pathmaker Group, USA",
-        "post_id": "10583",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Pathmaker Group, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27611"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Garrett Taylor, Dds, USA",
-        "post_id": "10582",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Garrett Taylor, Dds, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27610"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → dakkota.com, USA",
-        "post_id": "10581",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "dakkota.com, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27609"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → noment, USA",
-        "post_id": "10580",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "noment, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27608"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Moyes, USA",
-        "post_id": "10579",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Moyes, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27607"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Mr Christmas, USA",
-        "post_id": "10578",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Mr Christmas, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27606"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → EDIS, Poland",
-        "post_id": "10577",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "EDIS, Poland",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27605"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → ASUS, Taiwan",
-        "post_id": "10576",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "ASUS, Taiwan",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27604"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → Exegy, USA",
-        "post_id": "10575",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "Exegy, USA",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27603"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → n*w*****.com, Non Disponibile",
-        "post_id": "10574",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "n*w*****.com, Non Disponibile",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27602"
-            ]
-        }
-    },
-    {
-        "collected_at": "2025-12-05",
-        "source": "RansomFeedNews",
-        "post_title": " → ravand.com, Canada",
-        "post_id": "10573",
-        "author": null,
-        "posted_at": null,
-        "leak_types": [],
-        "estimated_volume": null,
-        "file_formats": [],
-        "target_service": "ravand.com, Canada",
-        "domains": [],
-        "country": null,
-        "threat_claim": null,
-        "deal_terms": null,
-        "confidence": "medium",
-        "screenshot_refs": [],
-        "osint_seeds": {
-            "urls": [
-                "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27601"
-            ]
-        }
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "dragonforce → VoiceTeam Call, Dominican Republic",
+    "post_id": "10721",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "VoiceTeam Call, Dominican Republic",
+    "domains": [],
+    "country": null,
+    "threat_claim": "dragonforce",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27802"
+      ]
     }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "dragonforce → City of La Vergne, USA",
+    "post_id": "10720",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "City of La Vergne, USA",
+    "domains": [],
+    "country": null,
+    "threat_claim": "dragonforce",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27801"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "akira → Nickman, DHK Architects, Profondia, Talbot  AND  Associates, Fishbowl Solutions., USA",
+    "post_id": "10719",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Nickman, DHK Architects, Profondia, Talbot  AND  Associates, Fishbowl Solutions., USA",
+    "domains": [],
+    "country": null,
+    "threat_claim": "akira",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27800"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "akira → Carbon Graphics Group, Canada",
+    "post_id": "10718",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Carbon Graphics Group, Canada",
+    "domains": [],
+    "country": null,
+    "threat_claim": "akira",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27799"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "akira → RUEZ, Germany",
+    "post_id": "10717",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "RUEZ, Germany",
+    "domains": [],
+    "country": null,
+    "threat_claim": "akira",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27798"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "akira → Nadel Architects, USA",
+    "post_id": "10716",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Nadel Architects, USA",
+    "domains": [],
+    "country": null,
+    "threat_claim": "akira",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27797"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "akira → AGI Group, USA",
+    "post_id": "10715",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "AGI Group, USA",
+    "domains": [],
+    "country": null,
+    "threat_claim": "akira",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27796"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "akira → PH Molds, Canada",
+    "post_id": "10714",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "PH Molds, Canada",
+    "domains": [],
+    "country": null,
+    "threat_claim": "akira",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27795"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "lynx → www.eliteflower.com, USA",
+    "post_id": "10713",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "www.eliteflower.com, USA",
+    "domains": [],
+    "country": null,
+    "threat_claim": "lynx",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27794"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "spacebears → Comcast, USA",
+    "post_id": "10712",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Comcast, USA",
+    "domains": [],
+    "country": null,
+    "threat_claim": "spacebears",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27793"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "dragonforce → Capo Brothers, USA",
+    "post_id": "10711",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Capo Brothers, USA",
+    "domains": [],
+    "country": null,
+    "threat_claim": "dragonforce",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27792"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "dragonforce → HESCO, Canada",
+    "post_id": "10710",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "HESCO, Canada",
+    "domains": [],
+    "country": null,
+    "threat_claim": "dragonforce",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27791"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "sinobi → Caldwell  AND  Company Accounting, USA",
+    "post_id": "10709",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Caldwell  AND  Company Accounting, USA",
+    "domains": [],
+    "country": null,
+    "threat_claim": "sinobi",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27790"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "worldleaks → Big Lar, Brazil",
+    "post_id": "10708",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Big Lar, Brazil",
+    "domains": [],
+    "country": null,
+    "threat_claim": "worldleaks",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27789"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "worldleaks → Ernest Käslin, Switzerland",
+    "post_id": "10707",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Ernest Käslin, Switzerland",
+    "domains": [],
+    "country": null,
+    "threat_claim": "worldleaks",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27788"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "worldleaks → Granjas 4 Irmãos SA - Agropecuária, Indústria e Comércio, Brazil",
+    "post_id": "10706",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Granjas 4 Irmãos SA - Agropecuária, Indústria e Comércio, Brazil",
+    "domains": [],
+    "country": null,
+    "threat_claim": "worldleaks",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27787"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "sinobi → Jeffrey W Krol  AND  Associates, USA",
+    "post_id": "10705",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Jeffrey W Krol  AND  Associates, USA",
+    "domains": [],
+    "country": null,
+    "threat_claim": "sinobi",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27786"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "sinobi → Quality Companies, USA",
+    "post_id": "10704",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Quality Companies, USA",
+    "domains": [],
+    "country": null,
+    "threat_claim": "sinobi",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27781"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "sinobi → Galesi Group, USA",
+    "post_id": "10703",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Galesi Group, USA",
+    "domains": [],
+    "country": null,
+    "threat_claim": "sinobi",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27780"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "sinobi → Gopher Industrial, USA",
+    "post_id": "10702",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Gopher Industrial, USA",
+    "domains": [],
+    "country": null,
+    "threat_claim": "sinobi",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27779"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "devman → S**** Saint ******, Non Disponibile",
+    "post_id": "10701",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "S**** Saint ******, Non Disponibile",
+    "domains": [],
+    "country": null,
+    "threat_claim": "devman",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27778"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "devman → arko.no, Norway",
+    "post_id": "10700",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "arko.no, Norway",
+    "domains": [],
+    "country": null,
+    "threat_claim": "devman",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27777"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "devman → f***i*.o*g, Non Disponibile",
+    "post_id": "10699",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "f***i*.o*g, Non Disponibile",
+    "domains": [],
+    "country": null,
+    "threat_claim": "devman",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27776"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "devman → hopital-*********.com, Non Disponibile",
+    "post_id": "10698",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "hopital-*********.com, Non Disponibile",
+    "domains": [],
+    "country": null,
+    "threat_claim": "devman",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27775"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "devman → pharmaciedesalize.com.fr, France",
+    "post_id": "10697",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "pharmaciedesalize.com.fr, France",
+    "domains": [],
+    "country": null,
+    "threat_claim": "devman",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27774"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "devman → elematec, USA",
+    "post_id": "10696",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "elematec, USA",
+    "domains": [],
+    "country": null,
+    "threat_claim": "devman",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27766"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "devman → gotec, Germany",
+    "post_id": "10695",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "gotec, Germany",
+    "domains": [],
+    "country": null,
+    "threat_claim": "devman",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27765"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "qilin → David M. Schwarz Architects, USA",
+    "post_id": "10694",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "David M. Schwarz Architects, USA",
+    "domains": [],
+    "country": null,
+    "threat_claim": "qilin",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27760"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "SilentRansomGroup → Mintzer Sarowitz Zeris Ledva  AND  Meyers, Germany",
+    "post_id": "10693",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Mintzer Sarowitz Zeris Ledva  AND  Meyers, Germany",
+    "domains": [],
+    "country": null,
+    "threat_claim": "SilentRansomGroup",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27757"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "SilentRansomGroup → Fish  AND  Richardson Overview Metrics, USA",
+    "post_id": "10692",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Fish  AND  Richardson Overview Metrics, USA",
+    "domains": [],
+    "country": null,
+    "threat_claim": "SilentRansomGroup",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27756"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "qilin → AMH Philippines, Philippines",
+    "post_id": "10691",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "AMH Philippines, Philippines",
+    "domains": [],
+    "country": null,
+    "threat_claim": "qilin",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27755"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "qilin → Acoustical Control, USA",
+    "post_id": "10690",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Acoustical Control, USA",
+    "domains": [],
+    "country": null,
+    "threat_claim": "qilin",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27754"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "qilin → La Costa Dental Excellence, USA",
+    "post_id": "10689",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "La Costa Dental Excellence, USA",
+    "domains": [],
+    "country": null,
+    "threat_claim": "qilin",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27753"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "qilin → Sanko Air Conditioning Co., Ltd., Japan",
+    "post_id": "10688",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Sanko Air Conditioning Co., Ltd., Japan",
+    "domains": [],
+    "country": null,
+    "threat_claim": "qilin",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27752"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "qilin → Marta Montserrat Areny Guerrero ABOGADO, Spain",
+    "post_id": "10687",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Marta Montserrat Areny Guerrero ABOGADO, Spain",
+    "domains": [],
+    "country": null,
+    "threat_claim": "qilin",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27751"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "lockbit5 → incolease.com, Egypt",
+    "post_id": "10686",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "incolease.com, Egypt",
+    "domains": [],
+    "country": null,
+    "threat_claim": "lockbit5",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27750"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "lockbit5 → physiciansmedicalbilling.net, USA",
+    "post_id": "10685",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "physiciansmedicalbilling.net, USA",
+    "domains": [],
+    "country": null,
+    "threat_claim": "lockbit5",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27747"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "lockbit5 → felixvet.com, Ireland",
+    "post_id": "10684",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "felixvet.com, Ireland",
+    "domains": [],
+    "country": null,
+    "threat_claim": "lockbit5",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27745"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "lockbit5 → comune.balmuccia.vc.it, Italy",
+    "post_id": "10683",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "comune.balmuccia.vc.it, Italy",
+    "domains": [],
+    "country": null,
+    "threat_claim": "lockbit5",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27744"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "lockbit5 → elundini.gov.za, South Africa",
+    "post_id": "10682",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "elundini.gov.za, South Africa",
+    "domains": [],
+    "country": null,
+    "threat_claim": "lockbit5",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27743"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "lockbit5 → chmsbc.org.br, Brazil",
+    "post_id": "10681",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "chmsbc.org.br, Brazil",
+    "domains": [],
+    "country": null,
+    "threat_claim": "lockbit5",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27742"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "lockbit5 → tracsa.com.mx, Mexico",
+    "post_id": "10680",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "tracsa.com.mx, Mexico",
+    "domains": [],
+    "country": null,
+    "threat_claim": "lockbit5",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27741"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "lockbit5 → iscot.it, Italy",
+    "post_id": "10679",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "iscot.it, Italy",
+    "domains": [],
+    "country": null,
+    "threat_claim": "lockbit5",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27740"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "lockbit5 → four-points.marriott.com, USA",
+    "post_id": "10678",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "four-points.marriott.com, USA",
+    "domains": [],
+    "country": null,
+    "threat_claim": "lockbit5",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27739"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "lockbit5 → cadopt.com, India",
+    "post_id": "10677",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "cadopt.com, India",
+    "domains": [],
+    "country": null,
+    "threat_claim": "lockbit5",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27737"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "lockbit5 → kap.co.th, Thailand",
+    "post_id": "10676",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "kap.co.th, Thailand",
+    "domains": [],
+    "country": null,
+    "threat_claim": "lockbit5",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27736"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "lockbit5 → milanoristorazione.it, Italy",
+    "post_id": "10675",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "milanoristorazione.it, Italy",
+    "domains": [],
+    "country": null,
+    "threat_claim": "lockbit5",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27735"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "everest → Benchmark Electronics Inc, USA",
+    "post_id": "10674",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Benchmark Electronics Inc, USA",
+    "domains": [],
+    "country": null,
+    "threat_claim": "everest",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27734"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "lockbit5 → 51talk.com, Singapore",
+    "post_id": "10673",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "51talk.com, Singapore",
+    "domains": [],
+    "country": null,
+    "threat_claim": "lockbit5",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27716"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@RansomFeedNews",
+    "post_title": "lockbit5 → aerworldwide.com, USA",
+    "post_id": "10672",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "aerworldwide.com, USA",
+    "domains": [],
+    "country": null,
+    "threat_claim": "lockbit5",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27715"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: http://ppdb.masnurulyaqin.sch.id http://ppdb.masnurulyaqin.sch.id",
+    "post_id": "116427",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "ppdb.masnurulyaqin.sch.id",
+    "domains": [
+      "ppdb.masnurulyaqin.sch.id"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: http://ppdb.masnurulyaqin.sch.id http://ppdb.masnurulyaqin.sch.id",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "http://ppdb.masnurulyaqin.sch.id"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: http://ppdb.masnurulyaqin.sch.id http://ppdb.masnurulyaqin.sch.id",
+      "message_url": "https://t.me/ctifeeds/116427"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: http://ppdb.mtsnpalasah.sch.id http://ppdb.mtsnpalasah.sch.id",
+    "post_id": "116426",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "ppdb.mtsnpalasah.sch.id",
+    "domains": [
+      "ppdb.mtsnpalasah.sch.id"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: http://ppdb.mtsnpalasah.sch.id http://ppdb.mtsnpalasah.sch.id",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "http://ppdb.mtsnpalasah.sch.id"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: http://ppdb.mtsnpalasah.sch.id http://ppdb.mtsnpalasah.sch.id",
+      "message_url": "https://t.me/ctifeeds/116426"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: http://psb.mikenongomulyo.sch.id http://psb.mikenongomulyo.sch.id",
+    "post_id": "116425",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "psb.mikenongomulyo.sch.id",
+    "domains": [
+      "psb.mikenongomulyo.sch.id"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: http://psb.mikenongomulyo.sch.id http://psb.mikenongomulyo.sch.id",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "http://psb.mikenongomulyo.sch.id"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: http://psb.mikenongomulyo.sch.id http://psb.mikenongomulyo.sch.id",
+      "message_url": "https://t.me/ctifeeds/116425"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: http://ppdb.maalmuttaqinwolowaru.sch.id http://ppdb.maalmuttaqinwolowaru.sch.id",
+    "post_id": "116424",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "ppdb.maalmuttaqinwolowaru.sch.id",
+    "domains": [
+      "ppdb.maalmuttaqinwolowaru.sch.id"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: http://ppdb.maalmuttaqinwolowaru.sch.id http://ppdb.maalmuttaqinwolowaru.sch.id",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "http://ppdb.maalmuttaqinwolowaru.sch.id"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: http://ppdb.maalmuttaqinwolowaru.sch.id http://ppdb.maalmuttaqinwolowaru.sch.id",
+      "message_url": "https://t.me/ctifeeds/116424"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: https://www.psba.ponpesalfaqihsima.com https://www.psba.ponpesalfaqihsima.com",
+    "post_id": "116423",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "www.psba.ponpesalfaqihsima.com",
+    "domains": [
+      "www.psba.ponpesalfaqihsima.com"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: https://www.psba.ponpesalfaqihsima.com https://www.psba.ponpesalfaqihsima.com",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.psba.ponpesalfaqihsima.com"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: https://www.psba.ponpesalfaqihsima.com https://www.psba.ponpesalfaqihsima.com",
+      "message_url": "https://t.me/ctifeeds/116423"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: http://lms.disdikbud.kaltimprov.go.id/b.html http://lms.disdikbud.kaltimprov.go.id/b.html",
+    "post_id": "116422",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "lms.disdikbud.kaltimprov.go.id",
+    "domains": [
+      "lms.disdikbud.kaltimprov.go.id"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: http://lms.disdikbud.kaltimprov.go.id/b.html http://lms.disdikbud.kaltimprov.go.id/b.html",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "http://lms.disdikbud.kaltimprov.go.id/b.html"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: http://lms.disdikbud.kaltimprov.go.id/b.html http://lms.disdikbud.kaltimprov.go.id/b.html",
+      "message_url": "https://t.me/ctifeeds/116422"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: http://disdukcapil.kaltimprov.go.id/b.html http://disdukcapil.kaltimprov.go.id/b.html",
+    "post_id": "116421",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "disdukcapil.kaltimprov.go.id",
+    "domains": [
+      "disdukcapil.kaltimprov.go.id"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: http://disdukcapil.kaltimprov.go.id/b.html http://disdukcapil.kaltimprov.go.id/b.html",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "http://disdukcapil.kaltimprov.go.id/b.html"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: http://disdukcapil.kaltimprov.go.id/b.html http://disdukcapil.kaltimprov.go.id/b.html",
+      "message_url": "https://t.me/ctifeeds/116421"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: https://ppdb.misunniyyah1selo.sch.id/ https://ppdb.misunniyyah1selo.sch.id/",
+    "post_id": "116420",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "ppdb.misunniyyah1selo.sch.id",
+    "domains": [
+      "ppdb.misunniyyah1selo.sch.id"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: https://ppdb.misunniyyah1selo.sch.id/ https://ppdb.misunniyyah1selo.sch.id/",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://ppdb.misunniyyah1selo.sch.id/"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: https://ppdb.misunniyyah1selo.sch.id/ https://ppdb.misunniyyah1selo.sch.id/",
+      "message_url": "https://t.me/ctifeeds/116420"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: https://ppdb.mtsislamiyahmalo.sch.id/ https://ppdb.mtsislamiyahmalo.sch.id/",
+    "post_id": "116419",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "ppdb.mtsislamiyahmalo.sch.id",
+    "domains": [
+      "ppdb.mtsislamiyahmalo.sch.id"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: https://ppdb.mtsislamiyahmalo.sch.id/ https://ppdb.mtsislamiyahmalo.sch.id/",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://ppdb.mtsislamiyahmalo.sch.id/"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: https://ppdb.mtsislamiyahmalo.sch.id/ https://ppdb.mtsislamiyahmalo.sch.id/",
+      "message_url": "https://t.me/ctifeeds/116419"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: https://www.ppdb.mtsalwathoniyyahbugen.sch.id/ https://www.ppdb.mtsalwathoniyyahbugen.sch.id/",
+    "post_id": "116418",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "www.ppdb.mtsalwathoniyyahbugen.sch.id",
+    "domains": [
+      "www.ppdb.mtsalwathoniyyahbugen.sch.id"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: https://www.ppdb.mtsalwathoniyyahbugen.sch.id/ https://www.ppdb.mtsalwathoniyyahbugen.sch.id/",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.ppdb.mtsalwathoniyyahbugen.sch.id/"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: https://www.ppdb.mtsalwathoniyyahbugen.sch.id/ https://www.ppdb.mtsalwathoniyyahbugen.sch.id/",
+      "message_url": "https://t.me/ctifeeds/116418"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: https://www.ppdb.miannashriyahlasem.sch.id https://www.ppdb.miannashriyahlasem.sch.id",
+    "post_id": "116417",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "www.ppdb.miannashriyahlasem.sch.id",
+    "domains": [
+      "www.ppdb.miannashriyahlasem.sch.id"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: https://www.ppdb.miannashriyahlasem.sch.id https://www.ppdb.miannashriyahlasem.sch.id",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.ppdb.miannashriyahlasem.sch.id"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: https://www.ppdb.miannashriyahlasem.sch.id https://www.ppdb.miannashriyahlasem.sch.id",
+      "message_url": "https://t.me/ctifeeds/116417"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: https://ppdb.mtsn1labuhanbatu.madaris.id https://ppdb.mtsn1labuhanbatu.madaris.id",
+    "post_id": "116416",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "ppdb.mtsn1labuhanbatu.madaris.id",
+    "domains": [
+      "ppdb.mtsn1labuhanbatu.madaris.id"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: https://ppdb.mtsn1labuhanbatu.madaris.id https://ppdb.mtsn1labuhanbatu.madaris.id",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://ppdb.mtsn1labuhanbatu.madaris.id"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: https://ppdb.mtsn1labuhanbatu.madaris.id https://ppdb.mtsn1labuhanbatu.madaris.id",
+      "message_url": "https://t.me/ctifeeds/116416"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: https://ppdbma.al-ahliyah.sch.id https://ppdbma.al-ahliyah.sch.id",
+    "post_id": "116415",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "ppdbma.al-ahliyah.sch.id",
+    "domains": [
+      "ppdbma.al-ahliyah.sch.id"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: https://ppdbma.al-ahliyah.sch.id https://ppdbma.al-ahliyah.sch.id",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://ppdbma.al-ahliyah.sch.id"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: https://ppdbma.al-ahliyah.sch.id https://ppdbma.al-ahliyah.sch.id",
+      "message_url": "https://t.me/ctifeeds/116415"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: https://ma.nihayatulamal.net/ https://ma.nihayatulamal.net/",
+    "post_id": "116414",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "ma.nihayatulamal.net",
+    "domains": [
+      "ma.nihayatulamal.net"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: https://ma.nihayatulamal.net/ https://ma.nihayatulamal.net/",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://ma.nihayatulamal.net/"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: https://ma.nihayatulamal.net/ https://ma.nihayatulamal.net/",
+      "message_url": "https://t.me/ctifeeds/116414"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: https://albanat.nihayatulamal.net https://albanat.nihayatulamal.net",
+    "post_id": "116413",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "albanat.nihayatulamal.net",
+    "domains": [
+      "albanat.nihayatulamal.net"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: https://albanat.nihayatulamal.net https://albanat.nihayatulamal.net",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://albanat.nihayatulamal.net"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: https://albanat.nihayatulamal.net https://albanat.nihayatulamal.net",
+      "message_url": "https://t.me/ctifeeds/116413"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: https://albanin.nihayatulamal.net https://albanin.nihayatulamal.net",
+    "post_id": "116412",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "albanin.nihayatulamal.net",
+    "domains": [
+      "albanin.nihayatulamal.net"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: https://albanin.nihayatulamal.net https://albanin.nihayatulamal.net",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://albanin.nihayatulamal.net"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: https://albanin.nihayatulamal.net https://albanin.nihayatulamal.net",
+      "message_url": "https://t.me/ctifeeds/116412"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: https://ppdb.elnuya.com https://ppdb.elnuya.com",
+    "post_id": "116411",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "ppdb.elnuya.com",
+    "domains": [
+      "ppdb.elnuya.com"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: https://ppdb.elnuya.com https://ppdb.elnuya.com",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://ppdb.elnuya.com"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: https://ppdb.elnuya.com https://ppdb.elnuya.com",
+      "message_url": "https://t.me/ctifeeds/116411"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: https://miftahulfalah.ac.id/ppdb https://miftahulfalah.ac.id/ppdb",
+    "post_id": "116410",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "miftahulfalah.ac.id",
+    "domains": [
+      "miftahulfalah.ac.id"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: https://miftahulfalah.ac.id/ppdb https://miftahulfalah.ac.id/ppdb",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://miftahulfalah.ac.id/ppdb"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: https://miftahulfalah.ac.id/ppdb https://miftahulfalah.ac.id/ppdb",
+      "message_url": "https://t.me/ctifeeds/116410"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: https://bim.go.id/bxr.html https://bim.go.id/bxr.html",
+    "post_id": "116409",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "bim.go.id",
+    "domains": [
+      "bim.go.id"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: https://bim.go.id/bxr.html https://bim.go.id/bxr.html",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://bim.go.id/bxr.html"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: https://bim.go.id/bxr.html https://bim.go.id/bxr.html",
+      "message_url": "https://t.me/ctifeeds/116409"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: https://demo.schoolmantic.id https://demo.schoolmantic.id",
+    "post_id": "116408",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "demo.schoolmantic.id",
+    "domains": [
+      "demo.schoolmantic.id"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: https://demo.schoolmantic.id https://demo.schoolmantic.id",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://demo.schoolmantic.id"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: https://demo.schoolmantic.id https://demo.schoolmantic.id",
+      "message_url": "https://t.me/ctifeeds/116408"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: https://fitness.kokaerp.in https://fitness.kokaerp.in",
+    "post_id": "116407",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "fitness.kokaerp.in",
+    "domains": [
+      "fitness.kokaerp.in"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: https://fitness.kokaerp.in https://fitness.kokaerp.in",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://fitness.kokaerp.in"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: https://fitness.kokaerp.in https://fitness.kokaerp.in",
+      "message_url": "https://t.me/ctifeeds/116407"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: https://displaymasjid.inweb1.my.id/ https://displaymasjid.inweb1.my.id/",
+    "post_id": "116406",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "displaymasjid.inweb1.my.id",
+    "domains": [
+      "displaymasjid.inweb1.my.id"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: https://displaymasjid.inweb1.my.id/ https://displaymasjid.inweb1.my.id/",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://displaymasjid.inweb1.my.id/"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: https://displaymasjid.inweb1.my.id/ https://displaymasjid.inweb1.my.id/",
+      "message_url": "https://t.me/ctifeeds/116406"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: http://absensiselfie.inweb1.my.id http://absensiselfie.inweb1.my.id",
+    "post_id": "116405",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "absensiselfie.inweb1.my.id",
+    "domains": [
+      "absensiselfie.inweb1.my.id"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: http://absensiselfie.inweb1.my.id http://absensiselfie.inweb1.my.id",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "http://absensiselfie.inweb1.my.id"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: http://absensiselfie.inweb1.my.id http://absensiselfie.inweb1.my.id",
+      "message_url": "https://t.me/ctifeeds/116405"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: http://bankmini3.inweb1.my.id http://bankmini3.inweb1.my.id",
+    "post_id": "116404",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "bankmini3.inweb1.my.id",
+    "domains": [
+      "bankmini3.inweb1.my.id"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: http://bankmini3.inweb1.my.id http://bankmini3.inweb1.my.id",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "http://bankmini3.inweb1.my.id"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: http://bankmini3.inweb1.my.id http://bankmini3.inweb1.my.id",
+      "message_url": "https://t.me/ctifeeds/116404"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Sinisterly - 💥 Premium Quality Combos for Sale – Guaranteed! 💥 https://sinister.ly/Thread-Diamond-%F0%9F%92%A5-Premium-Quality-Combos-for-Sale-%E2%80%93-Guaranteed-%F0%9F%92%A5--224173",
+    "post_id": "116403",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "sinister.ly",
+    "domains": [
+      "sinister.ly"
+    ],
+    "country": null,
+    "threat_claim": "Sinisterly - 💥 Premium Quality Combos for Sale – Guaranteed! 💥 https://sinister.ly/Thread-Diamond-%F0%9F%92%A5-Premium-Quality-Combos-for-Sale-%E2%80%93-Guaranteed-%F0%9F%92%A5--224173",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://sinister.ly/Thread-Diamond-%F0%9F%92%A5-Premium-Quality-Combos-for-Sale-%E2%80%93-Guaranteed-%F0%9F%92%A5--224173"
+      ],
+      "attacker_aliases": [],
+      "raw_text": "Sinisterly - 💥 Premium Quality Combos for Sale – Guaranteed! 💥 https://sinister.ly/Thread-Diamond-%F0%9F%92%A5-Premium-Quality-Combos-for-Sale-%E2%80%93-Guaranteed-%F0%9F%92%A5--224173",
+      "message_url": "https://t.me/ctifeeds/116403"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Sinisterly - Driver License SSN |  | passports | LLC EIN LTD I HAVE https://sinister.ly/Thread-Driver-License-SSN-passports-LLC-EIN-LTD-I-HAVE--224167",
+    "post_id": "116402",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "sinister.ly",
+    "domains": [
+      "sinister.ly"
+    ],
+    "country": null,
+    "threat_claim": "Sinisterly - Driver License SSN |  | passports | LLC EIN LTD I HAVE https://sinister.ly/Thread-Driver-License-SSN-passports-LLC-EIN-LTD-I-HAVE--224167",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://sinister.ly/Thread-Driver-License-SSN-passports-LLC-EIN-LTD-I-HAVE--224167"
+      ],
+      "attacker_aliases": [],
+      "raw_text": "Sinisterly - Driver License SSN |  | passports | LLC EIN LTD I HAVE https://sinister.ly/Thread-Driver-License-SSN-passports-LLC-EIN-LTD-I-HAVE--224167",
+      "message_url": "https://t.me/ctifeeds/116402"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Sinisterly - 💥 Premium Quality Combos for Sale – Guaranteed! 💥 https://sinister.ly/Thread-Diamond-%F0%9F%92%A5-Premium-Quality-Combos-for-Sale-%E2%80%93-Guaranteed-%F0%9F%92%A5--224161",
+    "post_id": "116400",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "sinister.ly",
+    "domains": [
+      "sinister.ly"
+    ],
+    "country": null,
+    "threat_claim": "Sinisterly - 💥 Premium Quality Combos for Sale – Guaranteed! 💥 https://sinister.ly/Thread-Diamond-%F0%9F%92%A5-Premium-Quality-Combos-for-Sale-%E2%80%93-Guaranteed-%F0%9F%92%A5--224161",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://sinister.ly/Thread-Diamond-%F0%9F%92%A5-Premium-Quality-Combos-for-Sale-%E2%80%93-Guaranteed-%F0%9F%92%A5--224161"
+      ],
+      "attacker_aliases": [],
+      "raw_text": "Sinisterly - 💥 Premium Quality Combos for Sale – Guaranteed! 💥 https://sinister.ly/Thread-Diamond-%F0%9F%92%A5-Premium-Quality-Combos-for-Sale-%E2%80%93-Guaranteed-%F0%9F%92%A5--224161",
+      "message_url": "https://t.me/ctifeeds/116400"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "DemonForums - ✪ [ 3,3 GB ] ✪ @Elite_Cloud1  ✪ ULP LOG'S ::  Date ✪ { 8-DEC-2025 } ✪ https://demonforums.net/Thread-Request-%E2%9C%AA-3-3-GB-%E2%9C%AA-Elite-Cloud1-%E2%9C%AA-ULP-LOG-S-Date-%E2%9C%AA-8-DEC-2025-%E2%9C%AA",
+    "post_id": "116398",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "demonforums.net",
+    "domains": [
+      "demonforums.net"
+    ],
+    "country": null,
+    "threat_claim": "DemonForums - ✪ [ 3,3 GB ] ✪ @Elite_Cloud1  ✪ ULP LOG'S ::  Date ✪ { 8-DEC-2025 } ✪ https://demonforums.net/Thread-Request-%E2%9C%AA-3-3-GB-%E2%9C%AA-Elite-Cloud1-%E2%9C%AA-ULP-LOG-S-Date-%E2%9C%AA-8-DEC-2025-%E2%9C%AA",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://demonforums.net/Thread-Request-%E2%9C%AA-3-3-GB-%E2%9C%AA-Elite-Cloud1-%E2%9C%AA-ULP-LOG-S-Date-%E2%9C%AA-8-DEC-2025-%E2%9C%AA"
+      ],
+      "attacker_aliases": [],
+      "raw_text": "DemonForums - ✪ [ 3,3 GB ] ✪ @Elite_Cloud1  ✪ ULP LOG'S ::  Date ✪ { 8-DEC-2025 } ✪ https://demonforums.net/Thread-Request-%E2%9C%AA-3-3-GB-%E2%9C%AA-Elite-Cloud1-%E2%9C%AA-ULP-LOG-S-Date-%E2%9C%AA-8-DEC-2025-%E2%9C%AA",
+      "message_url": "https://t.me/ctifeeds/116398"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: https://ppdb.mantebingtinggi.madaris.id/ https://ppdb.mantebingtinggi.madaris.id/",
+    "post_id": "116397",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "ppdb.mantebingtinggi.madaris.id",
+    "domains": [
+      "ppdb.mantebingtinggi.madaris.id"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: https://ppdb.mantebingtinggi.madaris.id/ https://ppdb.mantebingtinggi.madaris.id/",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://ppdb.mantebingtinggi.madaris.id/"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: https://ppdb.mantebingtinggi.madaris.id/ https://ppdb.mantebingtinggi.madaris.id/",
+      "message_url": "https://t.me/ctifeeds/116397"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: https://restobarmm.ru/login.html https://restobarmm.ru/login.html",
+    "post_id": "116396",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "restobarmm.ru",
+    "domains": [
+      "restobarmm.ru"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: https://restobarmm.ru/login.html https://restobarmm.ru/login.html",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://restobarmm.ru/login.html"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: https://restobarmm.ru/login.html https://restobarmm.ru/login.html",
+      "message_url": "https://t.me/ctifeeds/116396"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: http://www.nwsc.com.zm/index.html http://www.nwsc.com.zm/index.html",
+    "post_id": "116395",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "www.nwsc.com.zm",
+    "domains": [
+      "www.nwsc.com.zm"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: http://www.nwsc.com.zm/index.html http://www.nwsc.com.zm/index.html",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "http://www.nwsc.com.zm/index.html"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: http://www.nwsc.com.zm/index.html http://www.nwsc.com.zm/index.html",
+      "message_url": "https://t.me/ctifeeds/116395"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "DemonForums - Best Fresh [Url:Log:Pass] 21+ Mıllıon Lınes https://demonforums.net/Thread-Best-Fresh-Url-Log-Pass-21-M%C4%B1ll%C4%B1on-L%C4%B1nes--183741",
+    "post_id": "116394",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "demonforums.net",
+    "domains": [
+      "demonforums.net"
+    ],
+    "country": null,
+    "threat_claim": "DemonForums - Best Fresh [Url:Log:Pass] 21+ Mıllıon Lınes https://demonforums.net/Thread-Best-Fresh-Url-Log-Pass-21-M%C4%B1ll%C4%B1on-L%C4%B1nes--183741",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://demonforums.net/Thread-Best-Fresh-Url-Log-Pass-21-M%C4%B1ll%C4%B1on-L%C4%B1nes--183741"
+      ],
+      "attacker_aliases": [],
+      "raw_text": "DemonForums - Best Fresh [Url:Log:Pass] 21+ Mıllıon Lınes https://demonforums.net/Thread-Best-Fresh-Url-Log-Pass-21-M%C4%B1ll%C4%B1on-L%C4%B1nes--183741",
+      "message_url": "https://t.me/ctifeeds/116394"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "DemonForums - Best Fresh [Url:Log:Pass] 21+ Mıllıon Lınes https://demonforums.net/Thread-Best-Fresh-Url-Log-Pass-21-M%C4%B1ll%C4%B1on-L%C4%B1nes--183742",
+    "post_id": "116393",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "demonforums.net",
+    "domains": [
+      "demonforums.net"
+    ],
+    "country": null,
+    "threat_claim": "DemonForums - Best Fresh [Url:Log:Pass] 21+ Mıllıon Lınes https://demonforums.net/Thread-Best-Fresh-Url-Log-Pass-21-M%C4%B1ll%C4%B1on-L%C4%B1nes--183742",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://demonforums.net/Thread-Best-Fresh-Url-Log-Pass-21-M%C4%B1ll%C4%B1on-L%C4%B1nes--183742"
+      ],
+      "attacker_aliases": [],
+      "raw_text": "DemonForums - Best Fresh [Url:Log:Pass] 21+ Mıllıon Lınes https://demonforums.net/Thread-Best-Fresh-Url-Log-Pass-21-M%C4%B1ll%C4%B1on-L%C4%B1nes--183742",
+      "message_url": "https://t.me/ctifeeds/116393"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: https://ansorsumenep.com/hacked-by-barzxploit https://ansorsumenep.com/hacked-by-barzxploit",
+    "post_id": "116392",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "ansorsumenep.com",
+    "domains": [
+      "ansorsumenep.com"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: https://ansorsumenep.com/hacked-by-barzxploit https://ansorsumenep.com/hacked-by-barzxploit",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://ansorsumenep.com/hacked-by-barzxploit"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: https://ansorsumenep.com/hacked-by-barzxploit https://ansorsumenep.com/hacked-by-barzxploit",
+      "message_url": "https://t.me/ctifeeds/116392"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "DemonForums - ✪ [ 1,0 GB ] ✪ @Elite_Cloud1  ✪ ULP LOG'S ::  Date ✪ { 8-DEC-2025 } ✪ https://demonforums.net/Thread-Request-%E2%9C%AA-1-0-GB-%E2%9C%AA-Elite-Cloud1-%E2%9C%AA-ULP-LOG-S-Date-%E2%9C%AA-8-DEC-2025-%E2%9C%AA",
+    "post_id": "116389",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "demonforums.net",
+    "domains": [
+      "demonforums.net"
+    ],
+    "country": null,
+    "threat_claim": "DemonForums - ✪ [ 1,0 GB ] ✪ @Elite_Cloud1  ✪ ULP LOG'S ::  Date ✪ { 8-DEC-2025 } ✪ https://demonforums.net/Thread-Request-%E2%9C%AA-1-0-GB-%E2%9C%AA-Elite-Cloud1-%E2%9C%AA-ULP-LOG-S-Date-%E2%9C%AA-8-DEC-2025-%E2%9C%AA",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://demonforums.net/Thread-Request-%E2%9C%AA-1-0-GB-%E2%9C%AA-Elite-Cloud1-%E2%9C%AA-ULP-LOG-S-Date-%E2%9C%AA-8-DEC-2025-%E2%9C%AA"
+      ],
+      "attacker_aliases": [],
+      "raw_text": "DemonForums - ✪ [ 1,0 GB ] ✪ @Elite_Cloud1  ✪ ULP LOG'S ::  Date ✪ { 8-DEC-2025 } ✪ https://demonforums.net/Thread-Request-%E2%9C%AA-1-0-GB-%E2%9C%AA-Elite-Cloud1-%E2%9C%AA-ULP-LOG-S-Date-%E2%9C%AA-8-DEC-2025-%E2%9C%AA",
+      "message_url": "https://t.me/ctifeeds/116389"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "DemonForums - [ 75 GB ] @Elite_Cloud  - ULP LOG'S ::  FRESH [ 12-2-2025 ] https://demonforums.net/Thread-75-GB-Elite-Cloud-ULP-LOG-S-FRESH-12-2-2025",
+    "post_id": "116388",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "demonforums.net",
+    "domains": [
+      "demonforums.net"
+    ],
+    "country": null,
+    "threat_claim": "DemonForums - [ 75 GB ] @Elite_Cloud  - ULP LOG'S ::  FRESH [ 12-2-2025 ] https://demonforums.net/Thread-75-GB-Elite-Cloud-ULP-LOG-S-FRESH-12-2-2025",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://demonforums.net/Thread-75-GB-Elite-Cloud-ULP-LOG-S-FRESH-12-2-2025"
+      ],
+      "attacker_aliases": [],
+      "raw_text": "DemonForums - [ 75 GB ] @Elite_Cloud  - ULP LOG'S ::  FRESH [ 12-2-2025 ] https://demonforums.net/Thread-75-GB-Elite-Cloud-ULP-LOG-S-FRESH-12-2-2025",
+      "message_url": "https://t.me/ctifeeds/116388"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: https://illuminatiworldofficial.com/ https://illuminatiworldofficial.com/",
+    "post_id": "116386",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "illuminatiworldofficial.com",
+    "domains": [
+      "illuminatiworldofficial.com"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: https://illuminatiworldofficial.com/ https://illuminatiworldofficial.com/",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://illuminatiworldofficial.com/"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: https://illuminatiworldofficial.com/ https://illuminatiworldofficial.com/",
+      "message_url": "https://t.me/ctifeeds/116386"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Sinisterly - 💥 Premium Quality Combos for Sale – Guaranteed! 💥 https://sinister.ly/Thread-Diamond-%F0%9F%92%A5-Premium-Quality-Combos-for-Sale-%E2%80%93-Guaranteed-%F0%9F%92%A5--224145",
+    "post_id": "116385",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "sinister.ly",
+    "domains": [
+      "sinister.ly"
+    ],
+    "country": null,
+    "threat_claim": "Sinisterly - 💥 Premium Quality Combos for Sale – Guaranteed! 💥 https://sinister.ly/Thread-Diamond-%F0%9F%92%A5-Premium-Quality-Combos-for-Sale-%E2%80%93-Guaranteed-%F0%9F%92%A5--224145",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://sinister.ly/Thread-Diamond-%F0%9F%92%A5-Premium-Quality-Combos-for-Sale-%E2%80%93-Guaranteed-%F0%9F%92%A5--224145"
+      ],
+      "attacker_aliases": [],
+      "raw_text": "Sinisterly - 💥 Premium Quality Combos for Sale – Guaranteed! 💥 https://sinister.ly/Thread-Diamond-%F0%9F%92%A5-Premium-Quality-Combos-for-Sale-%E2%80%93-Guaranteed-%F0%9F%92%A5--224145",
+      "message_url": "https://t.me/ctifeeds/116385"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Sinisterly - Usa Driver License Available with ssn very fresh https://sinister.ly/Thread-Usa-Driver-License-Available-with-ssn-very-fresh--224136",
+    "post_id": "116384",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "sinister.ly",
+    "domains": [
+      "sinister.ly"
+    ],
+    "country": null,
+    "threat_claim": "Sinisterly - Usa Driver License Available with ssn very fresh https://sinister.ly/Thread-Usa-Driver-License-Available-with-ssn-very-fresh--224136",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://sinister.ly/Thread-Usa-Driver-License-Available-with-ssn-very-fresh--224136"
+      ],
+      "attacker_aliases": [],
+      "raw_text": "Sinisterly - Usa Driver License Available with ssn very fresh https://sinister.ly/Thread-Usa-Driver-License-Available-with-ssn-very-fresh--224136",
+      "message_url": "https://t.me/ctifeeds/116384"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Sinisterly - Usa Driver License Available with ssn very fresh https://sinister.ly/Thread-Usa-Driver-License-Available-with-ssn-very-fresh--224135",
+    "post_id": "116383",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "sinister.ly",
+    "domains": [
+      "sinister.ly"
+    ],
+    "country": null,
+    "threat_claim": "Sinisterly - Usa Driver License Available with ssn very fresh https://sinister.ly/Thread-Usa-Driver-License-Available-with-ssn-very-fresh--224135",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://sinister.ly/Thread-Usa-Driver-License-Available-with-ssn-very-fresh--224135"
+      ],
+      "attacker_aliases": [],
+      "raw_text": "Sinisterly - Usa Driver License Available with ssn very fresh https://sinister.ly/Thread-Usa-Driver-License-Available-with-ssn-very-fresh--224135",
+      "message_url": "https://t.me/ctifeeds/116383"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: https://geniusmoney.docopro.com https://geniusmoney.docopro.com",
+    "post_id": "116382",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "geniusmoney.docopro.com",
+    "domains": [
+      "geniusmoney.docopro.com"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: https://geniusmoney.docopro.com https://geniusmoney.docopro.com",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://geniusmoney.docopro.com"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: https://geniusmoney.docopro.com https://geniusmoney.docopro.com",
+      "message_url": "https://t.me/ctifeeds/116382"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Sinisterly - 💥 Premium Quality Combos for Sale – Guaranteed! 💥 https://sinister.ly/Thread-Diamond-%F0%9F%92%A5-Premium-Quality-Combos-for-Sale-%E2%80%93-Guaranteed-%F0%9F%92%A5--224124",
+    "post_id": "116381",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "sinister.ly",
+    "domains": [
+      "sinister.ly"
+    ],
+    "country": null,
+    "threat_claim": "Sinisterly - 💥 Premium Quality Combos for Sale – Guaranteed! 💥 https://sinister.ly/Thread-Diamond-%F0%9F%92%A5-Premium-Quality-Combos-for-Sale-%E2%80%93-Guaranteed-%F0%9F%92%A5--224124",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://sinister.ly/Thread-Diamond-%F0%9F%92%A5-Premium-Quality-Combos-for-Sale-%E2%80%93-Guaranteed-%F0%9F%92%A5--224124"
+      ],
+      "attacker_aliases": [],
+      "raw_text": "Sinisterly - 💥 Premium Quality Combos for Sale – Guaranteed! 💥 https://sinister.ly/Thread-Diamond-%F0%9F%92%A5-Premium-Quality-Combos-for-Sale-%E2%80%93-Guaranteed-%F0%9F%92%A5--224124",
+      "message_url": "https://t.me/ctifeeds/116381"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: https://issuer-center.systemlogic.com.br https://issuer-center.systemlogic.com.br",
+    "post_id": "116379",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "issuer-center.systemlogic.com.br",
+    "domains": [
+      "issuer-center.systemlogic.com.br"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: https://issuer-center.systemlogic.com.br https://issuer-center.systemlogic.com.br",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://issuer-center.systemlogic.com.br"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: https://issuer-center.systemlogic.com.br https://issuer-center.systemlogic.com.br",
+      "message_url": "https://t.me/ctifeeds/116379"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: https://data.systemlogic.com.br https://data.systemlogic.com.br",
+    "post_id": "116378",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "data.systemlogic.com.br",
+    "domains": [
+      "data.systemlogic.com.br"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: https://data.systemlogic.com.br https://data.systemlogic.com.br",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://data.systemlogic.com.br"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: https://data.systemlogic.com.br https://data.systemlogic.com.br",
+      "message_url": "https://t.me/ctifeeds/116378"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@ctifeeds",
+    "post_title": "Recent defacement reported by Hax.or: https://systemlogic.com.br https://systemlogic.com.br",
+    "post_id": "116377",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [
+      "web_defacement"
+    ],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "systemlogic.com.br",
+    "domains": [
+      "systemlogic.com.br"
+    ],
+    "country": null,
+    "threat_claim": "Recent defacement reported by Hax.or: https://systemlogic.com.br https://systemlogic.com.br",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://systemlogic.com.br"
+      ],
+      "attacker_aliases": [
+        "Hax.or"
+      ],
+      "raw_text": "Recent defacement reported by Hax.or: https://systemlogic.com.br https://systemlogic.com.br",
+      "message_url": "https://t.me/ctifeeds/116377"
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "→ Jimoty (ジモティー)",
+    "post_id": "1536",
+    "author": null,
+    "posted_at": "2025-12-09",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Jimoty (ジモティー)",
+    "domains": [],
+    "country": "JP",
+    "threat_claim": null,
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://jmty.co.jp/archives/24426/news_release/"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "Space Bears → Comcast",
+    "post_id": "1535",
+    "author": null,
+    "posted_at": "2025-12-08",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Comcast",
+    "domains": [],
+    "country": "US",
+    "threat_claim": "Space Bears",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": []
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "Qilin → Scientology",
+    "post_id": "1534",
+    "author": null,
+    "posted_at": "2025-12-04",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Scientology",
+    "domains": [],
+    "country": "US",
+    "threat_claim": "Qilin",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": []
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "INC Ransom → Yazaki Group",
+    "post_id": "1533",
+    "author": null,
+    "posted_at": "2025-12-07",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Yazaki Group",
+    "domains": [],
+    "country": "JP",
+    "threat_claim": "INC Ransom",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": []
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "Nova → National Health Insurance Scheme (NHIS)",
+    "post_id": "1531",
+    "author": null,
+    "posted_at": "2025-12-05",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "National Health Insurance Scheme (NHIS)",
+    "domains": [],
+    "country": "ZM",
+    "threat_claim": "Nova",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": []
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "Qilin → Maset",
+    "post_id": "1530",
+    "author": null,
+    "posted_at": "2025-12-04",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Maset",
+    "domains": [],
+    "country": "ES",
+    "threat_claim": "Qilin",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": []
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "Interlock → Providence Academy",
+    "post_id": "1529",
+    "author": null,
+    "posted_at": "2025-12-03",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Providence Academy",
+    "domains": [],
+    "country": "US",
+    "threat_claim": "Interlock",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": []
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "→ ASKUL",
+    "post_id": "1527",
+    "author": null,
+    "posted_at": "2025-12-09",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "ASKUL",
+    "domains": [],
+    "country": "JP",
+    "threat_claim": null,
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://therecord.media/askul-resumes-limited-ordering-following-ransomware-attack"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "→ Kankyo Kanri Center Co., Ltd.",
+    "post_id": "1526",
+    "author": null,
+    "posted_at": "2025-12-09",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Kankyo Kanri Center Co., Ltd.",
+    "domains": [],
+    "country": "JP",
+    "threat_claim": null,
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.kankyo-kanri.co.jp/wp-content/uploads/2025/12/2512%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B.pdf"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "→ Over 120,000 home cameras hacked in South Korea for 'sexploitation' footage",
+    "post_id": "1525",
+    "author": null,
+    "posted_at": "2025-12-09",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Over 120,000 home cameras hacked in South Korea for 'sexploitation' footage",
+    "domains": [],
+    "country": "KR",
+    "threat_claim": null,
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.bbc.com/news/articles/cj01q6p7ndlo"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "RansomHouse → ARMIS Group",
+    "post_id": "1524",
+    "author": null,
+    "posted_at": "2025-12-03",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "ARMIS Group",
+    "domains": [],
+    "country": "PT",
+    "threat_claim": "RansomHouse",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": []
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "→ Tokyo Electron Taiwan Ltd. (subsidiary of Tokyo Electron)",
+    "post_id": "1523",
+    "author": null,
+    "posted_at": "2025-12-09",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Tokyo Electron Taiwan Ltd. (subsidiary of Tokyo Electron)",
+    "domains": [],
+    "country": "JP",
+    "threat_claim": null,
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.tel.co.jp/news/notice/2025/ru980j00000000h7-att/20251203_001.pdf"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "Qilin → Mainetti UK",
+    "post_id": "1522",
+    "author": null,
+    "posted_at": "2025-12-03",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Mainetti UK",
+    "domains": [],
+    "country": "GB",
+    "threat_claim": "Qilin",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": []
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "Qilin → Aceros Ocotlán Group",
+    "post_id": "1521",
+    "author": null,
+    "posted_at": "2025-12-03",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Aceros Ocotlán Group",
+    "domains": [],
+    "country": "MX",
+    "threat_claim": "Qilin",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": []
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "→ Leroy Merlin",
+    "post_id": "1520",
+    "author": null,
+    "posted_at": "2025-12-09",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Leroy Merlin",
+    "domains": [],
+    "country": "FR",
+    "threat_claim": null,
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://x.com/_SaxX_/status/1995898120039788610?s=20"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "→ 02 Dec 2025",
+    "post_id": "1516",
+    "author": null,
+    "posted_at": "2025-12-09",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "02 Dec 2025",
+    "domains": [],
+    "country": null,
+    "threat_claim": null,
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": []
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "Everest → ASUS",
+    "post_id": "1515",
+    "author": null,
+    "posted_at": "2025-12-02",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "ASUS",
+    "domains": [],
+    "country": "TW",
+    "threat_claim": "Everest",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": []
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "→ Chubu Productivity Center (一般財団法人中部生産性本部)",
+    "post_id": "1512",
+    "author": null,
+    "posted_at": "2025-12-09",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Chubu Productivity Center (一般財団法人中部生産性本部)",
+    "domains": [],
+    "country": "JP",
+    "threat_claim": null,
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.cpc.or.jp/cpc/files/libs/3117/202512011822214112.pdf"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "→ In the past 24 hours, the hacktivist group NoName057(16) claims to have carried out an intensive DDoS campaign against Spanish infrastructure, listing 19 new targets and bringing the total to at least 50 since November 24.",
+    "post_id": "1506",
+    "author": null,
+    "posted_at": "2025-11-28",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "In the past 24 hours, the hacktivist group NoName057(16) claims to have carried out an intensive DDoS campaign against Spanish infrastructure, listing 19 new targets and bringing the total to at least 50 since November 24.",
+    "domains": [],
+    "country": "ES",
+    "threat_claim": null,
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": []
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "→ Japan Inspection Association (Shin Nihon Kentei Kyokai)",
+    "post_id": "1505",
+    "author": null,
+    "posted_at": "2025-12-09",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Japan Inspection Association (Shin Nihon Kentei Kyokai)",
+    "domains": [],
+    "country": "JP",
+    "threat_claim": null,
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.shinken.or.jp/archives/infomation/14909"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "→ Bank Mandiri",
+    "post_id": "1504",
+    "author": null,
+    "posted_at": "2025-11-27",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Bank Mandiri",
+    "domains": [],
+    "country": "ID",
+    "threat_claim": null,
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": []
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "Akira → Hitech Grand Prix Limited",
+    "post_id": "1501",
+    "author": null,
+    "posted_at": "2025-11-27",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Hitech Grand Prix Limited",
+    "domains": [],
+    "country": "GB",
+    "threat_claim": "Akira",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": []
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "→ YAC GARTER CO., LTD. (subsidiary of Y.A.C. Holdings Co., Ltd.)",
+    "post_id": "1500",
+    "author": null,
+    "posted_at": "2025-12-09",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "YAC GARTER CO., LTD. (subsidiary of Y.A.C. Holdings Co., Ltd.)",
+    "domains": [],
+    "country": "JP",
+    "threat_claim": null,
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.yac.co.jp/en/ir/news/auto_20251126509739/pdfFile.pdf"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "→ Upbit",
+    "post_id": "1499",
+    "author": null,
+    "posted_at": "2025-12-09",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Upbit",
+    "domains": [],
+    "country": "KR",
+    "threat_claim": null,
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://upbit.com/service_center/notice?id=5800&view=share"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "→ OpenAI (via Mixpanel service)",
+    "post_id": "1497",
+    "author": null,
+    "posted_at": "2025-12-09",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "OpenAI (via Mixpanel service)",
+    "domains": [],
+    "country": "US",
+    "threat_claim": null,
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": []
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "→ Rama Judicial de Colombia",
+    "post_id": "1495",
+    "author": null,
+    "posted_at": "2025-11-27",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Rama Judicial de Colombia",
+    "domains": [],
+    "country": "CO",
+    "threat_claim": null,
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": []
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "Kill Security → Meena Health",
+    "post_id": "1494",
+    "author": null,
+    "posted_at": "2025-11-27",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Meena Health",
+    "domains": [],
+    "country": "SA",
+    "threat_claim": "Kill Security",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": []
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "Everest → Iberia",
+    "post_id": "1493",
+    "author": null,
+    "posted_at": "2025-12-09",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Iberia",
+    "domains": [],
+    "country": "ES",
+    "threat_claim": "Everest",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": []
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@hackmanac_cybernews",
+    "post_title": "→ Riyadh Airports",
+    "post_id": "1491",
+    "author": null,
+    "posted_at": "2025-11-26",
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Riyadh Airports",
+    "domains": [],
+    "country": "SA",
+    "threat_claim": null,
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": []
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "coinbasecartel → Acu Trans Solutions",
+    "post_id": "9707",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Acu Trans Solutions",
+    "domains": [],
+    "country": null,
+    "threat_claim": "coinbasecartel",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "coinbasecartel → Arabian Escapes",
+    "post_id": "9706",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Arabian Escapes",
+    "domains": [],
+    "country": null,
+    "threat_claim": "coinbasecartel",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "coinbasecartel → Homes 4 Life",
+    "post_id": "9705",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Homes 4 Life",
+    "domains": [],
+    "country": null,
+    "threat_claim": "coinbasecartel",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "coinbasecartel → Elysian Real Estate",
+    "post_id": "9704",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Elysian Real Estate",
+    "domains": [],
+    "country": null,
+    "threat_claim": "coinbasecartel",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "coinbasecartel → Harbor Real Estate",
+    "post_id": "9703",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Harbor Real Estate",
+    "domains": [],
+    "country": null,
+    "threat_claim": "coinbasecartel",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "coinbasecartel → Savills Middle East/Cluttons",
+    "post_id": "9702",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Savills Middle East/Cluttons",
+    "domains": [],
+    "country": null,
+    "threat_claim": "coinbasecartel",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "coinbasecartel → Betterhomes",
+    "post_id": "9701",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Betterhomes",
+    "domains": [],
+    "country": null,
+    "threat_claim": "coinbasecartel",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "coinbasecartel → Hunt & Harris Real Estate",
+    "post_id": "9700",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Hunt & Harris Real Estate",
+    "domains": [],
+    "country": null,
+    "threat_claim": "coinbasecartel",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "coinbasecartel → Coldwell Banker UAE",
+    "post_id": "9699",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Coldwell Banker UAE",
+    "domains": [],
+    "country": null,
+    "threat_claim": "coinbasecartel",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "coinbasecartel → One Broker Group",
+    "post_id": "9698",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "One Broker Group",
+    "domains": [],
+    "country": null,
+    "threat_claim": "coinbasecartel",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "coinbasecartel → Sotheby’s International Realty",
+    "post_id": "9697",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Sotheby’s International Realty",
+    "domains": [],
+    "country": null,
+    "threat_claim": "coinbasecartel",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "mydata → https://gazomet.pl & https://cgas.pl",
+    "post_id": "9696",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "https://gazomet.pl & https://cgas.pl",
+    "domains": [],
+    "country": null,
+    "threat_claim": "mydata",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "chaos → b2be-com",
+    "post_id": "9695",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "b2be-com",
+    "domains": [],
+    "country": null,
+    "threat_claim": "chaos",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "everest → Iberia Airlines - Database Leaked",
+    "post_id": "9694",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Iberia Airlines - Database Leaked",
+    "domains": [],
+    "country": null,
+    "threat_claim": "everest",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "everest → Sarmap - Database leaked",
+    "post_id": "9693",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Sarmap - Database leaked",
+    "domains": [],
+    "country": null,
+    "threat_claim": "everest",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "chaos → thinkmarkets-com",
+    "post_id": "9692",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "thinkmarkets-com",
+    "domains": [],
+    "country": null,
+    "threat_claim": "chaos",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "everest → Petra - Database Leaked",
+    "post_id": "9691",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Petra - Database Leaked",
+    "domains": [],
+    "country": null,
+    "threat_claim": "everest",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "sinobi → Sterling Biotech",
+    "post_id": "9690",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Sterling Biotech",
+    "domains": [],
+    "country": null,
+    "threat_claim": "sinobi",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "incransom → sandiegowarroom.com",
+    "post_id": "9689",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "sandiegowarroom.com",
+    "domains": [],
+    "country": null,
+    "threat_claim": "incransom",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "incransom → hohmartin.org",
+    "post_id": "9688",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "hohmartin.org",
+    "domains": [],
+    "country": null,
+    "threat_claim": "incransom",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "stormous → www.bkcolombia.org",
+    "post_id": "9687",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "www.bkcolombia.org",
+    "domains": [],
+    "country": null,
+    "threat_claim": "stormous",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "stormous → www.goodmanmfg.com",
+    "post_id": "9686",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "www.goodmanmfg.com",
+    "domains": [],
+    "country": null,
+    "threat_claim": "stormous",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "stormous → www.futureal.hu",
+    "post_id": "9685",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "www.futureal.hu",
+    "domains": [],
+    "country": null,
+    "threat_claim": "stormous",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "stormous → www.bkcolombia.org/td&gt;",
+    "post_id": "9684",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "www.bkcolombia.org/td&gt;",
+    "domains": [],
+    "country": null,
+    "threat_claim": "stormous",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "stormous → www.holidaypalace.com",
+    "post_id": "9683",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "www.holidaypalace.com",
+    "domains": [],
+    "country": null,
+    "threat_claim": "stormous",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "qilin → Canno Design",
+    "post_id": "9682",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Canno Design",
+    "domains": [],
+    "country": null,
+    "threat_claim": "qilin",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "incransom → Foxconn Interconnect Technology Limited (FIT)",
+    "post_id": "9681",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Foxconn Interconnect Technology Limited (FIT)",
+    "domains": [],
+    "country": null,
+    "threat_claim": "incransom",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "qilin → Redi Carpet",
+    "post_id": "9680",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Redi Carpet",
+    "domains": [],
+    "country": null,
+    "threat_claim": "qilin",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "sinobi → The Landreau Group",
+    "post_id": "9679",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "The Landreau Group",
+    "domains": [],
+    "country": null,
+    "threat_claim": "sinobi",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "qilin → Poyntell Limited",
+    "post_id": "9678",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Poyntell Limited",
+    "domains": [],
+    "country": null,
+    "threat_claim": "qilin",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "nightspire → Sanyo Special Steel Indi<!DOCTYPE html",
+    "post_id": "9677",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Sanyo Special Steel Indi<!DOCTYPE html",
+    "domains": [],
+    "country": null,
+    "threat_claim": "nightspire",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "akira → Advanced Power",
+    "post_id": "9676",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Advanced Power",
+    "domains": [],
+    "country": null,
+    "threat_claim": "akira",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "akira → Rosland Capital",
+    "post_id": "9675",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Rosland Capital",
+    "domains": [],
+    "country": null,
+    "threat_claim": "akira",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "akira → Sieger design",
+    "post_id": "9674",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Sieger design",
+    "domains": [],
+    "country": null,
+    "threat_claim": "akira",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "akira → Carbon Graphics Group",
+    "post_id": "9673",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Carbon Graphics Group",
+    "domains": [],
+    "country": null,
+    "threat_claim": "akira",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "akira → Nickman, DHK Architects, Profondia, Talbot & Associates, Fishbowl Solutions.",
+    "post_id": "9672",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Nickman, DHK Architects, Profondia, Talbot & Associates, Fishbowl Solutions.",
+    "domains": [],
+    "country": null,
+    "threat_claim": "akira",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "akira → PH Molds",
+    "post_id": "9671",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "PH Molds",
+    "domains": [],
+    "country": null,
+    "threat_claim": "akira",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "akira → AGI Group",
+    "post_id": "9670",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "AGI Group",
+    "domains": [],
+    "country": null,
+    "threat_claim": "akira",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "akira → Nadel Architects",
+    "post_id": "9669",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Nadel Architects",
+    "domains": [],
+    "country": null,
+    "threat_claim": "akira",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "akira → RUEZ",
+    "post_id": "9668",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "RUEZ",
+    "domains": [],
+    "country": null,
+    "threat_claim": "akira",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "akira → Transimpex Warenhandelsgesellschaft",
+    "post_id": "9667",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Transimpex Warenhandelsgesellschaft",
+    "domains": [],
+    "country": null,
+    "threat_claim": "akira",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "qilin → Seipi",
+    "post_id": "9666",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Seipi",
+    "domains": [],
+    "country": null,
+    "threat_claim": "qilin",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "nightspire → <img style='width:30px;' src='http://nspiremkiq44zcxjbgva",
+    "post_id": "9665",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "<img style='width:30px;' src='http://nspiremkiq44zcxjbgva",
+    "domains": [],
+    "country": null,
+    "threat_claim": "nightspire",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "sinobi → TCG",
+    "post_id": "9664",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "TCG",
+    "domains": [],
+    "country": null,
+    "threat_claim": "sinobi",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "sinobi → SLA.DK",
+    "post_id": "9663",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "SLA.DK",
+    "domains": [],
+    "country": null,
+    "threat_claim": "sinobi",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "lynx → www.eliteflower.com",
+    "post_id": "9662",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "www.eliteflower.com",
+    "domains": [],
+    "country": null,
+    "threat_claim": "lynx",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "everest → Air Miles España, S.A - Database Leaked",
+    "post_id": "9661",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "Air Miles España, S.A - Database Leaked",
+    "domains": [],
+    "country": null,
+    "threat_claim": "everest",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "dragonforce → VoiceTeam Call",
+    "post_id": "9660",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "VoiceTeam Call",
+    "domains": [],
+    "country": null,
+    "threat_claim": "dragonforce",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "tengu → https://www.revnomix.com",
+    "post_id": "9659",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "https://www.revnomix.com",
+    "domains": [],
+    "country": null,
+    "threat_claim": "tengu",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  },
+  {
+    "collected_at": "2025-12-09",
+    "source": "@venarix",
+    "post_title": "dragonforce → City of La Vergne",
+    "post_id": "9658",
+    "author": null,
+    "posted_at": null,
+    "leak_types": [],
+    "estimated_volume": null,
+    "file_formats": [],
+    "target_service": "City of La Vergne",
+    "domains": [],
+    "country": null,
+    "threat_claim": "dragonforce",
+    "deal_terms": null,
+    "confidence": "medium",
+    "screenshot_refs": [],
+    "osint_seeds": {
+      "urls": [
+        "https://www.venarix.com"
+      ]
+    }
+  }
 ]
