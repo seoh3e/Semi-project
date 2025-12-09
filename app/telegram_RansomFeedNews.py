@@ -74,7 +74,6 @@ def intermediate_to_RansomFeedNews_leakrecord(event: IntermediateEvent) -> LeakR
         estimated_volume=None,#
         file_formats=[],
         target_service=event.victim_name,
-        # domains=[dominio if dominio!="N/D" else ''],
         domains=[],#
         country=None,
         threat_claim=event.group_name,

@@ -3,7 +3,7 @@
 import re
 from datetime import date
 from typing import Optional, List
-from app.models import IntermediateEvent, LeakRecord
+from .models import IntermediateEvent, LeakRecord
 
 
 # ─────────────────────────────────────────────
@@ -15,37 +15,28 @@ def parse_venarix(
     raw_text: str, message_id=None, message_url=None
 ) -> IntermediateEvent:
     """
-    VenariX Cyber Feeds 채널 메시지 파서.
+    venarix 채널 메시지 파서.
     """
 
     lines = raw_text.splitlines()
 
-    victim = None
     group = None
+    victim = None
     published_date_text = None
     urls: List[str] = []
 
     # 기본 포맷:
     # 🚨 New cyber event 🚨
-    #
-    # Threat group: nightspire
-    #
-    # Victim: <img style='width:30px;', src='http://nspiremkiq44z>
-    #
-    # For detailed insights on this incident, sign up for free at https://www.venarix.com
 
-    for idx, line in enumerate(lines):
-        # threat group
-        if idx == 2:
-            group = line.split(":", 1)[1].strip()
+    # Threat group: coinbasecartel
 
-        # victim
-        if idx == 4:
-            victim = line.split(":", 1)[1].strip()
+    # Victim: Acu Trans Solutions
 
-        # URL
-        if idx == 6:
-            urls.extend(re.findall(r"(https?://\S+)", line))
+    # For datailed insights on this incident, sign up for free at https://www.venarix.com
+
+    group=lines[2].split("Threat group: ")[1]
+
+    victim=lines[4].split("Victim: ")[1]
 
     return IntermediateEvent(
         source_channel="@venarix",
@@ -65,7 +56,7 @@ def parse_venarix(
 # ─────────────────────────────────────────────
 
 
-def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
+def intermediate_to_venarix_leakrecord(event: IntermediateEvent) -> LeakRecord:
     """
     파싱된 IntermediateEvent → LeakRecord 표준 구조 변환
     """
@@ -74,7 +65,7 @@ def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
         collected_at=date.today(),
         source=event.source_channel,
         post_title=f"{event.group_name or ''} → {event.victim_name or ''}",
-        post_id=str(event.message_id) if event.message_id else "",
+        post_id=str(event.message_id) if event.message_id else '',
         author=None,
         posted_at=None,
         leak_types=[],
