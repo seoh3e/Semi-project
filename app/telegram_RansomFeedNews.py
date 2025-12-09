@@ -1,9 +1,9 @@
-# app/telegram_ransomfeednews.py
+# app/telegram_RansomFeedNews.py
 
 import re
-from datetime import date
+from datetime import date, datetime
 from typing import Optional, List
-from app.models import IntermediateEvent, LeakRecord
+from .models import IntermediateEvent, LeakRecord
 
 
 # ─────────────────────────────────────────────
@@ -20,38 +20,25 @@ def parse_RansomFeedNews(
 
     lines = raw_text.splitlines()
 
-    victim = None
-    group = None
     published_date_text = None
+    group = None
+    victim = None
     urls: List[str] = []
 
     # 기본 포맷:
-    # ID: 27710
-    # ⚠️ Sat, 06 Dec 2025 18:43:27 CET
-    # 🥷 nightspire
-    # 🎯 Ermat Grup, Turkey
-    # 🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27710
+    # ID: 27781
+    # ⚠️ Sun, 07 Dec 2025 14:42:25 CET
+    # 🥷 sinobi
+    # 🎯 Quality Companies, USA
+    # 🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27781
 
-    for idx, line in enumerate(lines):
-        # 날짜 정보
-        if idx == 1:
-            published_date_text = line.strip()
+    published_date_text = datetime.strptime(lines[1][3:-5], "%a, %d %b %Y %H:%M:%S").date()
 
-        # 그룹명
-        if idx == 2:
-            parts = line.split()
-            if len(parts) > 1:
-                group = " ".join(parts[1:]).strip()
+    group = lines[2][2:-1]
 
-        # 피해자
-        if idx == 3:
-            parts = line.split("🎯")
-            if len(parts) > 1:
-                victim = parts[1].strip()
+    victim = lines[3][2:-1]
 
-        # URL
-        if idx == 4:
-            urls.append(line.strip())
+    urls.append(lines[4][2:])
 
     return IntermediateEvent(
         source_channel="@RansomFeedNews",
@@ -71,7 +58,7 @@ def parse_RansomFeedNews(
 # ─────────────────────────────────────────────
 
 
-def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
+def intermediate_to_RansomFeedNews_leakrecord(event: IntermediateEvent) -> LeakRecord:
     """
     파싱된 IntermediateEvent → LeakRecord 표준 구조 변환
     """
@@ -80,18 +67,19 @@ def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
         collected_at=date.today(),
         source=event.source_channel,
         post_title=f"{event.group_name or ''} → {event.victim_name or ''}",
-        post_id=str(event.message_id) if event.message_id else "",
+        post_id=str(event.message_id) if event.message_id else '',
         author=None,
-        posted_at=None,
-        leak_types=[],
-        estimated_volume=None,
+        posted_at=event.published_at_text,
+        leak_types=[],#
+        estimated_volume=None,#
         file_formats=[],
         target_service=event.victim_name,
-        domains=[],
+        # domains=[dominio if dominio!="N/D" else ''],
+        domains=[],#
         country=None,
         threat_claim=event.group_name,
         deal_terms=None,
-        confidence="medium",
+        confidence="medium",#
         screenshot_refs=[],
         osint_seeds={"urls": event.urls},
     )

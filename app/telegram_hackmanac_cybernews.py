@@ -1,9 +1,9 @@
 # app/telegram_hackmanac_cybernews.py
 
 import re
-from datetime import date, datetime
+from datetime import date,datetime
 from typing import Optional, List
-from app.models import IntermediateEvent, LeakRecord
+from .models import IntermediateEvent, LeakRecord
 
 
 # ─────────────────────────────────────────────
@@ -20,56 +20,43 @@ def parse_hackmanac_cybernews(
 
     lines = raw_text.splitlines()
 
-    victim = None
-    group = None
     published_date_text = None
     urls: List[str] = []
+    victim = None
+    group = None
 
     # 기본 포맷:
     # 🚨Cyberattack Alert ‼️
-    #
-    # 🇿🇲Zambia - National Health Insurance Scheme (NHIS)
-    #
-    # Nova hacking group claims to have breached National Health Insurance Scheme (NHIS).
-    #
-    # Allegedly, the attackers exfiltrated patients data.
-    #
-    # Sector: Insurance
+
+    # 🇺🇸USA - Scientology
+
+    # Qilin hacking group claims to have breached Scientology.
+
+    # Sector: Organizations
     # Threat class: Cybercrime
-    #
-    # Observed: Dec 5, 2025
+    # Observed: Dec 4, 2025
     # Status: Pending verification
-    #
+
     # —
     # About this post:
     # Hackmanac provides early warning and cyber situational awareness through its social channels. This alert is based on publicly available information that our analysts retrieved from clear and dark web sources. No confidential or proprietary data was downloaded, copied, or redistributed, and sensitive details were redacted from the attached screenshot(s).
-    #
+
     # For more details about this incident, our ESIX impact score, and additional context, visit HackRisk.io.
 
     for idx, line in enumerate(lines):
-        # 날짜 정보
-        if "Observed:" in line:
-            parts = line.split("Observed:")
-            if len(parts) > 1:
-                published_date_text = parts[1].strip()
+        if idx == 0:
+            if line != "🚨Cyberattack Alert ‼️":
+                break
 
-        # 그룹명
-        if "hacking group" in line:
-            parts = line.split("hacking group")
-            if len(parts) > 1:
-                group = parts[0].strip()
+        if "Observed: " in line:
+            published_date_text=datetime.strptime(line.split("Observed: ")[1], "%b %d, %Y").date()
 
-        # 피해자
-        if idx == 2:
-            parts = line.split(" - ")
-            if len(parts) > 1:
-                victim = parts[1].strip()
+        if "Source: " in line:
+            urls=line.split("Source: ")[1]
+    else:
+        victim=lines[2]
 
-        # URL
-        if "Source:" in line:
-            parts = line.split("Source:")
-            if len(parts) > 1:
-                urls.append(parts[1].strip())
+        group=lines[4].split(" hacking group ")[0]
 
     return IntermediateEvent(
         source_channel="@hackmanac_cybernews",
@@ -89,37 +76,47 @@ def parse_hackmanac_cybernews(
 # ─────────────────────────────────────────────
 
 
-def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
+def intermediate_to_hackmanac_cybernews_leakrecord(event: IntermediateEvent) -> LeakRecord:
     """
     파싱된 IntermediateEvent → LeakRecord 표준 구조 변환
     """
 
+    status_to_confidence={"Pending verification":"medium","Confirmed":"high"}
+
     lines = event.raw_text.splitlines()
 
+    estimated_volume=None
+    leak_types=[]
+
     for idx, line in enumerate(lines):
-        if idx == 2:
-            parts = line.split(" - ")
-            if len(parts) > 1:
-                flag = parts[0].strip()[:2]
-                OFFSET = 0x1F1E6  # Regional Indicator Symbol 'A' 시작
-                country = "".join(chr(ord(c) - OFFSET + ord("A")) for c in flag)
+        if " exfiltrated " in line:
+            parts=line.split(" exfiltrated ")[1][:-1]
+            if " of " in parts:
+                estimated_volume=parts.split(" of ")[0]
+                if ", including " in parts:
+                    leak_types.append(parts.split(", including ")[1][:-1])
+            else:
+                leak_types.append(parts)
+
+        if "Status: " in line:
+            status=line.split("Status: ")[1]
 
     return LeakRecord(
         collected_at=date.today(),
         source=event.source_channel,
         post_title=f"{event.group_name or ''} → {event.victim_name or ''}",
-        post_id=str(event.message_id) if event.message_id else "",
+        post_id=str(event.message_id) if event.message_id else '',
         author=None,
-        posted_at=datetime.strptime(event.published_at, "%b %d, %Y").date(),
-        leak_types=[],
-        estimated_volume=None,
+        posted_at=event.published_at_text,
+        leak_types=leak_types,
+        estimated_volume=estimated_volume,
         file_formats=[],
         target_service=event.victim_name,
         domains=[],
-        country=country,
+        country=None,
         threat_claim=event.group_name,
         deal_terms=None,
-        confidence="medium",
+        confidence=status_to_confidence[status],
         screenshot_refs=[],
         osint_seeds={"urls": event.urls},
     )
