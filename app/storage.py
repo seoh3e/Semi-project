@@ -167,3 +167,70 @@ def append_leak_record_csv(record: LeakRecord) -> None:
             getattr(record, "message_id", ""),
             getattr(record, "message_url", ""),
         ])
+
+
+# app/storage.py
+
+from pathlib import Path
+from typing import List
+import csv
+import json
+
+from .models import LeakRecord
+
+
+def leakrecords_to_rows(records: List[LeakRecord]) -> list[dict]:
+    rows: list[dict] = []
+    for r in records:
+        rows.append(
+            {
+                "post_title": r.post_title,
+                "post_id": r.post_id,
+                "author": r.author,
+                "source": r.source,
+                "posted_at": r.posted_at.isoformat() if r.posted_at else "",
+                "collected_at": (
+                    r.collected_at.isoformat()
+                    if hasattr(r.collected_at, "isoformat")
+                    else str(r.collected_at)
+                ),
+                "leak_types": ", ".join(r.leak_types),
+                "estimated_volume": r.estimated_volume
+                if r.estimated_volume is not None
+                else "",
+                "file_formats": ", ".join(r.file_formats),
+                "target_service": r.target_service or "",
+                "domains": ", ".join(r.domains),
+                "country": r.country or "",
+                "threat_claim": r.threat_claim or "",
+                "deal_terms": r.deal_terms or "",
+                "confidence": r.confidence,
+            }
+        )
+    return rows
+
+
+def save_leak_summary(
+    records: List[LeakRecord],
+    csv_path: str = "data/leak_summary.csv",
+    json_path: str = "data/leak_summary.json",
+) -> None:
+    """
+    채널별 최근 N개의 LeakRecord를 모아서
+    leak_summary.csv / leak_summary.json으로 한 번에 저장하는 함수.
+    기존 append_leak_record_csv와는 다르게, 매번 '새 파일'을 생성한다.
+    """
+    if not records:
+        print("[WARN] save_leak_summary: records가 비어 있어서 저장하지 않음.")
+        return
+
+    rows = leakrecords_to_rows(records)
+
+    csv_p = Path(csv_path)
+    csv_p.parent.mkdir(parents=True, exist_ok=True)
+
+    # 요약 파일이므로 매번 덮어쓴다 (w 모드)
+    with csv_p.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
+        writer.writeheader()
+        writer.writero

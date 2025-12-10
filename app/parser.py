@@ -201,3 +201,38 @@ def parse_telegram_message(raw: str) -> LeakRecord:
     )
 
     return record
+
+from datetime import datetime
+from typing import Any
+
+def build_leakrecord_from_telegram_msg(msg: Any, channel_name: str) -> LeakRecord:
+    """
+    Telethon/Pyrogram 메시지 객체 + 채널명 → LeakRecord 완성본 생성.
+
+    - msg.message (str)       : 본문 텍스트
+    - msg.id                  : 텔레그램 메시지 ID
+    - msg.date                : 텔레그램 상 게시 시각 (datetime)
+    - msg.sender_id / msg.from_id 등 : 작성자 식별자 (라이브러리별로 다름)
+    """
+    # 1) 우선 본문 텍스트 기반으로 파싱
+    base = parse_telegram_message(msg.message)
+
+    # 2) 텔레그램 메타데이터를 base에 채워 넣기
+    post_id = getattr(msg, "id", None)
+    posted_at = getattr(msg, "date", None)
+
+    # sender / from 관련 필드는 라이브러리마다 이름이 다를 수 있으니 안전하게 처리
+    author = getattr(msg, "sender_id", None)
+    if author is None:
+        author = getattr(msg, "from_id", None)
+
+    # collected_at은 "우리가 수집한 날"로 덮어쓰기
+    collected = date.today()
+
+    # 새 LeakRecord를 만들어도 되고, base를 수정해도 되는데,
+    # 여기서는 base를 수정해서 그대로 리턴
+    base.post_id = str(post_id) if post_id is not None else None
+    base.author = str(author) if author is not None else None
+    base.posted_at = posted_at
+    base.source = channel_name
+    bas
