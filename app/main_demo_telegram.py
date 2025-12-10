@@ -38,6 +38,7 @@ from .telegram_venarix import (
     intermediate_to_leakrecord as venarix_to_leakrecord,
 )
 from .storage import append_leak_record_csv
+from .enrich_with_osint import enrich_leakrecord_osint
 
 
 # ---------------------------------------------------------------------------
@@ -53,6 +54,9 @@ def process_leak_record(record: LeakRecord) -> None:
     """
     # 1) JSON 저장 (기존)
     add_leak_record(record)
+
+    # 1-1) enrich_leakrecord_osint
+    record = enrich_leakrecord_osint(record)
 
     # 1-2) CSV에도 한 줄 append (대시보드용)
     append_leak_record_csv(record)
