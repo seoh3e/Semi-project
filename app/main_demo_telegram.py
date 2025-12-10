@@ -38,7 +38,7 @@ from .telegram_venarix import (
     intermediate_to_leakrecord as venarix_to_leakrecord,
 )
 from .storage import append_leak_record_csv
-from .enrich_with_osint import enrich_leakrecord_osint
+from .enrich_with_osint import enrich_leakrecord_with_malpedia
 
 
 # ---------------------------------------------------------------------------
@@ -56,7 +56,7 @@ def process_leak_record(record: LeakRecord) -> None:
     add_leak_record(record)
 
     # 1-1) enrich_leakrecord_osint
-    record = enrich_leakrecord_osint(record)
+    record = enrich_leakrecord_with_malpedia(record)
 
     # 1-2) CSV에도 한 줄 append (대시보드용)
     append_leak_record_csv(record)
@@ -106,7 +106,7 @@ def run_RansomFeedNews_demo() -> None:
     """
     raw_message = """
 ID: 27781 
-⚠️ Sun, 07 Dec 2025 14:42:25 CET 
+⚠️Sun, 07 Dec 2025 14:42:25 CET 
 🥷 sinobi 
 🎯 Quality Companies, USA 
 🔗 http://www.ransomfeed.it/index.php?page=post_details&id_post=27781
@@ -126,7 +126,7 @@ ID: 27781
 
     # 2) IntermediateEvent → LeakRecord
     record: LeakRecord = ransomfeed_to_leakrecord(event)
-    print(record)
+
     # 3) 공통 파이프라인 태우기
     process_leak_record(record)
 
@@ -211,7 +211,7 @@ For more details about this incident, our ESIX impact score, and additional cont
 
     # 2) IntermediateEvent → LeakRecord
     record: LeakRecord = hackmanac_to_leakrecord(event)
-    print(record)
+
     # 3) 공통 파이프라인 태우기
     process_leak_record(record)
 
@@ -271,11 +271,11 @@ if __name__ == "__main__":
     run_RansomFeedNews_demo()
 
     # 3) ctifeeds 채널 포맷 테스트
-    # run_ctifeeds_demo()
+    run_ctifeeds_demo()
 
     # 4) hackmanac_cybernews 채널 포맷 테스트
-    # run_hackmanac_cybernews_demo()
+    run_hackmanac_cybernews_demo()
 
     # 5) venarix 채널 포맷 테스트
-    # run_venarix_demo()
+    run_venarix_demo()
 
