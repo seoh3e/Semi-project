@@ -226,19 +226,5 @@ For datailed insights on this incident, sign up for free at https://www.venarix.
 # ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
-    # 1) 기존 일반 텔레그램 포맷 테스트 (필요하면 주석 해제)
-    # run_generic_telegram_demo()
+    print("Use run_all_demos.py to run all demos.")
 
-    print("[RUN] RansomFeedNews demo")
-    run_RansomFeedNews_demo()
-
-    print("[RUN] ctifeeds demo")
-    run_ctifeeds_demo()
-
-    print("[RUN] hackmanac_cybernews demo")
-    run_hackmanac_cybernews_demo()
-
-    print("[RUN] venarix demo")
-    run_venarix_demo()
-
-    print("[DONE] all demos")
