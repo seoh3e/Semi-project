@@ -1,11 +1,12 @@
 # app/storage.py
 
 from datetime import date, datetime
+from dataclasses import is_dataclass, asdict
+from pathlib import Path
+from typing import List
 import csv
 import json
 import os
-from pathlib import Path
-from dataclasses import is_dataclass, asdict
 
 from .models import LeakRecord
 
@@ -17,24 +18,25 @@ from .models import LeakRecord
 DATA_DIR = Path("data")
 DATA_DIR.mkdir(exist_ok=True)
 
-# JSON 저장용 (백업 / 디버깅용)
-JSON_PATH = DATA_DIR / "leak_summary.json"
+# JSON 저장용 (전체 LeakRecord 백업 / 디버깅용)
+# => leak_summary.json과 구분하기 위해 파일명을 leaks.json으로 사용
+JSON_PATH = DATA_DIR / "leaks.json"
 
-# 대시보드에서 읽을 CSV 경로
+# 대시보드에서 읽을 CSV 경로 (append 용)
 CSV_RECORDS_PATH = DATA_DIR / "leak_records.csv"
 
 # 대시보드에서 사용하는 CSV 컬럼 정의
 CSV_HEADER = [
-    "source",        # 채널 / feed 이름 (@RansomFeedNews 등)
-    "title",         # 글 제목 또는 핵심 문구
-    "target_service",# 피해 서비스 / 회사명
-    "domains",       # 도메인 목록 (쉼표 join)
-    "leak_types",    # 유출 타입 목록 (예: email, password 등)
-    "volume",        # 유출 규모 (문자열/숫자 상관 없음)
-    "confidence",    # 신뢰도 (low/medium/high)
-    "collected_at",  # 수집일 (YYYY-MM-DD)
-    "message_id",    # 텔레그램 메시지 ID
-    "message_url",   # 텔레그램 메시지 URL
+    "source",
+    "post_title",
+    "target_service",
+    "domains",
+    "leak_types",
+    "estimated_volume",
+    "confidence",
+    "collected_at",
+    "post_id",
+    "message_url",
 ]
 
 
@@ -45,9 +47,11 @@ CSV_HEADER = [
 def record_to_dict(record: LeakRecord) -> dict:
     """LeakRecord 객체를 평범한 dict로 변환한다."""
 
-    # pydantic v1 / v2 대응
+    # pydantic v2
     if hasattr(record, "model_dump"):
         return record.model_dump()
+
+    # pydantic v1
     if hasattr(record, "dict"):
         return record.dict()
 
@@ -64,16 +68,16 @@ def record_to_dict(record: LeakRecord) -> dict:
 
 
 # =============================================================================
-# (옵션) 중복 저장 방지 – message_id 기준
+# (옵션) 중복 저장 방지 – post_id 기준
 # =============================================================================
 
 def is_duplicate_record(record: LeakRecord) -> bool:
     """
-    CSV에 이미 동일한 message_id가 있으면 True.
-    message_id가 없으면 그냥 False 반환.
+    CSV에 이미 동일한 post_id가 있으면 True.
+    post_id가 없으면 그냥 False 반환.
     """
-    msg_id = getattr(record, "message_id", None)
-    if not msg_id:
+    post_id = getattr(record, "post_id", None)
+    if not post_id:
         return False
 
     if not CSV_RECORDS_PATH.exists():
@@ -82,7 +86,7 @@ def is_duplicate_record(record: LeakRecord) -> bool:
     with CSV_RECORDS_PATH.open("r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            if row.get("message_id") == str(msg_id):
+            if row.get("post_id") == str(post_id):
                 return True
 
     return False
@@ -139,7 +143,7 @@ def append_leak_record_csv(record: LeakRecord) -> None:
 
     # (옵션) 중복이면 스킵
     if is_duplicate_record(record):
-        print(f"[SKIP] duplicated message_id={record.message_id}")
+        print(f"[SKIP] duplicated post_id={record.post_id}")
         return
 
     file_exists = CSV_RECORDS_PATH.exists()
@@ -156,28 +160,22 @@ def append_leak_record_csv(record: LeakRecord) -> None:
         leak_types_str = ",".join(record.leak_types) if getattr(record, "leak_types", None) else ""
 
         writer.writerow([
-            getattr(record, "source", ""),
-            getattr(record, "title", ""),
-            getattr(record, "target_service", ""),
+            record.source,
+            record.post_title,
+            record.target_service or "",
             domains_str,
             leak_types_str,
-            getattr(record, "volume", ""),
-            getattr(record, "confidence", ""),
-            getattr(record, "collected_at", ""),
-            getattr(record, "message_id", ""),
+            record.estimated_volume if record.estimated_volume is not None else "",
+            record.confidence,
+            record.collected_at,
+            record.post_id,
             getattr(record, "message_url", ""),
         ])
 
 
-# app/storage.py
-
-from pathlib import Path
-from typing import List
-import csv
-import json
-
-from .models import LeakRecord
-
+# =============================================================================
+# 3) 요약 파일용 변환/저장 함수 (leak_summary.csv / json)
+# =============================================================================
 
 def leakrecords_to_rows(records: List[LeakRecord]) -> list[dict]:
     rows: list[dict] = []
@@ -195,9 +193,9 @@ def leakrecords_to_rows(records: List[LeakRecord]) -> list[dict]:
                     else str(r.collected_at)
                 ),
                 "leak_types": ", ".join(r.leak_types),
-                "estimated_volume": r.estimated_volume
-                if r.estimated_volume is not None
-                else "",
+                "estimated_volume": (
+                    r.estimated_volume if r.estimated_volume is not None else ""
+                ),
                 "file_formats": ", ".join(r.file_formats),
                 "target_service": r.target_service or "",
                 "domains": ", ".join(r.domains),
@@ -233,4 +231,8 @@ def save_leak_summary(
     with csv_p.open("w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
         writer.writeheader()
-        writer.writero
+        writer.writerows(rows)
+
+    # JSON 요약도 같은 rows 기준으로 저장
+    with open(json_path, "w", encoding="utf-8") as jf:
+        json.dump(rows, jf, ensure_ascii=False, indent=2, default=str)

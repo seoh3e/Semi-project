@@ -1,6 +1,8 @@
 # app/parser.py
+
 from datetime import date
-from typing import List
+from typing import List, Any
+from urllib.parse import urlparse
 import re
 
 from .models import LeakRecord
@@ -51,6 +53,30 @@ DOMAIN_FALLBACK_RE = re.compile(
 )
 
 
+# -------------------------------------------------------------------
+# URL 리스트 → 도메인 리스트 추출 (RansomFeedNews 등에서 사용)
+# -------------------------------------------------------------------
+def extract_domains(urls: List[str]) -> List[str]:
+    """
+    URL 리스트에서 도메인만 추출하여 중복 제거한 리스트를 반환한다.
+    예:
+        ["https://example.com/a", "http://sub.example.com", "https://example.com/b"]
+        -> ["example.com", "sub.example.com"]
+    """
+    domains: List[str] = []
+
+    for u in urls:
+        try:
+            netloc = urlparse(u).netloc.lower()
+        except Exception:
+            continue
+
+        if netloc and netloc not in domains:
+            domains.append(netloc)
+
+    return domains
+
+
 def normalize_confidence(conf_raw: str) -> str:
     """
     다양한 표현을 high/medium/low/unknown 으로 정규화
@@ -73,7 +99,6 @@ def normalize_confidence(conf_raw: str) -> str:
         return "low"
 
     return "unknown"
-
 
 
 def parse_telegram_message(raw: str) -> LeakRecord:
@@ -183,14 +208,12 @@ def parse_telegram_message(raw: str) -> LeakRecord:
         post_id=None,
         author=None,
         posted_at=None,
-
         leak_types=leak_types,
         estimated_volume=estimated_volume,
         file_formats=[],
         target_service=target_service,
         domains=domains,
         country=None,
-
         threat_claim=None,
         deal_terms=None,
         confidence=confidence,
@@ -202,37 +225,43 @@ def parse_telegram_message(raw: str) -> LeakRecord:
 
     return record
 
-from datetime import datetime
-from typing import Any
 
 def build_leakrecord_from_telegram_msg(msg: Any, channel_name: str) -> LeakRecord:
     """
     Telethon/Pyrogram 메시지 객체 + 채널명 → LeakRecord 완성본 생성.
 
-    - msg.message (str)       : 본문 텍스트
-    - msg.id                  : 텔레그램 메시지 ID
-    - msg.date                : 텔레그램 상 게시 시각 (datetime)
-    - msg.sender_id / msg.from_id 등 : 작성자 식별자 (라이브러리별로 다름)
+    - msg.message : 본문 텍스트 (str)
+    - msg.id      : 텔레그램 메시지 ID
+    - msg.date    : 텔레그램 상 게시 시각 (datetime)
+    - msg.sender_id / msg.from_id : 작성자 ID (라이브러리별로 다름)
     """
-    # 1) 우선 본문 텍스트 기반으로 파싱
+    # 1) 먼저 본문 텍스트만 보고 LeakRecord 기본 골격 생성
     base = parse_telegram_message(msg.message)
 
-    # 2) 텔레그램 메타데이터를 base에 채워 넣기
+    # 2) 텔레그램 메타데이터 채워넣기
     post_id = getattr(msg, "id", None)
     posted_at = getattr(msg, "date", None)
 
-    # sender / from 관련 필드는 라이브러리마다 이름이 다를 수 있으니 안전하게 처리
     author = getattr(msg, "sender_id", None)
     if author is None:
         author = getattr(msg, "from_id", None)
 
-    # collected_at은 "우리가 수집한 날"로 덮어쓰기
-    collected = date.today()
-
-    # 새 LeakRecord를 만들어도 되고, base를 수정해도 되는데,
-    # 여기서는 base를 수정해서 그대로 리턴
     base.post_id = str(post_id) if post_id is not None else None
     base.author = str(author) if author is not None else None
     base.posted_at = posted_at
     base.source = channel_name
-    bas
+    base.collected_at = date.today()
+
+    # 3) osint_seeds에 텔레그램 메타데이터도 같이 저장 (선택)
+    seeds = dict(base.osint_seeds) if base.osint_seeds else {}
+    telegram_meta = seeds.get("telegram", {})
+    telegram_meta.update(
+        {
+            "channel": channel_name,
+            "message_id": post_id,
+        }
+    )
+    seeds["telegram"] = telegram_meta
+    base.osint_seeds = seeds
+
+    return base
