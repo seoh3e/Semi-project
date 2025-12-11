@@ -7,6 +7,8 @@ import requests
 from bs4 import BeautifulSoup
 
 from .models import LeakRecord
+import os
+import json
 
 
 # ───────────────────────────────────────────────
@@ -307,6 +309,99 @@ def enrich_leakrecord_with_heuristics(leak: LeakRecord) -> LeakRecord:
 
 
 # ───────────────────────────────────────────────
+# MITRE ENTERPRISE ATT&CK (STIX 2.1)
+# ───────────────────────────────────────────────
+MITRE_JSON_URL = (
+    "https://raw.githubusercontent.com/mitre/cti/master/enterprise-attack/enterprise-attack.json"
+)
+MITRE_LOCAL_FILE = "enterprise-attack.json"
+
+
+def ensure_mitre_file():
+    if os.path.exists(MITRE_LOCAL_FILE):
+        return True
+
+    session = requests.Session()
+    retries = Retry(total=5, backoff_factor=1, status_forcelist=[429, 500, 502, 503, 504])
+    session.mount("https://", HTTPAdapter(max_retries=retries))
+
+    try:
+        resp = session.get(MITRE_JSON_URL, timeout=20)
+        resp.raise_for_status()
+        with open(MITRE_LOCAL_FILE, "w", encoding="utf-8") as f:
+            f.write(resp.text)
+        return True
+    except Exception:
+        return False
+
+
+def load_mitre_objects():
+    if not ensure_mitre_file():
+        return []
+
+    with open(MITRE_LOCAL_FILE, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    objects = data.get("objects", [])
+    for obj in objects:
+        if obj.get("type") == "intrusion-set" and "name" in obj:
+            obj["name_lower"] = obj["name"].lower()
+    return objects
+
+
+def mitre_search_intrusion_set(objects, group_name: str):
+    q = group_name.lower()
+    return [
+        o for o in objects
+        if o.get("type") == "intrusion-set"
+        and q in o.get("name_lower", "")
+    ]
+
+
+def mitre_relationships(objects, source_id):
+    return [
+        o for o in objects
+        if o.get("type") == "relationship"
+        and o.get("source_ref") == source_id
+        and "attack-pattern" in o.get("target_ref", "")
+    ]
+
+
+def mitre_attack_patterns(objects, technique_ids):
+    return [
+        o.get("name")
+        for o in objects
+        if o.get("type") == "attack-pattern"
+        and o.get("id") in technique_ids
+    ]
+
+
+def enrich_with_mitre(leak: LeakRecord) -> LeakRecord:
+    """MITRE 기반 보강"""
+    objects = load_mitre_objects()
+    if not objects:
+        return leak
+
+    if leak.threat_claim:
+        groups = mitre_search_intrusion_set(objects, leak.threat_claim)
+        if groups:
+            group = groups[0]
+
+            rels = mitre_relationships(objects, group.get("id"))
+            technique_ids = [r.get("target_ref") for r in rels]
+            ttp_names = mitre_attack_patterns(objects, technique_ids)
+
+            leak.osint_seeds.setdefault("ttps", [])
+            leak.osint_seeds["ttps"] = ttp_names
+
+            leak.leak_types = leak.leak_types or ["APT-attributed leak"]
+            leak.country = leak.country or "unknown"
+            leak.target_service = leak.target_service or "unknown service"
+
+    return leak
+
+
+# ───────────────────────────────────────────────
 # OSINT 통합 wrapper
 # ───────────────────────────────────────────────
 
@@ -327,4 +422,8 @@ def enrich_leakrecord_with_osint(leak: LeakRecord) -> LeakRecord:
     # 2) 단순 heuristic 기반 OSINT
     leak = enrich_leakrecord_with_heuristics(leak)
 
+    # 3)
+    leak = enrich_with_mitre(leak)
+
     return leak
+
