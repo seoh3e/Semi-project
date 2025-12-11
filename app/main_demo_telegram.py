@@ -9,6 +9,7 @@
     LeakRecord              →  저장 + 알림
 
 - 현재 구현된 채널:
+    - generic 텔레그램 포맷 (DarkForum 스타일)
     - RansomFeedNews
     - ctifeeds
     - hackmanac_cybernews
@@ -17,10 +18,11 @@
 
 from __future__ import annotations
 
-from .parser import parse_telegram_message  # 기존 일반 텔레그램 포맷용 파서 (DarkForum 스타일 등)
-from .storage import add_leak_record
+from .parser import parse_telegram_message  # 기존 일반 텔레그램 포맷용 파서
+from .storage import add_leak_record, append_leak_record_csv
 from .notifier import notify_new_leak
 from .models import LeakRecord
+
 from .telegram_RansomFeedNews import (
     parse_RansomFeedNews,
     intermediate_to_leakrecord as ransomfeed_to_leakrecord,
@@ -37,39 +39,33 @@ from .telegram_venarix import (
     parse_venarix,
     intermediate_to_leakrecord as venarix_to_leakrecord,
 )
-from .storage import append_leak_record_csv
-from .enrich_with_osint import enrich_leakrecord_with_malpedia
 
 
 # ---------------------------------------------------------------------------
 # 공통 처리 유틸
 # ---------------------------------------------------------------------------
 
-
 def process_leak_record(record: LeakRecord) -> None:
     """
     LeakRecord를 공동 파이프라인에 태우는 함수.
-    - CSV/JSON 저장
-    - 콘솔/슬랙 등 알림 출력
+    - JSON 저장
+    - CSV 저장
+    - 콘솔 알림 출력
     """
-    # 1) JSON 저장 (기존)
+    # 1) JSON 저장
     add_leak_record(record)
 
-    # 1-1) enrich_leakrecord_osint
-    record = enrich_leakrecord_with_malpedia(record)
-
-    # 1-2) CSV에도 한 줄 append (대시보드용)
+    # 2) CSV에도 한 줄 append (대시보드용)
     append_leak_record_csv(record)
     print("✅ CSV 저장 완료: data/leak_records.csv")
 
-    # 2) 알림
+    # 3) 알림
     notify_new_leak(record)
 
 
 # ---------------------------------------------------------------------------
 # 1. 기존 일반 텔레그램 메시지 데모 (DarkForum 같은 포맷)
 # ---------------------------------------------------------------------------
-
 
 def run_generic_telegram_demo() -> None:
     """
@@ -96,13 +92,9 @@ CONFIDENCE : HIGH
 # 2. RansomFeedNews 전용 데모
 # ---------------------------------------------------------------------------
 
-
 def run_RansomFeedNews_demo() -> None:
     """
     RansomFeedNews 채널에서 온 메시지를 예시로 사용하는 데모.
-
-    실제 텔레그램 API 연동 없이,
-    '이런 형식의 텍스트가 왔다'고 가정하고 파이프라인을 테스트한다.
     """
     raw_message = """
 ID: 27781 
@@ -119,7 +111,6 @@ ID: 27781
         message_url="https://t.me/RansomFeedNews/123",
     )
 
-    # group / victim 둘 다 없으면 의미 없는 메시지로 간주
     if not event.group_name and not event.victim_name:
         print("[SKIP] RansomFeedNews event without group/victim")
         return
@@ -127,7 +118,7 @@ ID: 27781
     # 2) IntermediateEvent → LeakRecord
     record: LeakRecord = ransomfeed_to_leakrecord(event)
 
-    # 3) 공통 파이프라인 태우기
+    # 3) 공통 파이프라인
     process_leak_record(record)
 
 
@@ -135,34 +126,25 @@ ID: 27781
 # 3. ctifeeds 전용 데모
 # ---------------------------------------------------------------------------
 
-
 def run_ctifeeds_demo() -> None:
     """
     ctifeeds 채널에서 온 메시지를 예시로 사용하는 데모.
-
-    실제 텔레그램 API 연동 없이,
-    '이런 형식의 텍스트가 왔다'고 가정하고 파이프라인을 테스트한다.
     """
     raw_message = """
 Recent defacement reported by Hax.or: http://psb.mikenongomulyo.sch.id http://psb.mikenongomulyo.sch.id
     """.strip()
 
-    # 1) raw → IntermediateEvent
     event = parse_ctifeeds(
         raw_text=raw_message,
-        message_id=123,  # 데모용 임의 값
-        message_url="https://t.me/ctifeeds/123",
+        message_id=124,
+        message_url="https://t.me/ctifeeds/124",
     )
 
-    # group / victim 둘 다 없으면 의미 없는 메시지로 간주
     if not event.group_name and not event.victim_name:
         print("[SKIP] ctifeeds event without group/victim")
         return
 
-    # 2) IntermediateEvent → LeakRecord
     record: LeakRecord = ctifeeds_to_leakrecord(event)
-
-    # 3) 공통 파이프라인 태우기
     process_leak_record(record)
 
 
@@ -170,13 +152,9 @@ Recent defacement reported by Hax.or: http://psb.mikenongomulyo.sch.id http://ps
 # 4. hackmanac_cybernews 전용 데모
 # ---------------------------------------------------------------------------
 
-
 def run_hackmanac_cybernews_demo() -> None:
     """
     hackmanac_cybernews 채널에서 온 메시지를 예시로 사용하는 데모.
-
-    실제 텔레그램 API 연동 없이,
-    '이런 형식의 텍스트가 왔다'고 가정하고 파이프라인을 테스트한다.
     """
     raw_message = """
 🚨Cyberattack Alert ‼️
@@ -197,22 +175,17 @@ Hackmanac provides early warning and cyber situational awareness through its soc
 For more details about this incident, our ESIX impact score, and additional context, visit HackRisk.io.
     """.strip()
 
-    # 1) raw → IntermediateEvent
     event = parse_hackmanac_cybernews(
         raw_text=raw_message,
-        message_id=123,  # 데모용 임의 값
-        message_url="https://t.me/hackmanac_cybernews/123",
+        message_id=125,
+        message_url="https://t.me/hackmanac_cybernews/125",
     )
 
-    # group / victim 둘 다 없으면 의미 없는 메시지로 간주
     if not event.group_name and not event.victim_name:
         print("[SKIP] hackmanac_cybernews event without group/victim")
         return
 
-    # 2) IntermediateEvent → LeakRecord
     record: LeakRecord = hackmanac_to_leakrecord(event)
-
-    # 3) 공통 파이프라인 태우기
     process_leak_record(record)
 
 
@@ -220,13 +193,9 @@ For more details about this incident, our ESIX impact score, and additional cont
 # 5. venarix 전용 데모
 # ---------------------------------------------------------------------------
 
-
 def run_venarix_demo() -> None:
     """
     venarix 채널에서 온 메시지를 예시로 사용하는 데모.
-
-    실제 텔레그램 API 연동 없이,
-    '이런 형식의 텍스트가 왔다'고 가정하고 파이프라인을 테스트한다.
     """
     raw_message = """
 🚨 New cyber event 🚨
@@ -238,22 +207,17 @@ Victim: Acu Trans Solutions
 For datailed insights on this incident, sign up for free at https://www.venarix.com
     """.strip()
 
-    # 1) raw → IntermediateEvent
     event = parse_venarix(
         raw_text=raw_message,
-        message_id=123,  # 데모용 임의 값
-        message_url="https://t.me/venarix/123",
+        message_id=126,
+        message_url="https://t.me/venarix/126",
     )
 
-    # group / victim 둘 다 없으면 의미 없는 메시지로 간주
     if not event.group_name and not event.victim_name:
         print("[SKIP] venarix event without group/victim")
         return
 
-    # 2) IntermediateEvent → LeakRecord
     record: LeakRecord = venarix_to_leakrecord(event)
-
-    # 3) 공통 파이프라인 태우기
     process_leak_record(record)
 
 
@@ -262,20 +226,19 @@ For datailed insights on this incident, sign up for free at https://www.venarix.
 # ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
-    # 필요에 따라 어떤 데모를 돌릴지 선택하면 됨.
-
-    # 1) 기존 일반 텔레그램 포맷 테스트
+    # 1) 기존 일반 텔레그램 포맷 테스트 (필요하면 주석 해제)
     # run_generic_telegram_demo()
 
-    # 2) RansomFeedNews 채널 포맷 테스트
+    print("[RUN] RansomFeedNews demo")
     run_RansomFeedNews_demo()
 
-    # 3) ctifeeds 채널 포맷 테스트
+    print("[RUN] ctifeeds demo")
     run_ctifeeds_demo()
 
-    # 4) hackmanac_cybernews 채널 포맷 테스트
+    print("[RUN] hackmanac_cybernews demo")
     run_hackmanac_cybernews_demo()
 
-    # 5) venarix 채널 포맷 테스트
+    print("[RUN] venarix demo")
     run_venarix_demo()
 
+    print("[DONE] all demos")

@@ -1,42 +1,54 @@
 # app/telegram_venarix.py
 
-import re
 from datetime import date
-from typing import Optional, List
+from typing import List
+from urllib.parse import urlparse
+
 from .models import IntermediateEvent, LeakRecord
+from .enrich_with_osint import enrich_leakrecord_with_osint
 
 
-# ─────────────────────────────────────────────
-# 1) raw_text → IntermediateEvent
-# ─────────────────────────────────────────────
+def _extract_domains(urls: List[str]) -> List[str]:
+    domains = []
+    for u in urls:
+        try:
+            host = urlparse(u).netloc.lower()
+        except Exception:
+            continue
+        if host and host not in domains:
+            domains.append(host)
+    return domains
 
 
+# --------------------------------------------------------
+# raw_text → IntermediateEvent
+# --------------------------------------------------------
 def parse_venarix(
     raw_text: str, message_id=None, message_url=None
 ) -> IntermediateEvent:
-    """
-    venarix 채널 메시지 파서.
-    """
 
     lines = raw_text.splitlines()
 
     group = None
     victim = None
-    published_date_text = None
-    urls: List[str] = []
-
-    # 기본 포맷:
-    # 🚨 New cyber event 🚨
+    urls = []
 
     # Threat group: coinbasecartel
+    for line in lines:
+        if line.startswith("Threat group:"):
+            group = line.split("Threat group:")[1].strip()
+            break
 
-    # Victim: Acu Trans Solutions
+    # Victim:
+    for line in lines:
+        if line.startswith("Victim:"):
+            victim = line.split("Victim:")[1].strip()
+            break
 
-    # For datailed insights on this incident, sign up for free at https://www.venarix.com
-
-    group=lines[2].split("Threat group: ")[1]
-
-    victim=lines[4].split("Victim: ")[1]
+    # URL
+    for line in lines:
+        if "http" in line:
+            urls.append(line.strip())
 
     return IntermediateEvent(
         source_channel="@venarix",
@@ -45,34 +57,31 @@ def parse_venarix(
         message_url=message_url,
         group_name=group,
         victim_name=victim,
-        published_at_text=published_date_text,
+        published_at_text=None,
         urls=urls,
         tags=[],
     )
 
 
-# ─────────────────────────────────────────────
-# 2) IntermediateEvent → LeakRecord 변환기
-# ─────────────────────────────────────────────
-
-
+# --------------------------------------------------------
+# IntermediateEvent → LeakRecord
+# --------------------------------------------------------
 def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
-    """
-    파싱된 IntermediateEvent → LeakRecord 표준 구조 변환
-    """
 
-    return LeakRecord(
+    domains = _extract_domains(event.urls)
+
+    record = LeakRecord(
         collected_at=date.today(),
         source=event.source_channel,
         post_title=f"{event.group_name or ''} → {event.victim_name or ''}",
-        post_id=str(event.message_id) if event.message_id else '',
+        post_id=str(event.message_id) if event.message_id else "",
         author=None,
-        posted_at=None,
+        posted_at=event.published_at_text,
         leak_types=[],
         estimated_volume=None,
         file_formats=[],
         target_service=event.victim_name,
-        domains=[],
+        domains=domains,
         country=None,
         threat_claim=event.group_name,
         deal_terms=None,
@@ -80,3 +89,5 @@ def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
         screenshot_refs=[],
         osint_seeds={"urls": event.urls},
     )
+
+    return enrich_leakrecord_with_osint(record)

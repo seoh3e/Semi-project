@@ -5,6 +5,7 @@ from typing import List
 from urllib.parse import urlparse
 
 from .models import IntermediateEvent, LeakRecord
+from .enrich_with_osint import enrich_leakrecord_with_osint
 
 
 # ─────────────────────────────────────────────
@@ -99,12 +100,14 @@ def parse_RansomFeedNews(
 def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
     """
     파싱된 IntermediateEvent → LeakRecord 표준 구조 변환
+    + OSINT(enrich_with_osint)로 보강까지 수행.
     """
 
     # URL 리스트에서 도메인만 추출
     domains = _extract_domains(event.urls)
 
-    return LeakRecord(
+    # 1차적으로 기본 필드만 채운 LeakRecord 생성
+    record = LeakRecord(
         collected_at=date.today(),
         source=event.source_channel,
         post_title=f"{event.group_name or ''} → {event.victim_name or ''}",
@@ -123,3 +126,8 @@ def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
         screenshot_refs=[],
         osint_seeds={"urls": event.urls},
     )
+
+    # 🔍 OSINT 보강 (Malpedia + heuristic)
+    record = enrich_leakrecord_with_osint(record)
+
+    return record
