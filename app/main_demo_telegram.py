@@ -53,7 +53,7 @@ def process_leak_record(record: LeakRecord) -> None:
     - 콘솔 알림 출력
     """
 
-    print("\n[LeakRecord 객체 출력]\n", record, "\n")  # ✅ 이 줄 추가
+    print("\n[LeakRecord 객체 출력]\n", record, "\n")  # ✅ 추가
 
     # 1) JSON 저장
     add_leak_record(record)
