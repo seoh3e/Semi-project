@@ -56,7 +56,6 @@ def parse_ctifeeds(
         tags=[],
     )
 
-
 # --------------------------------------------------------
 # 2) IntermediateEvent → LeakRecord
 # --------------------------------------------------------
@@ -86,6 +85,7 @@ def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
 
     # OSINT 보강
     return enrich_leakrecord_with_osint(record)
+
 
 
 
