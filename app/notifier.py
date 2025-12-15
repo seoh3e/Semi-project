@@ -50,20 +50,37 @@ def _truncate(text: Optional[str], max_len: int = 140) -> str:
 # 1) 콘솔 알림 (안정화/정리 버전)
 # =============================================================================
 def notify_new_leak(record: LeakRecord) -> None:
-    """새 유출 정보가 추가될 때 콘솔에 알림을 출력."""
-    source = (record.source or "N/A")
-    title = _truncate(getattr(record, "post_title", None), 160)
-    target = getattr(record, "target_service", None) or "N/A"
+    """새 유출 정보가 추가될 때 콘솔에 알림을 출력. (필드 누락/타입 불일치 방어)"""
 
-    domains = _as_csv(getattr(record, "domains", None))
-    leak_types = _as_csv(getattr(record, "leak_types", None))
+    def _val(name: str, default="N/A"):
+        v = getattr(record, name, None)
+        if v is None:
+            return default
+        if isinstance(v, str):
+            v = v.strip()
+            return v if v else default
+        return v
 
-    volume = getattr(record, "estimated_volume", None)
-    volume = volume if volume is not None else "Unknown"
+    def _csv(name: str) -> str:
+        v = getattr(record, name, None)
+        if not v:
+            return "N/A"
+        if isinstance(v, str):
+            return v.strip() or "N/A"
+        try:
+            return ", ".join(str(x) for x in list(v))
+        except Exception:
+            return str(v)
 
-    confidence = getattr(record, "confidence", None) or "N/A"
-    collected_at = getattr(record, "collected_at", None) or "N/A"
-    posted_at = getattr(record, "posted_at", None) or ""
+    title = _val("post_title")
+    source = _val("source")
+    target = _val("target_service")
+    domains = _csv("domains")
+    leak_types = _csv("leak_types")
+    volume = _val("estimated_volume", default="Unknown")
+    confidence = _val("confidence")
+    collected_at = _val("collected_at")
+    posted_at = _val("posted_at", default="")  # 없으면 안 찍어도 됨
 
     print("\n" + "=" * 72)
     print("🔔 [NEW LEAK DETECTED]")
