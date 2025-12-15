@@ -49,9 +49,12 @@ def process_leak_record(record: LeakRecord) -> None:
     """
     LeakRecord를 공동 파이프라인에 태우는 함수.
     - JSON 저장
-    - CSV 저장 (대시보드용)
-    - 콘솔 + Slack 알림
+    - CSV 저장
+    - 콘솔 알림 출력
     """
+
+    print("\n[LeakRecord 객체 출력]\n", record, "\n")  # ✅ 이 줄 추가
+
     # 1) JSON 저장
     add_leak_record(record)
 
@@ -59,8 +62,9 @@ def process_leak_record(record: LeakRecord) -> None:
     append_leak_record_csv(record)
     print("✅ CSV 저장 완료: data/leak_records.csv")
 
-    # 3) 알림 (콘솔 + Slack)
+    # 3) 알림
     notify_all(record)
+
 
 
 # ---------------------------------------------------------------------------
