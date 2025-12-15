@@ -3,10 +3,10 @@
 import json
 from pathlib import Path
 from typing import Tuple, Any
-import re
 import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
+import re
 import math
 
 def normalize_leak_types(value):
