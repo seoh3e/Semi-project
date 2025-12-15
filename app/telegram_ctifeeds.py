@@ -7,7 +7,6 @@ import re
 
 from .models import IntermediateEvent, LeakRecord
 from .enrich_with_osint import enrich_leakrecord_with_osint
-
 # --------------------------------------------------------
 # URL → 도메인 추출 유틸
 # --------------------------------------------------------
@@ -88,4 +87,5 @@ def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
 
     # OSINT 보강
     return enrich_leakrecord_with_osint(record)
+
 
