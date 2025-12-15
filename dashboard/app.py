@@ -1,5 +1,4 @@
 # dashboard/app.py
-
 import json
 from pathlib import Path
 from typing import Tuple, Any
