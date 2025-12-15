@@ -6,7 +6,7 @@ from typing import Tuple
 
 import pandas as pd
 import streamlit as st
-
+import math
 
 # ──────────────────────────────────────────────────────────────
 # 기본 설정
