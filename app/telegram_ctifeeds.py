@@ -21,7 +21,6 @@ def _extract_domains(urls: List[str]) -> List[str]:
             domains.append(host)
     return domains
 
-
 # --------------------------------------------------------
 # 1) raw_text → IntermediateEvent
 # --------------------------------------------------------
@@ -87,5 +86,6 @@ def intermediate_to_leakrecord(event: IntermediateEvent) -> LeakRecord:
 
     # OSINT 보강
     return enrich_leakrecord_with_osint(record)
+
 
 
