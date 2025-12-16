@@ -9,7 +9,8 @@ from bs4 import BeautifulSoup
 from .models import LeakRecord
 import os
 import json
-
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 # ───────────────────────────────────────────────
 # Malpedia 기능 (quicksearch + actor 페이지 파싱)
@@ -426,4 +427,5 @@ def enrich_leakrecord_with_osint(leak: LeakRecord) -> LeakRecord:
     leak = enrich_with_mitre(leak)
 
     return leak
+
 
